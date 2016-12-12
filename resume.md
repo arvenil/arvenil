@@ -27,64 +27,11 @@ Feel free to contact me via email [hire@golang.guru](mailto:hire@golang.guru) or
 * "¿Qué hora es?" level of Spanish ;) I'm currently living in Spain so I hope to learn more as soon as possible :)
 * basic photography skills
 
-### Skills
+### Skills and buzzwords
 
-`Blockchain`
-`Bitcoin`
-`Golang`
-`MySQL`
-`Amazon DynamoDB`
-`PHP`
-`Linux`
-`RabbitMQ`
-`Scrum`
-`Agile Methodologies`
-`Agile`
-`REST`
-`WebSockets`
-`Unit Testing`
-`Test Driven Development`
-`TDD`
-`PHPUnit`
-`Testify`
-`gocheck`
-`JavaScript`
-`Bash`
-`IT Management`
-`XML`
-`JSON`
-`jQuery`
-`Symfony`
-`Memcached`
-`FCE`
-`Agile Project Management`
-`Continuous Integration`
-`CI`
-`Coaching`
-`Project Management`
-`Certified Scrum Master`
-`Team Management`
-`Continuous Delivery`
-`Backbone.js`
-`Node.js`
-`CoffeeScript`
-`Github`
-`AJAX`
-`git`
-`github`
-`ElasticSearch`
-`Amazon Dynamodb`
-`Amazon Web Services`
-`AWS`
-`Docker`
-`REST`
-`Web Development`
-`Software Development`
-`Gin`
-`Revel`
-`AngularJS`
-`jenkins`
-`travis`
+Feel free to use below list to quickly check if I might have desired skills
+
+`AJAX` `AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB` `Amazon Web Services` `AngularJS` `Backbone.js` `Bash` `Bitcoin` `Blockchain` `CI` `Certified Scrum Master` `Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR` `Docker` `ElasticSearch` `FCE` `Fedora` `Gin` `Github` `Golang` `IT Management` `IntelliJ IDEA` `PhpStorm` `JSON` `JavaScript` `Linux Mint` `Linux` `Memcached` `MySQL` `Node.js` `OpenSuse` `PHPUnit` `PHP` `PLD` `Photography` `Project Management` `REST` `RabbitMQ` `Revel` `Rollerblading` `Scrum` `Software Development` `Symfony` `TDD` `Team Management` `Test Driven Development` `Testify` `Ubuntu` `Unit Testing` `Web Development` `WebSockets` `XML` `git` `github` `gocheck` `jQuery` `jenkins` `macOS` `travis`
 
 ### Demo
 
