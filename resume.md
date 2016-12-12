@@ -324,4 +324,4 @@ Thanks to gomobile I've build SDK application for Android and iOS
 
 # Something not right?
 
-This resume is open source so feel free to fork project, fix mistakes, make improvements and finally request for pull at [github.com/arvenil/resume](github.com/arvenil/resume)
+This resume is open source so feel free to fork project, fix mistakes, make improvements and finally request for pull at [https://github.com/arvenil/resume](https://github.com/arvenil/resume)
