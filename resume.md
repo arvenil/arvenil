@@ -1,4 +1,4 @@
-![](https://static.goldenline.pl/user_photo/024/user_265240_6c5c6d_huge.jpg)
+![Profile photo](https://static.goldenline.pl/user_photo/024/user_265240_6c5c6d_huge.jpg)
 
 
 # Hi,
