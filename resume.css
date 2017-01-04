@@ -8,4 +8,6 @@ img[alt*="Profile photo"] {
 
 .container-fluid {
     width: 100vmin;
+    word-wrap: break-word;
+    overflow: hidden;
 }
