@@ -2,4 +2,10 @@ img[alt*="Profile photo"] {
   border-radius: 50%;
   display: block;
   margin: auto;
+  width: 50vmin;
+  height: 50vmin;
+}
+
+.container-fluid {
+    width: 100vmin;
 }
