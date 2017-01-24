@@ -67,7 +67,7 @@ Great! Please contact me via email [hire@golang.guru](mailto:hire@golang.guru) o
 
 You might also try to check some of my online profiles:
   
-* [LinkedIn](www.linkedin.com/in/kamildziedzic)
+* [LinkedIn](https://www.linkedin.com/in/kamildziedzic)
 * [Github](https://github.com/arvenil)
 * [Stackoverflow](http://stackoverflow.com/users/916440/kamil-dziedzic)
 
@@ -82,10 +82,10 @@ If you are interested more in my previous adventures please feel free to scroll 
 #### January 2016 – June 2016 (6 months), Lisbon, Portugal
 
 I've designed and build REST micro-service for booking app
-- [gin](github.com/gin-gonic/gin) web framework for simplified routing
+- [gin](https://github.com/gin-gonic/gin) web framework for simplified routing
 - [dependency injection](https://github.com/karlkfi/inject)
 - dynamodb for storage with [aws-sdk-go](https://github.com/aws/aws-sdk-go)
-- tests written with [testify](github.com/stretchr/testify) and run by circle-ci
+- tests written with [testify](https://github.com/stretchr/testify) and run by circle-ci
 - coverage with coveralls.io
 
 I've build OAuth server for password less authorization
