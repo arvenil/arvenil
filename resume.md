@@ -77,7 +77,7 @@ If you are interested more in my previous adventures please feel free to scroll 
 
 ## Senior Software Developer
 
-### [Uniplaces](www.uniplaces.com)
+### [Uniplaces](https://www.uniplaces.com)
 
 #### January 2016 – June 2016 (6 months), Lisbon, Portugal
 
@@ -117,7 +117,7 @@ Thanks to gomobile I've build SDK application for Android and iOS
 
 ## Golang Developer
 
-### [Percona](www.percona.com)
+### [Percona](https://www.percona.com)
 
 #### January 2014 – July 2015 (1 year 7 months), Remote
 
@@ -188,7 +188,7 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 
 ## PHP and UI/Front-end Developer
 
-### [Percona](www.percona.com)
+### [Percona](https://www.percona.com)
 
 #### September 2013 – December 2013 (4 months), Remote
 
@@ -210,7 +210,7 @@ BackEnd
 
 ## IT Manager
 
-### [FarmaProm Polska](www.farmaprom.pl)
+### [FarmaProm Polska](https://www.farmaprom.pl)
 
 #### October 2011 – November 2013 (2 years 2 months), Kraków, Poland
 
@@ -252,7 +252,7 @@ duplication)
 
 ## Team Leader / Senior PHP Developer
 
-### [Araneo](araneo.pl)
+### [Araneo](http://araneo.pl)
 
 #### December 2007 – October 2011 (3 years 11 months), Kraków, Poland
  
@@ -295,7 +295,7 @@ application usability
 
 ## PHP Developer
 
-### [Krakowskie e-Centrum Informatyczne](kei.pl)
+### [Krakowskie e-Centrum Informatyczne](https://kei.pl)
 
 #### July 2007 – August 2007 (2 months), Kraków, Poland
 
