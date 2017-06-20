@@ -75,6 +75,14 @@ If you are interested more in my previous adventures please feel free to scroll 
 
 # Work History
 
+## Software Engineer
+
+### [Percona](https://www.percona.com)
+
+#### January 2017 - till now, Remote
+
+Working on [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management)
+
 ## Senior Software Developer
 
 ### [Uniplaces](https://www.uniplaces.com)
