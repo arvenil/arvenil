@@ -8,7 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.2.1/markdown-it.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css" />
-<link rel="stylesheet" href="resume.css" />
+<link rel="stylesheet" href="https://raw.githubusercontent.com/arvenil/resume/master/README.css" />
 </head>
 <body>
 <div class="container-fluid">
@@ -21,7 +21,7 @@
 var m = document.getElementById("markdown");
 var md = window.markdownit();
 
-$.get("https://raw.githubusercontent.com/arvenil/resume/master/resume.md", function(data) {
+$.get("https://raw.githubusercontent.com/arvenil/resume/master/README.md", function(data) {
     m.innerHTML = md.render(data);
 })
 
