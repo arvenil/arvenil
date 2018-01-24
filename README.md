@@ -1,4 +1,4 @@
-![Profile photo](/photo.jpg?raw=true "Kamil Dziedzic")
+![Profile photo](https://raw.githubusercontent.com/arvenil/resume/master/photo.jpg "Kamil Dziedzic")
 
 
 # Hi,
