@@ -84,19 +84,19 @@ If you are interested more in my previous adventures please feel free to scroll 
 Working on [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management)
 
 Contributed to:
-- https://github.com/percona/mysqld_exporter
-- https://github.com/prometheus/mysqld_exporter
-- https://github.com/percona/postgres_exporter
-- https://github.com/percona/mongodb_exporter
-- https://github.com/percona/rds_exporter
-- https://github.com/percona/pmm-client
-- https://github.com/percona/pmm-server
-- https://github.com/percona/qan-agent
-- https://github.com/percona/kardianos-service
-- https://github.com/percona/percona-toolkit
-- https://github.com/percona/qan-api
-- https://github.com/percona/qan-app
-- https://github.com/percona/pmm-managed 
+- [percona/mysqld_exporter](https://github.com/percona/mysqld_exporter)
+- [prometheus/mysqld_exporter](https://github.com/prometheus/mysqld_exporter)
+- [percona/postgres_exporter](https://github.com/percona/postgres_exporter)
+- [percona/mongodb_exporter](https://github.com/percona/mongodb_exporter)
+- [percona/rds_exporter](https://github.com/percona/rds_exporter)
+- [percona/pmm-client](https://github.com/percona/pmm-client)
+- [percona/pmm-server](https://github.com/percona/pmm-server)
+- [percona/qan-agent](https://github.com/percona/qan-agent)
+- [percona/kardianos-service](https://github.com/percona/kardianos-service)
+- [percona/percona-toolkit](https://github.com/percona/percona-toolkit)
+- [percona/qan-api](https://github.com/percona/qan-api)
+- [percona/qan-app](https://github.com/percona/qan-app)
+- [percona/pmm-managed](https://github.com/percona/pmm-managed)
 
 ## Senior Software Developer
 
