@@ -9,16 +9,16 @@ Will you help me?
 
 I'm looking for opportunities to widen my knowledge, experience and expertise in software development alongside with a steady source of income to pursue my dream of building decentralized apps of the future.
 
-Feel free to contact me via email [hire@golang.guru](mailto:hire@golang.guru) or bleep `c4afb2a4c29d9211c6a751226b829dc40fa82972f7e6765d9cd8f699999aaa0e,golang.guru`
+Feel free to contact me via email [hire@golang.guru](mailto:hire@golang.guru)
 
 ## What can I offer?
 
 * open mind
 * 10 years experience in web app development, product building and team leading
 * dedication to learn new languages and technologies
-* 2+ years experience with golang (standalone programs and web apis) and 0.5 year with gomobile
-* 8+ years in building REST apis
-* 3+ years with testing and TDD
+* 4+ years experience with golang (standalone programs and web apis) and 0.5 year with gomobile
+* 10+ years in building REST apis
+* 5+ years with testing and TDD
 * 6+ years with MySQL, 0.5 year with Amazon DynamoDB, some experience with Memcached and MongoDB 
 * 6+ years with Agile, Kanban and Scrum (Professional Scrum Master I certificate in 2012)
 * some experience with javascript apps e.g. AngularJS and node.js, far from feeling comfortable to say I'm js developer, but I'm comfortable to begin working on professional apps. It's also something I want to be more serious about as this seems to be one of the best option to write cross-platform, distributed apps with nice gui 
@@ -79,9 +79,24 @@ If you are interested more in my previous adventures please feel free to scroll 
 
 ### [Percona](https://www.percona.com)
 
-#### January 2017 - till now, Remote
+#### January 2017 - November 2018 (1 year, 11 months), Remote
 
 Working on [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management)
+
+Contributed to:
+- https://github.com/percona/mysqld_exporter
+- https://github.com/prometheus/mysqld_exporter
+- https://github.com/percona/postgres_exporter
+- https://github.com/percona/mongodb_exporter
+- https://github.com/percona/rds_exporter
+- https://github.com/percona/pmm-client
+- https://github.com/percona/pmm-server
+- https://github.com/percona/qan-agent
+- https://github.com/percona/kardianos-service
+- https://github.com/percona/percona-toolkit
+- https://github.com/percona/qan-api
+- https://github.com/percona/qan-app
+- https://github.com/percona/pmm-managed 
 
 ## Senior Software Developer
 
