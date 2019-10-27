@@ -14,7 +14,7 @@ Feel free to contact me via email [hire@golang.guru](mailto:hire@golang.guru)
 ## What can I offer?
 
 * open mind
-* 10 years experience in web app development, product building and team leading
+* 15 years experience in web app development, product building and team leading
 * dedication to learn new languages and technologies
 * 4+ years experience with golang (standalone programs and web apis) and 0.5 year with gomobile
 * 10+ years in building REST apis
@@ -47,10 +47,9 @@ Both projects show some of my skills, coding standards and love for testing.
 ## What can you offer me?
 
 * steady income (I need to eat, pay rent, read books, watch movies, have fun, support my photography hobby - this requires some coins)
-* opportunities to learn about blockchain, ipfs, bitcoin and everything else related to distributed network at work or in spare time
-* position in Research and Development
 * opportunity to learn new programming language
 * opportunity to work and exchange knowledge with a team of specialists
+* position in Research and Development
 * in work time to share knowledge via blogs and talks
 * experience with already known technologies
 * more international experience in product building and team leading
@@ -63,13 +62,14 @@ Both projects show some of my skills, coding standards and love for testing.
 
 Do you think my skills could be useful for your company or clients? Can you offer me anything from the list above?
 
-Great! Please contact me via email [hire@golang.guru](mailto:hire@golang.guru) or bleep `c4afb2a4c29d9211c6a751226b829dc40fa82972f7e6765d9cd8f699999aaa0e,golang.guru`
+Great! Please contact me via email [hire@golang.guru](mailto:hire@golang.guru)
 
 You might also try to check some of my online profiles:
   
 * [LinkedIn](https://www.linkedin.com/in/kamildziedzic)
 * [Github](https://github.com/arvenil)
 * [Stackoverflow](http://stackoverflow.com/users/916440/kamil-dziedzic)
+* [Instagram](https://www.instagram.com/arvenil/) (private, sorry)
 
 If you are interested more in my previous adventures please feel free to scroll down for my full work history with some references.
 
