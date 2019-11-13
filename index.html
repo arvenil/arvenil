@@ -7,6 +7,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.2.1/markdown-it.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css" />
 <link rel="stylesheet" href="https://raw.githack.com/arvenil/resume/master/README.css" />
 </head>
@@ -21,9 +24,25 @@
 var m = document.getElementById("markdown");
 var md = window.markdownit();
 
-$.get("https://raw.githubusercontent.com/arvenil/resume/master/README.md", function(data) {
-    m.innerHTML = md.render(data);
-})
+var renderHTML = function() {
+    var d = $.Deferred();
+
+    $.get("https://raw.githubusercontent.com/arvenil/resume/master/README.md", function(data) {
+        m.innerHTML = md.render(data);
+        d.resolve();
+    });
+
+    return d.promise();
+};
+
+var renderPDF = function () {
+    var pdf = new jsPDF('p','pt','a4');
+    pdf.addHTML(document.body,function() {
+        pdf.save('Kamil Dziedzic - Software Engineer.pdf');
+    });
+};
+
+renderHTML().then(renderPDF)
 
 </script>
 </body>
