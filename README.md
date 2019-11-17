@@ -31,7 +31,7 @@ Feel free to contact me via email [hire@golang.guru](mailto:hire@golang.guru)
 
 Feel free to use below list to quickly check if I might have desired skills
 
-`AJAX` `AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB` `Amazon Web Services` `AngularJS` `Backbone.js` `Bash` `CI` `Certified Scrum Master` `Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR` `Docker` `ElasticSearch` `FCE` `Fedora` `Gin` `Github` `Golang` `IT Management` `IntelliJ IDEA` `PhpStorm` `JSON` `JavaScript` `Linux Mint` `Linux` `Memcached` `MySQL` `Node.js` `OpenSuse` `PHPUnit` `PHP` `PLD` `Photography` `Project Management` `REST` `RabbitMQ` `Revel` `Rollerblading` `Scrum` `Software Development` `Symfony` `TDD` `Team Management` `Test Driven Development` `Testify` `Ubuntu` `Unit Testing` `Web Development` `WebSockets` `XML` `git` `github` `gocheck` `gRPC` `jQuery` `jenkins` `macOS` `MongoDB` `travis` `TypeScript`
+`AJAX` `AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB` `Amazon Web Services` `AngularJS` `Backbone.js` `Bash` `CI` `Certified Scrum Master` `Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR` `Docker` `ElasticSearch` `FCE` `Fedora` `Gin` `Git` `Github` `Golang` `gRPC` `IT Management` `IntelliJ IDEA` `PhpStorm` `JavaScript` `Jenkins` `JSON` `jQuery` `Linux Mint` `Linux` `MacOS` `Memcached` `MongoDB` `MySQL` `Node.js` `OpenSuse` `PHPUnit` `PHP` `PLD` `Photography` `Project Management` `REST` `RabbitMQ` `Revel` `Rollerblading` `Scrum` `Software Development` `Symfony` `TDD` `Team Management` `Test Driven Development` `Testify` `TypeScript` `Ubuntu` `Unit Testing` `Travis` `Web Development` `WebSockets` `XML`
 
 ### Demo
 
