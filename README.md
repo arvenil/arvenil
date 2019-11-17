@@ -3,7 +3,7 @@
 
 # Hi,
 
-My Name is Kamil Dziedzic, a Backend Developer, former IT manager and former full-stack web developer aspiring to become proper Software Engineer for the next generation internet - decentralized, private and encrypted.
+My Name is Kamil Dziedzic, a Backend Developer, former IT Manager and former Full-Stack Developer aspiring to become proper Software Engineer for the next generation internet - decentralized, private and encrypted.
 
 Will you help me?
 
@@ -20,11 +20,11 @@ Feel free to contact me via email [hire@golang.guru](mailto:hire@golang.guru)
 * 10+ years in building REST apis
 * 5+ years with testing and TDD
 * 6+ years with MySQL, 0.5 year with Amazon DynamoDB, some experience with Memcached and MongoDB 
-* 6+ years with Agile, Kanban and Scrum (Professional Scrum Master I certificate in 2012)
+* 6+ years with Agile, Kanban and Scrum (Professional Scrum Master I, certificate in 2012)
 * some experience with javascript apps e.g. AngularJS and node.js, far from feeling comfortable to say I'm js developer, but I'm comfortable to begin working on professional apps. It's also something I want to be more serious about as this seems to be one of the best option to write cross-platform, distributed apps with nice gui 
 * 6+ years with developing PHP apps, while I'm not interested in writing php code anymore I can still read it :)
 * communicative English with Polish accent ;)
-* "¿Qué hora es?" level of Spanish ;) I'm currently living in Spain so I hope to learn more as soon as possible :)
+* "¿Qué hora es?" level of Spanish ;)
 * basic photography skills
 
 ### Skills and buzzwords
