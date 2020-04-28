@@ -1,9 +1,9 @@
-img[alt*="Profile photo"] {
+img[alt*="Kamil Dziedzic"] {
   border-radius: 50%;
   display: block;
   margin: auto;
-  width: 70vmin;
-  height: 70vmin;
+  width: 60vmin;
+  height: 60vmin;
 }
 
 h3:first-of-type,

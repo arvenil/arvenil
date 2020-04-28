@@ -2,7 +2,7 @@ let m = document.getElementById("markdown");
 let md = window.markdownit();
 
 let renderHTML = function() {
-    var d = $.Deferred();
+    let d = $.Deferred();
 
     $.get("https://raw.githubusercontent.com/arvenil/resume/master/README.md", function(data) {
         m.innerHTML = md.render(data);

@@ -1,4 +1,4 @@
-![Profile photo](https://raw.githubusercontent.com/arvenil/resume/master/photo.jpg "Kamil Dziedzic")
+![Kamil Dziedzic](https://raw.githubusercontent.com/arvenil/resume/master/photo.jpg "Kamil Dziedzic")
 
 # Kamil Dziedzic
 Backend Developer, former IT Manager, and former Full-Stack Developer aspiring to become proper *Software Engineer*.
@@ -29,15 +29,15 @@ Feel free to contact me via email [hire@dziedzic.es](mailto:hire@dziedzic.es) or
 
 Feel free to use below list to quickly check if I might have desired skills
 
-`AJAX` `AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB` 
-`Amazon Web Services` `AngularJS` `Backbone.js` `Bash` `CI/CD` `Certified Scrum Master` 
-`Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR` 
-`Docker` `ElasticSearch` `FCE` `Fedora` `Gin` `Git` `Github` `Golang` `gRPC` 
-`IT Management` `IntelliJ IDEA` `PhpStorm` `JavaScript` `Jenkins` `JSON` `jQuery` 
-`Linux Mint` `Linux` `MacOS` `Memcached` `MongoDB` `MySQL` `Node.js` `OpenSUSE` 
-`PHPUnit` `PHP` `Photography` `Project Management` `REST` `RabbitMQ` `Revel` 
-`Rollerblading` `Scrum` `Software Development` `Symfony` `TDD` `Team Management` 
-`Test Driven Development` `Testify` `TypeScript` `Ubuntu` `Unit Testing` `Travis` 
+`AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB`  
+`Amazon Web Services` `AngularJS` `Backbone.js` `Bash` `CI/CD` `Certified Scrum Master`  
+`Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR`  
+`Docker` `ElasticSearch` `FCE` `Fedora` `Gin` `Git` `Github` `Golang` `gRPC`  
+`IT Management` `IntelliJ IDEA` `PhpStorm` `JavaScript` `Jenkins` `JSON` `jQuery`  
+`Linux Mint` `Linux` `MacOS` `Memcached` `MongoDB` `MySQL` `Node.js` `OpenSUSE`  
+`PHPUnit` `PHP` `Photography` `Project Management` `REST` `RabbitMQ` `Revel`  
+`Rollerblading` `Scrum` `Software Development` `Symfony` `TDD` `Team Management`  
+`Test Driven Development` `Testify` `TypeScript` `Ubuntu` `Unit Testing` `Travis`  
 `Web Development` `WebSockets` `XML`
 
 ### Demo
@@ -47,7 +47,7 @@ There are however three exceptions:
 
 1. [Kata 形🤺](https://github.com/arvenil/kata) is my recent toy project to show of my skills in algorithms and coding Go.
 2. [osin-dynamodb](https://github.com/uniplaces/osin-dynamodb) is a Go library which implements the storage for [OSIN](https://github.com/RangelReale/osin) with [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) using [aws-sdk-go](https://github.com/aws/aws-sdk-go). I've created it for storing OAuth credentials in DynamoDB in one of my projects at [Uniplaces](uniplaces.com).
-3. [ninja-mutex](https://github.com/arvenil/ninja-mutex) [![Total Downloads](https://img.shields.io/packagist/dt/arvenil/ninja-mutex.png)](https://packagist.org/packages/arvenil/ninja-mutex) is a simple to use mutex implementation for php. It supports different adapters (flock, memcache, mysql, redis, ...) so you can set it up as you wish. All adapters (if set up properly) can be used in multi server environment - in other words lock is shared between web servers. I've created it as a demo of my skills, a demo I could show on job interviews.
+3. [ninja-mutex](https://github.com/arvenil/ninja-mutex) [![Total Downloads](https://img.shields.io/packagist/dt/arvenil/ninja-mutex.svg)](https://packagist.org/packages/arvenil/ninja-mutex) is a simple to use mutex implementation for php. It supports different adapters (flock, memcache, mysql, redis, ...) so you can set it up as you wish. All adapters (if set up properly) can be used in multi server environment - in other words lock is shared between web servers. I've created it as a demo of my skills, a demo I could show on job interviews.
 
 All those projects show some of my skills, coding standards and love for testing.
 
