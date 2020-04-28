@@ -26,8 +26,6 @@ Feel free to contact me via email [hire@dziedzic.es](mailto:hire@dziedzic.es) or
 * "¿Qué hora es?" level of Spanish
 * passion for photography
 
-<div style="page-break-after: always;"></div>
-
 ### Skills and buzzwords
 
 Feel free to use below list to quickly check if I might have desired skills
@@ -81,8 +79,6 @@ You might also try to check some of my online profiles:
 * [Instagram](https://www.instagram.com/arvenil/) (private, sorry)
 
 If you are interested more in my previous adventures please feel free to scroll down for my full work history with some references.
-
-<div style="page-break-after: always;"></div>
 
 # Work History
 

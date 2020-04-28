@@ -10,7 +10,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.1/html2pdf.bundle.min.js"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.4.1/cerulean/bootstrap.min.css" />
-<link rel="stylesheet" href="https://raw.githack.com/arvenil/resume/master/README.css" />
+<link rel="stylesheet" href="README.css" />
 </head>
 <body>
 <div>
@@ -19,39 +19,6 @@
     <div class="panel-body" id="markdown">Loading ...</div>
   </div>
 </div>
-<script>
-var m = document.getElementById("markdown");
-var md = window.markdownit();
-
-var renderHTML = function() {
-    var d = $.Deferred();
-
-    $.get("https://raw.githubusercontent.com/arvenil/resume/master/README.md", function(data) {
-        m.innerHTML = md.render(data);
-        d.resolve();
-    });
-
-    return d.promise();
-};
-
-var renderPDF = function () {
-    var element = document.body;
-    var opt = {
-       pagebreak: {
-         avoid: ['h1','h2','li','blockquote','code'],
-         mode: "css"
-       },
-       filename:     'Kamil Dziedzic - Software Engineer.pdf',
-       image:        { type: 'jpeg', quality: 0.95 },
-       html2canvas:  { scale: 2, useCORS: true},
-       jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-
-    html2pdf().set(opt).from(element).save();
-};
-
-renderHTML().then(renderPDF)
-
-</script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
