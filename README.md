@@ -1,6 +1,5 @@
 ![Profile photo](https://raw.githubusercontent.com/arvenil/resume/master/photo.jpg "Kamil Dziedzic")
 
-
 # Kamil Dziedzic
 Backend Developer, former IT Manager, and former Full-Stack Developer aspiring to become proper *Software Engineer*.
 
@@ -120,7 +119,7 @@ I've designed and build REST micro-service for booking app
 * tests written with [testify](https://github.com/stretchr/testify) and run by circle-ci
 * coverage with coveralls.io
 
-I've build OAuth server for password less authorization
+I've built OAuth server for a password less authorization
 
 * based on RFC-6749 with support for ["Resource Owner Password Credentials Grant"](https://tools.ietf.org/html/rfc6749#section-4.3)
 * utilizes [osin auth library](https://github.com/RangelReale/osin)
@@ -130,9 +129,9 @@ Thanks to gomobile I've build SDK application for Android and iOS
 
 * common application layer for Android and iOS mobile apps
 * simplified development as common logic could be encapsulated in library that Android and iOS developers can use in their apps
-* gomobile allows to build fully native apps, but writing just a common library gives Android and iOS developers free hand at designing native frontend part of their app
+* gomobile allows building fully native apps, but writing just a common library gives Android and iOS developers free hand at designing native frontend part of their app
 
-> *I had the pleasure to work with Kamill at Uniplaces.  
+> *I had the pleasure to work with Kamil at Uniplaces.  
 > Soon, I was able to notice that he had a deep knowledge of the most relevant technologies that simply make things work as they should.  
 > Kamil is a very proactive mate that can finish things nicely done within the deadlines agreed.  
 > I believe he is a major addition in any company.*
@@ -335,14 +334,13 @@ application usability
 
 #### July 2007 – August 2007 (2 months), Kraków, Poland
 
-Summer job and my first professional experience
+Summer job, and my first professional experience
 
 * head developer and designer of ticket/issue tracking system
 * developer and designer of companies database for sales
 department
 * creation, development and maintenance of existing software
 (CRM, Website Builder and others)
-
 
 # Something not right?
 

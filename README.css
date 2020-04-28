@@ -2,11 +2,12 @@ img[alt*="Profile photo"] {
   border-radius: 50%;
   display: block;
   margin: auto;
-  width: 55vmin;
-  height: 55vmin;
+  width: 70vmin;
+  height: 70vmin;
 }
 
-h3:first-of-type {
+h3:first-of-type,
+h1:nth-of-type(2) {
     break-before: page;
 }
 
