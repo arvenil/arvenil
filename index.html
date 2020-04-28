@@ -37,7 +37,10 @@ var renderHTML = function() {
 var renderPDF = function () {
     var element = document.body;
     var opt = {
-       pagebreak: { avoid: ['h1','h2','li','p','blockquote'] },
+       pagebreak: {
+         avoid: ['h1','h2','li','blockquote','code'],
+         mode: "css"
+       },
        filename:     'Kamil Dziedzic - Software Engineer.pdf',
        image:        { type: 'jpeg', quality: 0.95 },
        html2canvas:  { scale: 2, useCORS: true},
