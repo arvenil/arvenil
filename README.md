@@ -29,28 +29,18 @@ Feel free to contact me via email [hire@dziedzic.es](mailto:hire@dziedzic.es) or
 
 Feel free to use below list to quickly check if I might have desired skills
 
-`AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB`  
-`Amazon Web Services` `AngularJS` `Backbone.js` `Bash` `CI/CD` `Certified Scrum Master`  
-`Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR`  
-`Docker` `ElasticSearch` `FCE` `Fedora` `Gin` `Git` `Github` `Golang` `gRPC`  
-`IT Management` `IntelliJ IDEA` `PhpStorm` `JavaScript` `Jenkins` `JSON` `jQuery`  
-`Linux Mint` `Linux` `MacOS` `Memcached` `MongoDB` `MySQL` `Node.js` `OpenSUSE`  
-`PHPUnit` `PHP` `Photography` `Project Management` `REST` `RabbitMQ` `Revel`  
-`Rollerblading` `Scrum` `Software Development` `Symfony` `TDD` `Team Management`  
-`Test Driven Development` `Testify` `TypeScript` `Ubuntu` `Unit Testing` `Travis`  
-`Web Development` `WebSockets` `XML`
+`AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB` `Amazon Web Services` `AngularJS` `Backbone.js` `Bash` `CI/CD` `Certified Scrum Master` `Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR` `Docker` `ElasticSearch` `FCE` `Fedora` `Gin` `Git` `Github` `Golang` `gRPC` `IT Management` `IntelliJ IDEA` `PhpStorm` `JavaScript` `Jenkins` `JSON` `jQuery` `kubernetes` `Linux Mint` `Linux` `MacOS` `Memcached` `MongoDB` `MySQL` `Node.js` `OpenSUSE` `PHPUnit` `PHP` `Photography` `Project Management` `REST` `RabbitMQ` `Revel` `Rollerblading` `Scrum` `Software Development` `Symfony` `TDD` `Team Management` `Test Driven Development` `Testify` `TypeScript` `Ubuntu` `Unit Testing` `Travis` `Web Development` `webpack` `WebSockets` `XML`
 
 ### Demo
 
 Most of my work belongs to my employers.  
 There are however three exceptions:
 
-1. [Kata 形🤺](https://github.com/arvenil/kata) is my recent toy project to show of my skills in algorithms and coding Go.
+1. [Kata 形](https://github.com/arvenil/kata) is my recent toy project to show of my skills in algorithms and idiomatic Go.
 2. [osin-dynamodb](https://github.com/uniplaces/osin-dynamodb) is a Go library which implements the storage for [OSIN](https://github.com/RangelReale/osin) with [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) using [aws-sdk-go](https://github.com/aws/aws-sdk-go). I've created it for storing OAuth credentials in DynamoDB in one of my projects at [Uniplaces](uniplaces.com).
 3. [ninja-mutex](https://github.com/arvenil/ninja-mutex) [![Total Downloads](https://img.shields.io/packagist/dt/arvenil/ninja-mutex.svg)](https://packagist.org/packages/arvenil/ninja-mutex) is a simple to use mutex implementation for php. It supports different adapters (flock, memcache, mysql, redis, ...) so you can set it up as you wish. All adapters (if set up properly) can be used in multi server environment - in other words lock is shared between web servers. I've created it as a demo of my skills, a demo I could show on job interviews.
 
 All those projects show some of my skills, coding standards and love for testing.
-
 
 ## What can you offer me?
 
@@ -131,21 +121,21 @@ Thanks to gomobile I've build SDK application for Android and iOS
 * simplified development as common logic could be encapsulated in library that Android and iOS developers can use in their apps
 * gomobile allows building fully native apps, but writing just a common library gives Android and iOS developers free hand at designing native frontend part of their app
 
+##### Joao Aguiar, Software Engineer
 > *I had the pleasure to work with Kamil at Uniplaces.  
 > Soon, I was able to notice that he had a deep knowledge of the most relevant technologies that simply make things work as they should.  
 > Kamil is a very proactive mate that can finish things nicely done within the deadlines agreed.  
 > I believe he is a major addition in any company.*
-> - Joao Aguiar, Software Engineer
 
+##### Ranveer Singh, Software Engineer
 > *Kamil and I worked in the same team at Uniplaces.   
 > He started the very first project in Go at Uniplaces.  
 > He is very organized, composed and enthusiastic person  
 > who will definitely motivate anyone to be a better programmer.   
-> He is very versatile technologist, always open to work with cutting edge technology.  
+> He is a very versatile technologist, always open to work with cutting edge technology.  
 > He also mentored me and taught me a lot of the concepts of programming.  
 > I wish him all the best and given an opportunity I would like to work with him again.  
 > I highly recommend Kamil.*
-> - Ranveer Singh, Software Engineer
 
 ## Golang Developer
 
@@ -170,21 +160,22 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 * real-time MySQL "EXPLAIN" thanks to WebSockets
 * tests written with gocheck and run by jenkins
 
+##### Peter Zaitsev, Founder, CEO
 > *Kamil has a great mix of skills as backend, frontend developer as well as understands ops/devops pretty well.  
 > Kamil was a great team player always helping his colleagues when asked.  
-> Kamil has a great ability to find simple practical solutions to complicated problems*
-> - Peter Zaitsev, Founder, CEO
+> Kamil has a great ability to find simple practical solutions to complicated problems* 
 
+##### Vadim Tkachenko, CTO / Co-founder
 > *Kamil is a senior backend engineer, he did a major work in percona-agent and Percona backend layer.  
 > Kamil showed a deep understand of how to design systems and make an implementation.*
-> - Vadim Tkachenko, CTO / Co-founder
 
+##### Nika Krupitskaya, Project Manager
 > *Kamil showed expert level of Go lang knowledge, high quality of work and critical architecture mind.  
 > Beside of that Kamil is 1) showing good skills on debugging problems 2) analytic mind with clear explanation of problem and ability to ask right questions and suggest right solutions on the base of answers 3) very attentive to users of the system and support engineers with helping them to solve problems.  
 > Also Kamil is showing good discipline, very attentive to team mates and giving a hand for everyone who needs his expert view.  
 > And in addition what is most important for manager's view to the team - nice and interesting person.*
-> - Nika Krupitskaya, Project Manager
 
+##### Carlos Salguero, Developer
 > *Kamil is a very talented developer and a good friend.  
 > He has a deep knowledge of Go and other programming languages as well  
 > and that turns him in a good fit for almost any project you can imagine.  
@@ -193,32 +184,31 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 > Kamil is not only talented programming computers but he is also a very open minded person;  
 > I've enjoyed his code reviews and the discussions we had about technology and the best way of solving problems.  
 > He is always trying to improve things and pushes others to do the same.*
-> - Carlos Salguero, Developer
 
+##### Martin Cespedes, Senior QA / Scrum Master
 > *Kamil is a great person and he makes the every day work easier.   
 > He has great capacity for analysis and he is always willing to help and learn new things.   
 > His knowledge on backend dev is outstanding.  
 > A definite asset on any company.*
-> - Martin Cespedes, Senior QA / Scrum Master
 
+##### Pablo Penén, Senior Frontend Developer
 > *Kamil is a great developer and an excellent team-mate,  
 > I felt very comfortable working with him as a great backend / frontend team.  
 > He is an excellent professional with a great knowledge.*
-> - Pablo Penén, Senior Frontend Developer
 
+##### Miguel Paolino, Senior Software Developer
 > *Kamil is a very detail-oriented developer with strong technical and analytic skills.  
 > He was the cornerstone of our backend team, he built most of our code base with great speed and quality.  
 > He always kept the team focused on what's important leading the technical discussions in the right direction.  
 > He's great to be around, a team player and more importantly an awesome person.*
-> - Miguel Paolino, Senior Software Developer
 
+##### Fabian Vallejos, Senior Frontend Developer
 > *Kamil is a extremely talented developer and I was very lucky to work with him.  
 > He's a true hacker and brilliant class A programmer, his style is a pleasure to read.  
 > He is friendly, outgoing and always has a moment to help address customer concerns.*
-> - Fabian Vallejos, Senior Frontend Developer
 
+##### Francisco Guijarro, Javascript Developer
 > *Just a great developer and a great team member to work with.*
-> - Francisco Guijarro, Javascript Developer
 
 ## PHP and UI/Front-end Developer
 
@@ -226,7 +216,7 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 
 #### September 2013 – December 2013 (4 months), Remote
 
-Developing backend and frontend applications for Percona Cloud Tools hosting service
+Backend and frontend application for Percona Cloud Tools
 
 ##### FrontEnd
 
@@ -279,12 +269,11 @@ reports of deployed modifications
 components (e.g. protection against race conditions or data
 duplication)
 
-
+##### Michal Gorski, Hadoop Developer
 > *I would like to say that Kamil is a Programming Jezus.  
 > But it might be offensive. Offensive to Kamil.  
 > Because he's not going to wait three days to resurrect your dead code.  
 > If you have Kamil in your team it will be done unto you even before you ask.*
-> - Michal Gorski, Hadoop Developer
 
 ## Team Leader / Senior PHP Developer
 
@@ -323,10 +312,10 @@ from relation model to star schema)
 * debugging, testing, optimizing php/sql/js code, improving
 application usability
 
+##### Kris Kovalik, Hacker, Software Developer
 > *Kamil is well skilled and very sane developer.  
 > At the time he successfully kept restrained our biggest,  
 > really huge project and made sure that his team does the job well.*
-> - Kris Kovalik, Hacker, Artist, Skater, Nomad
 
 ## PHP Developer
 
