@@ -115,7 +115,7 @@ I've built OAuth server for a password less authorization
 * utilizes [osin auth library](https://github.com/RangelReale/osin)
 * I've made library for osin to store auth credentials in [dynamodb](https://github.com/arvenil/osin-dynamodb)
 
-Thanks to gomobile I've build SDK application for Android and iOS
+Thanks to gomobile I've built SDK application for Android and iOS
 
 * common application layer for Android and iOS mobile apps
 * simplified development as common logic could be encapsulated in library that Android and iOS developers can use in their apps
