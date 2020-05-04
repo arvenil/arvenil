@@ -31,11 +31,35 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.s?css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                ],
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    {
+                        loader: 'css-loader',      // translates CSS into CommonJS modules
+                    },
+                    {
+                        loader: 'postcss-loader',  // Run post css actions
+                        options: {
+                            plugins: function () { // post css plugins, can be exported to postcss.config.js
+                                return [
+                                    require('precss'),
+                                    require('autoprefixer')
+                                ];
+                            }
+                        }
+                    },
+                    {
+                        loader: "resolve-url-loader",
+                    },
+                    {
+                        loader: 'sass-loader', // compiles Sass to CSS
+                        options: {
+                            sourceMap: true,
+                        }
+                    },
+                ]
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,

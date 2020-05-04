@@ -3,7 +3,7 @@ build:	                  ## Build.
 	blackfriday-tool README.md src/README.html
 	npx webpack --mode production
 	gulp
-	wkhtmltopdf --encoding utf-8 --print-media-type --user-style-sheet docs/styles.css src/README.html src/"Kamil Dziedzic - Software Engineer.pdf"
+	wkhtmltopdf --encoding utf-8 --print-media-type --user-style-sheet docs/main.css src/README.html src/"Kamil Dziedzic - Software Engineer.pdf"
 
 help: Makefile            ## Display this help message.
 	@echo "Please use \`make <target>\` where <target> is one of:"
