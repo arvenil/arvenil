@@ -121,23 +121,23 @@ Thanks to gomobile I've built SDK application for Android and iOS
 * simplified development as common logic could be encapsulated in library that Android and iOS developers can use in their apps
 * gomobile allows building fully native apps, but writing just a common library gives Android and iOS developers free hand at designing native frontend part of their app
 
-> I had the pleasure to work with Kamil at Uniplaces.  
+> *I had the pleasure to work with Kamil at Uniplaces.  
 > Soon, I was able to notice that he had a deep knowledge of the most relevant technologies that simply make things work as they should.  
 > Kamil is a very proactive mate that can finish things nicely done within the deadlines agreed.  
-> I believe he is a major addition in any company.
+> I believe he is a major addition in any company.*
 > 
 > — <cite>Joao Aguiar, Software Engineer</cite>
 
 <!-- -->
 
-> Kamil and I worked in the same team at Uniplaces.   
+> *Kamil and I worked in the same team at Uniplaces.   
 > He started the very first project in Go at Uniplaces.  
 > He is very organized, composed and enthusiastic person  
 > who will definitely motivate anyone to be a better programmer.   
 > He is a very versatile technologist, always open to work with cutting edge technology.  
 > He also mentored me and taught me a lot of the concepts of programming.  
 > I wish him all the best and given an opportunity I would like to work with him again.  
-> I highly recommend Kamil.
+> I highly recommend Kamil.*
 > 
 > — <cite>Ranveer Singh, Software Engineer</cite> 
 
@@ -166,78 +166,78 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 * real-time MySQL "EXPLAIN" thanks to WebSockets
 * tests written with gocheck and run by jenkins
 
-> Kamil has a great mix of skills as backend, frontend developer as well as understands ops/devops pretty well.  
+> *Kamil has a great mix of skills as backend, frontend developer as well as understands ops/devops pretty well.  
 > Kamil was a great team player always helping his colleagues when asked.  
-> Kamil has a great ability to find simple practical solutions to complicated problems.
+> Kamil has a great ability to find simple practical solutions to complicated problems.*
 > 
 > — <cite>Peter Zaitsev, Founder, CEO</cite>
 
 <!-- -->
 
-> Kamil is a Senior Backend Engineer, he did a major work in percona-agent and Percona backend layer.  
-> Kamil showed a deep understand of how to design systems and make an implementation.
+> *Kamil is a Senior Backend Engineer, he did a major work in percona-agent and Percona backend layer.  
+> Kamil showed a deep understand of how to design systems and make an implementation.*
 >
 > — <cite>Vadim Tkachenko, CTO / Co-founder</cite>
 
 <!-- -->
 
-> Kamil showed expert level of Go lang knowledge, high quality of work and critical architecture mind.  
+> *Kamil showed expert level of Go lang knowledge, high quality of work and critical architecture mind.  
 > Beside of that Kamil is 1) showing good skills on debugging problems 2) analytic mind with clear explanation of problem and ability to ask right questions and suggest right solutions on the base of answers 3) very attentive to users of the system and support engineers with helping them to solve problems.  
 > Also Kamil is showing good discipline, very attentive to team mates and giving a hand for everyone who needs his expert view.  
-> And in addition what is most important for manager's view to the team - nice and interesting person.
+> And in addition what is most important for manager's view to the team - nice and interesting person.*
 >
 > — <cite>Nika Krupitskaya, Project Manager</cite>
 
 <!-- -->
 
-> Kamil is a very talented developer and a good friend.  
+> *Kamil is a very talented developer and a good friend.  
 > He has a deep knowledge of Go and other programming languages as well  
 > and that turns him in a good fit for almost any project you can imagine.  
 > Careful about details, always trying to reach 110% of test coverage and always willing to help,  
 > I've really enjoyed working with him.  
 > Kamil is not only talented programming computers, but he is also a very open-minded person;  
 > I've enjoyed his code reviews, and the discussions we had about technology and the best way of solving problems.  
-> He is always trying to improve things and pushes others to do the same.
+> He is always trying to improve things and pushes others to do the same.*
 >
 > — <cite>Carlos Salguero, Developer</cite>
 
 <!-- -->
 
-> Kamil is a great person, and he makes the everyday work easier.   
+> *Kamil is a great person, and he makes the everyday work easier.   
 > He has great capacity for analysis, and he is always willing to help and learn new things.   
 > His knowledge on backend dev is outstanding.  
-> A definite asset on any company.
+> A definite asset on any company.*
 >
 > — <cite>Martin Cespedes, Senior QA / Scrum Master</cite>
 
 <!-- -->
 
-> Kamil is a great developer and an excellent team-mate,  
+> *Kamil is a great developer and an excellent team-mate,  
 > I felt very comfortable working with him as a great backend / frontend team.  
-> He is an excellent professional with great knowledge.
+> He is an excellent professional with great knowledge.*
 >
 > — <cite>Pablo Penén, Senior Frontend Developer</cite>
 
 <!-- -->
 
-> Kamil is a very detail-oriented developer with strong technical and analytic skills.  
+> *Kamil is a very detail-oriented developer with strong technical and analytic skills.  
 > He was the cornerstone of our backend team, he built most of our code base with great speed and quality.  
 > He always kept the team focused on what's important leading the technical discussions in the right direction.  
-> He's great to be around, a team player and more importantly an awesome person.
+> He's great to be around, a team player and more importantly an awesome person.*
 >
 > — <cite>Miguel Paolino, Senior Software Developer</cite>
 
 <!-- -->
 
-> Kamil is an extremely talented developer and I was very lucky to work with him.  
+> *Kamil is an extremely talented developer and I was very lucky to work with him.  
 > He's a true hacker and brilliant class A programmer, his style is a pleasure to read.  
-> He is friendly, outgoing and always has a moment to help address customer concerns.
+> He is friendly, outgoing and always has a moment to help address customer concerns.*
 >
 > — <cite>Fabian Vallejos, Senior Frontend Developer</cite>
 
 <!-- -->
 
-> Just a great developer and a great team member to work with.
+> *Just a great developer and a great team member to work with.8
 >
 > — <cite>Francisco Guijarro, Javascript Developer</cite>
 
@@ -302,10 +302,10 @@ reports of deployed modifications
 components (e.g. protection against race conditions or data
 duplication)
 
-> I would like to say that Kamil is a Programming Jezus.  
+> *I would like to say that Kamil is a Programming Jezus.  
 > But it might be offensive. Offensive to Kamil.  
 > Because he's not going to wait three days to resurrect your dead code.  
-> If you have Kamil in your team it will be done unto you even before you ask.
+> If you have Kamil in your team it will be done unto you even before you ask.*
 >
 > — <cite>Michal Górski, Hadoop Developer</cite>
 
@@ -348,9 +348,9 @@ from relation model to star schema)
 * debugging, testing, optimizing php/sql/js code, improving
 application usability
 
-> Kamil is well skilled and very sane developer.
+> *Kamil is well skilled and very sane developer.
 > At the time he successfully kept restrained our biggest,  
-> really huge project and made sure that his team does the job well.
+> really huge project and made sure that his team does the job well.*
 >
 > — <cite>Kris Kovalik, Hacker, Software Developer</cite>
 
