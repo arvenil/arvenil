@@ -1,1 +1,52 @@
-$font-size-base:          15px !default;
+$font-size-base: 0.9rem !default;
+
+img[alt*="Kamil Dziedzic"] {
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  width: 60vmin;
+  height: 60vmin;
+}
+
+@media print {
+  h3:nth-of-type(2) {
+    page-break-before: always;
+  }
+}
+
+.container-fluid {
+  width: 100vmin;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border: none !important;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote p {
+  display: inline;
+}
+blockquote:before {
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  color: #2FA4E7;
+  font-size: 4em;
+  content:"\201C";
+}
+blockquote:after {
+  line-height: 0.1em;
+  margin-left: 0.25em;
+  vertical-align: -0.4em;
+  color: #2FA4E7;
+  font-size: 4em;
+  content:"\201D";
+}
+
+cite {
+  color: #2FA4E7;
+}

@@ -1,6 +1,4 @@
-@import "custom.css";
 @import "_custom.scss";
-@import "~bootswatch/cerulean/variables";
-@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "~bootswatch/cerulean/bootswatch";
-
+@import "~bootswatch/dist/cerulean/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/cerulean/bootswatch";

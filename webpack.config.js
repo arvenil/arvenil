@@ -1,7 +1,7 @@
 const path = require('path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
         path: path.resolve(__dirname, 'docs'),
     },
     optimization: {
-        minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+        minimizer: [new TerserJSPlugin({}), new CssMinimizerPlugin({})],
         splitChunks: {
             cacheGroups: {
                 styles: {
@@ -42,11 +42,13 @@ module.exports = {
                     {
                         loader: 'postcss-loader',  // Run post css actions
                         options: {
-                            plugins: function () { // post css plugins, can be exported to postcss.config.js
-                                return [
-                                    require('precss'),
-                                    require('autoprefixer')
-                                ];
+                            postcssOptions: {
+                                plugins: function () { // post css plugins, can be exported to postcss.config.js
+                                    return [
+                                        require('precss'),
+                                        require('autoprefixer')
+                                    ];
+                                }
                             }
                         }
                     },
