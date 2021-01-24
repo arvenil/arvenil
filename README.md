@@ -372,4 +372,4 @@ department
 
 # Something not right?
 
-This resume is open source so feel free to fork project, fix mistakes, make improvements and finally request for pull at [https://github.com/arvenil/resume](https://github.com/arvenil/resume)
+This resume is open source so feel free to fork project, fix mistakes, make improvements and finally request for pull at [https://github.com/arvenil/arvenil](https://github.com/arvenil/arvenil)
