@@ -237,7 +237,7 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 
 <!-- -->
 
-> *Just a great developer and a great team member to work with.8
+> *Just a great developer and a great team member to work with.*
 >
 > — <cite>Francisco Guijarro, Javascript Developer</cite>
 
