@@ -13,6 +13,7 @@
 <span class="badge-daviddm"><a href="https://david-dm.org/bevry/binaryextensions" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/bevry/binaryextensions.svg" alt="Dependency Status" /></a></span>
 <span class="badge-daviddmdev"><a href="https://david-dm.org/bevry/binaryextensions#info=devDependencies" title="View the status of this project's development dependencies on DavidDM"><img src="https://img.shields.io/david/dev/bevry/binaryextensions.svg" alt="Dev Dependency Status" /></a></span>
 <br class="badge-separator" />
+<span class="badge-githubsponsors"><a href="https://github.com/sponsors/balupton" title="Donate to this project using GitHub Sponsors"><img src="https://img.shields.io/badge/github-donate-yellow.svg" alt="GitHub Sponsors donate button" /></a></span>
 <span class="badge-patreon"><a href="https://patreon.com/bevry" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
 <span class="badge-flattr"><a href="https://flattr.com/profile/balupton" title="Donate to this project using Flattr"><img src="https://img.shields.io/badge/flattr-donate-yellow.svg" alt="Flattr donate button" /></a></span>
 <span class="badge-liberapay"><a href="https://liberapay.com/bevry" title="Donate to this project using Liberapay"><img src="https://img.shields.io/badge/liberapay-donate-yellow.svg" alt="Liberapay donate button" /></a></span>
@@ -32,34 +33,6 @@ A package that contains an array of every single file extension there is for bin
 <!-- /DESCRIPTION -->
 
 
-<!-- INSTALL/ -->
-
-<h2>Install</h2>
-
-<a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
-<ul>
-<li>Install: <code>npm install --save binaryextensions</code></li>
-<li>Require: <code>require('binaryextensions')</code></li>
-</ul>
-
-<a href="https://jspm.io" title="Native ES Modules CDN"><h3>jspm</h3></a>
-
-``` html
-<script type="module">
-    import * as pkg from '//dev.jspm.io/binaryextensions'
-</script>
-```
-
-<h3><a href="https://editions.bevry.me" title="Editions are the best way to produce and consume packages you care about.">Editions</a></h3>
-
-<p>This package is published with the following editions:</p>
-
-<ul><li><code>binaryextensions</code> aliases <code>binaryextensions/source/index.json</code></li>
-<li><code>binaryextensions/source/index.json</code> is JSON</li></ul>
-
-<!-- /INSTALL -->
-
-
 ## Usage
 
 ``` javascript
@@ -71,6 +44,35 @@ Missing an extension? [Send a pull request!](https://github.com/bevry/binaryexte
 Want a definitive list of text extensions? Check out [bevry/textextensions](https://github.com/bevry/textextensions)
 
 Want to detect if a file is text or binary? Check out [bevry/istextorbinary](https://github.com/bevry/istextorbinary)
+
+
+<!-- INSTALL/ -->
+
+<h2>Install</h2>
+
+<a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
+<ul>
+<li>Install: <code>npm install --save binaryextensions</code></li>
+<li>Import: <code>import * as pkg from ('binaryextensions')</code></li>
+<li>Require: <code>const pkg = require('binaryextensions')</code></li>
+</ul>
+
+<a href="https://jspm.io" title="Native ES Modules CDN"><h3>jspm</h3></a>
+
+``` html
+<script type="module">
+    import * as pkg from '//dev.jspm.io/binaryextensions@2.3.0'
+</script>
+```
+
+<h3><a href="https://editions.bevry.me" title="Editions are the best way to produce and consume packages you care about.">Editions</a></h3>
+
+<p>This package is published with the following editions:</p>
+
+<ul><li><code>binaryextensions</code> aliases <code>binaryextensions/source/index.json</code></li>
+<li><code>binaryextensions/source/index.json</code> is JSON</li></ul>
+
+<!-- /INSTALL -->
 
 
 <!-- HISTORY/ -->
@@ -90,12 +92,13 @@ Want to detect if a file is text or binary? Check out [bevry/istextorbinary](htt
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/binaryextensions/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/binaryextensions">view contributions</a></li></ul>
+<ul><li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/bevry/binaryextensions/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/binaryextensions">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
 No sponsors yet! Will you be the first?
 
+<span class="badge-githubsponsors"><a href="https://github.com/sponsors/balupton" title="Donate to this project using GitHub Sponsors"><img src="https://img.shields.io/badge/github-donate-yellow.svg" alt="GitHub Sponsors donate button" /></a></span>
 <span class="badge-patreon"><a href="https://patreon.com/bevry" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
 <span class="badge-flattr"><a href="https://flattr.com/profile/balupton" title="Donate to this project using Flattr"><img src="https://img.shields.io/badge/flattr-donate-yellow.svg" alt="Flattr donate button" /></a></span>
 <span class="badge-liberapay"><a href="https://liberapay.com/bevry" title="Donate to this project using Liberapay"><img src="https://img.shields.io/badge/liberapay-donate-yellow.svg" alt="Liberapay donate button" /></a></span>
@@ -109,7 +112,7 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/binaryextensions/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/binaryextensions">view contributions</a></li></ul>
+<ul><li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/bevry/binaryextensions/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/binaryextensions">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/binaryextensions/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 

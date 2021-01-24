@@ -5,6 +5,9 @@ build:	                  ## Build.
 	gulp
 	wkhtmltopdf --encoding utf-8 --print-media-type --user-style-sheet docs/main.css src/README.html src/"Kamil Dziedzic - Software Engineer.pdf"
 
+update:
+
+
 help: Makefile            ## Display this help message.
 	@echo "Please use \`make <target>\` where <target> is one of:"
 	@grep '^[a-zA-Z]' $(MAKEFILE_LIST) | \

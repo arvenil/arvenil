@@ -83,13 +83,17 @@
       evt.initMouseEvent('click', true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
       node.dispatchEvent(evt);
     }
-  }
+  } // Detect WebView inside a native macOS app by ruling out all browsers
+  // We just need to check for 'Safari' because all other browsers (besides Firefox) include that too
+  // https://www.whatismybrowser.com/guides/the-latest-user-agent/macos
 
+
+  var isMacOSWebView = _global.navigator && /Macintosh/.test(navigator.userAgent) && /AppleWebKit/.test(navigator.userAgent) && !/Safari/.test(navigator.userAgent);
   var saveAs = _global.saveAs || ( // probably in some web worker
   typeof window !== 'object' || window !== _global ? function saveAs() {}
   /* noop */
-  // Use download attribute first if possible (#193 Lumia mobile)
-  : 'download' in HTMLAnchorElement.prototype ? function saveAs(blob, name, opts) {
+  // Use download attribute first if possible (#193 Lumia mobile) unless this is a macOS WebView
+  : 'download' in HTMLAnchorElement.prototype && !isMacOSWebView ? function saveAs(blob, name, opts) {
     var URL = _global.URL || _global.webkitURL;
     var a = document.createElement('a');
     name = name || blob.name || 'download';
@@ -153,7 +157,7 @@
 
     var isChromeIOS = /CriOS\/[\d]+/.test(navigator.userAgent);
 
-    if ((isChromeIOS || force && isSafari) && typeof FileReader === 'object') {
+    if ((isChromeIOS || force && isSafari || isMacOSWebView) && typeof FileReader !== 'undefined') {
       // Safari doesn't allow downloading of blob URLs
       var reader = new FileReader();
 
