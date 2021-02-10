@@ -1,7 +1,7 @@
 ![Kamil Dziedzic](https://raw.githubusercontent.com/arvenil/resume/master/photo.jpg "Kamil Dziedzic")
 
 # Kamil Dziedzic
-Backend Developer, former IT Manager, and former Full-Stack Developer aspiring to become proper *Software Engineer*.
+Go and Backend Developer, former IT Manager, and former Full-Stack Developer aspiring to become proper *Software Engineer*.
 
 **Will you help me?**
 
@@ -13,14 +13,14 @@ Feel free to contact me via email [hire@dziedzic.es](mailto:hire@dziedzic.es) or
 
 * open mind
 * dedication to learn new languages and technologies
-* 12 years experience in web app development, product building and team leading
-* 4+ years experience with golang, CLI tools, REST/gRPC APIs, gomobile
-* 10+ years with MySQL, 0.5 year with Amazon DynamoDB, some experience with Memcached and MongoDB 
-* 10+ years in building REST APIs
-* 5+ years with testing and TDD
-* 6+ years with developing PHP apps
-* experience with Javascript apps e.g. AngularJS and node.js, far from feeling comfortable to say I'm JS developer, but eager to work on professional apps.
+* 12+ years experience in web app development, product building and team leading
 * 10+ years with Agile, Kanban and Scrum (Professional Scrum Master I, 2012)
+* 5+ years experience with golang: REST/gRPC APIs, CLI tools, gomobile, docker  
+* 10+ years with MySQL, 1+ year with PostgreSQL, 0.5 year with Amazon DynamoDB, some experience with Memcached and MongoDB 
+* 10+ years in building REST APIs
+* 6+ years with testing, TDD, CI and CD
+* 2+ years with Javascript apps e.g. AngularJS and node.js, far from feeling comfortable to say I'm JS developer, but eager to work on professional apps
+* 6+ years with developing PHP apps
 * communicative English with Polish accent
 * "¿Qué hora es?" level of Spanish
 * passion for photography
@@ -29,7 +29,7 @@ Feel free to contact me via email [hire@dziedzic.es](mailto:hire@dziedzic.es) or
 
 Feel free to use below list to quickly check if I might have desired skills
 
-`AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB` `Amazon Web Services` `AngularJS` `Backbone.js` `Bash` `CI/CD` `Certified Scrum Master` `Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR` `Docker` `ElasticSearch` `FCE` `Fedora` `Gin` `Git` `Github` `Golang` `gRPC` `IT Management` `IntelliJ IDEA` `PhpStorm` `JavaScript` `Jenkins` `JSON` `jQuery` `kubernetes` `Linux Mint` `Linux` `MacOS` `Memcached` `MongoDB` `MySQL` `Node.js` `OpenSUSE` `PHPUnit` `PHP` `Photography` `Project Management` `REST` `RabbitMQ` `Revel` `Rollerblading` `Scrum` `Software Development` `Symfony` `TDD` `Team Management` `Test Driven Development` `Testify` `TypeScript` `Ubuntu` `Unit Testing` `Travis` `Web Development` `webpack` `WebSockets` `XML`
+`AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB` `Amazon Web Services` `AngularJS` `Ansible` `Azure` `Azure DevOps` `Azure Event Hubs` `Azure Pipelines` `Backbone.js` `Bash` `CI/CD` `Certified Scrum Master` `Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR` `Docker` `ElasticSearch` `FCE` `Fedora` `Gin` `Git` `Github` `Github Actions` `Goland` `Golang` `Grafana` `gRPC` `HAProxy` `IT Management` `IntelliJ IDEA` `PhpStorm` `JavaScript` `Jenkins` `Jira` `JSON` `jQuery` `kubernetes` `Linux Mint` `Linux` `MacOS` `Makefile` `Memcached` `Microsoft Teams` `MongoDB` `MySQL` `Nagios` `Node.js` `OpenSUSE` `PHPUnit` `PHP` `Photography` `Project Management` `REST` `RabbitMQ` `Revel` `Rollerblading` `RPM` `Scrum` `Software Development` `SPEC` `Splunk` `Symfony` `TDD` `Team Management` `Test Driven Development` `Testify` `TypeScript` `Ubuntu` `Unit Testing` `Travis` `Web Development` `webpack` `WebSockets` `XML`
 
 ### Demo
 
@@ -50,7 +50,7 @@ All those projects show some of my skills, coding standards and love for testing
 * opportunity to share knowledge via blogs and talks
 * experience in international product building and team leading
 * experience with technologies you use
-* opportunity to learn new language (e.g. Spanish and proper English)
+* opportunity to learn new language (e.g. Spanish, French, German, Mandarin or/and proper English)
 * office space
 * opportunities to travel
 
@@ -70,6 +70,23 @@ You might also try to check some of my online profiles:
 If you are interested more in my previous adventures please feel free to scroll down for my full work history with some references.
 
 # Work History
+
+## Developer
+
+### [Derivco Sports](https://derivco.com/)
+
+#### May 2020 - now, Barcelona (fully Remote because of COVID-19)
+
+Double-entry bookkeeping API and integrations with customers
+
+* Go with Echo Labstack router for REST API
+* PostgreSQL for storage
+* Microsoft Azure Event Hubs for real-time event processing with sharding
+* Microsoft Azure Pipelines, Ansible, RPMs and Docker for CI and CD
+* Nagios, Grafana and Splunk for monitoring and logs
+* HAProxy for high availability load balancer
+
+#### 
 
 ## Software Engineer
 
