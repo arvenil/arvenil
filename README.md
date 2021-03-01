@@ -169,12 +169,12 @@ Thanks to gomobile I've built SDK application for Android and iOS
 I've made REST API in golang, for Percona Cloud Tools
 
 * Revel web framework for simplified routing, parameter parsing and for crash-free request processing
-* RabbitMQ and workers architecture for resource-consuming processing, scalability, responsive/non-blocking requests, high-load protection and to utilize sharding
-* WebSockets for real-time server-data analysis (websocket connection from agent/daemon installed on customer server through decentralized swarm of data collecting APIs, till user interface in his web browser)
-* micro-service architecture
+* Event based architecture with RabbitMQ for resource-consuming processing, scalability, non-blocking requests, high-load protection and to utilize sharding
+* WebSockets for real-time server-data analysis
+* Micro-service architecture
 * Memcached as caching and backend for service discovery
 * Upstart for spawning and managing workers
-* tests written with gocheck and run by jenkins
+* Tests written with gocheck and run by jenkins
 
 Worked on percona-agent, real-time client-side agent written in golang for Percona Cloud Tools
 
@@ -339,15 +339,13 @@ www.FarmaProm.pl.
 
 * leading php developer team
 * coordinating work between teams (php, android, windows
-mobile) when this was necessary (e.g. modifications request
-which require work in multiple teams)
+mobile)
 * accepting, pricing and coordinating commissions from client
 * deploying new software versions
 * technical support for client in contacts with his clients
 (pharmaceuticals companies and wholesales)
 * designing key modifications (from changes in application
-engine to modifications operating on critical data e.g.
-companies and wholesales financial data)
+engine to modifications operating on customers critical data e.g. wholesales financial data)
 * designing, managing and optimizing large databases
 (hundreds tables, tens of gigabytes of data, hundreds millions
 records)
