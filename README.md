@@ -7,7 +7,7 @@ Go and Backend Developer, former IT Manager, and former Full-Stack Developer asp
 
 I'm looking for opportunities to widen my knowledge, experience and expertise in software development alongside with a steady source of income to pursue my dream of building apps for the future.
 
-Feel free to contact me via email [hire@dziedzic.es](mailto:hire@dziedzic.es) or [LinkedIn](https://www.linkedin.com/in/kamildziedzic/)
+Feel free to contact me via email [hire@dziedzic.fr](mailto:hire@dziedzic.fr) or [LinkedIn](https://www.linkedin.com/in/kamildziedzic/)
 
 ## What can I offer?
 
