@@ -79,12 +79,12 @@ If you are interested more in my previous adventures please feel free to scroll 
 
 Double-entry bookkeeping API and integrations with customers
 
-* Go with Echo Labstack router for REST API
-* PostgreSQL for storage
-* Microsoft Azure Event Hubs for real-time event processing with sharding
-* Microsoft Azure Pipelines, Ansible, RPMs and Docker for CI and CD
+* [Go](https://golang.org/) with [Echo Labstack](https://echo.labstack.com/) router for REST API
+* [PostgreSQL](https://www.postgresql.org/) for storage and message queue.
+* [Microsoft Azure Event Hubs](https://azure.microsoft.com/en-us/services/event-hubs/) for real-time event processing with sharding
+* [Microsoft Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/), [Ansible](https://www.ansible.com/), [RPM](https://rpm.org/index.html) and [Docker](https://www.docker.com/) for CI and CD
 * Nagios, Grafana and Splunk for monitoring and logs
-* HAProxy for high availability load balancer
+* [HAProxy](http://www.haproxy.org/) for high availability load balancer
 
 #### 
 
