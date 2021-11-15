@@ -9,7 +9,7 @@ npm:
 	npm install -g npm
 
 node:
-	nvm install node
+	. ${NVM_DIR}/nvm.sh && nvm install node
 
 update: npm node
 	npm update            ## Update dependencies.
