@@ -68,9 +68,9 @@ RequireEnsureDependency.Template = class RequireEnsureDependencyTemplate extends
 		{ runtimeTemplate, moduleGraph, chunkGraph, runtimeRequirements }
 	) {
 		const dep = /** @type {RequireEnsureDependency} */ (dependency);
-		const depBlock = /** @type {AsyncDependenciesBlock} */ (moduleGraph.getParentBlock(
-			dep
-		));
+		const depBlock = /** @type {AsyncDependenciesBlock} */ (
+			moduleGraph.getParentBlock(dep)
+		);
 		const promise = runtimeTemplate.blockPromise({
 			chunkGraph,
 			block: depBlock,
@@ -85,14 +85,14 @@ RequireEnsureDependency.Template = class RequireEnsureDependencyTemplate extends
 			source.replace(
 				contentRange[1],
 				errorHandlerRange[0] - 1,
-				").bind(null, __webpack_require__)).catch("
+				").bind(null, __webpack_require__))['catch']("
 			);
 			source.replace(errorHandlerRange[1], range[1] - 1, ")");
 		} else {
 			source.replace(
 				contentRange[1],
 				range[1] - 1,
-				`).bind(null, __webpack_require__)).catch(${RuntimeGlobals.uncaughtErrorHandler})`
+				`).bind(null, __webpack_require__))['catch'](${RuntimeGlobals.uncaughtErrorHandler})`
 			);
 		}
 	}

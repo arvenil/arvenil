@@ -68,8 +68,12 @@ import {
     AST_Chain,
     AST_Class,
     AST_ClassExpression,
+    AST_ClassPrivateProperty,
     AST_ClassProperty,
     AST_ConciseMethod,
+    AST_PrivateGetter,
+    AST_PrivateMethod,
+    AST_PrivateSetter,
     AST_Conditional,
     AST_Const,
     AST_Constant,
@@ -83,6 +87,7 @@ import {
     AST_Directive,
     AST_Do,
     AST_Dot,
+    AST_DotHash,
     AST_EmptyStatement,
     AST_Exit,
     AST_Expansion,
@@ -154,7 +159,7 @@ import {
     is_basic_identifier_string,
     is_identifier_string,
     PRECEDENCE,
-    RESERVED_WORDS,
+    ALL_RESERVED_WORDS,
 } from "./parse.js";
 
 const EXPECT_DIRECTIVE = /^$|[;{][\s\n]*$/;
@@ -169,6 +174,48 @@ function is_some_comments(comment) {
         (comment.type === "comment2" || comment.type === "comment1")
         && /@preserve|@lic|@cc_on|^\**!/i.test(comment.value)
     );
+}
+
+class Rope {
+    constructor() {
+        this.committed = "";
+        this.current = "";
+    }
+
+    append(str) {
+        this.current += str;
+    }
+
+    insertAt(char, index) {
+        const { committed, current } = this;
+        if (index < committed.length) {
+            this.committed = committed.slice(0, index) + char + committed.slice(index);
+        } else if (index === committed.length) {
+            this.committed += char;
+        } else {
+            index -= committed.length;
+            this.committed += current.slice(0, index) + char;
+            this.current = current.slice(index);
+        }
+    }
+
+    charAt(index) {
+        const { committed } = this;
+        if (index < committed.length) return committed[index];
+        return this.current[index - committed.length];
+    }
+
+    curLength() {
+        return this.current.length;
+    }
+
+    length() {
+        return this.committed.length + this.current.length;
+    }
+
+    toString() {
+        return this.committed + this.current;
+    }
 }
 
 function OutputStream(options) {
@@ -235,7 +282,7 @@ function OutputStream(options) {
     var current_col = 0;
     var current_line = 1;
     var current_pos = 0;
-    var OUTPUT = "";
+    var OUTPUT = new Rope();
     let printed_comments = new Set();
 
     var to_utf8 = options.ascii_only ? function(str, identifier) {
@@ -344,11 +391,17 @@ function OutputStream(options) {
     var do_add_mapping = mappings ? function() {
         mappings.forEach(function(mapping) {
             try {
+                let { name, token } = mapping;
+                if (token.type == "name" || token.type === "privatename") {
+                    name = token.value;
+                } else if (name instanceof AST_Symbol) {
+                    name = token.type === "string" ? token.value : name.name;
+                }
                 options.source_map.add(
                     mapping.token.file,
                     mapping.line, mapping.col,
                     mapping.token.line, mapping.token.col,
-                    !mapping.name && mapping.token.type == "name" ? mapping.token.value : mapping.name
+                    is_basic_identifier_string(name) ? name : undefined
                 );
             } catch(ex) {
                 // Ignore bad mapping
@@ -360,19 +413,18 @@ function OutputStream(options) {
     var ensure_line_len = options.max_line_len ? function() {
         if (current_col > options.max_line_len) {
             if (might_add_newline) {
-                var left = OUTPUT.slice(0, might_add_newline);
-                var right = OUTPUT.slice(might_add_newline);
+                OUTPUT.insertAt("\n", might_add_newline);
+                const curLength = OUTPUT.curLength();
                 if (mappings) {
-                    var delta = right.length - current_col;
+                    var delta = curLength - current_col;
                     mappings.forEach(function(mapping) {
                         mapping.line++;
                         mapping.col += delta;
                     });
                 }
-                OUTPUT = left + "\n" + right;
                 current_line++;
                 current_pos++;
-                current_col = right.length;
+                current_col = curLength;
             }
         }
         if (might_add_newline) {
@@ -406,13 +458,13 @@ function OutputStream(options) {
 
             if (prev === ":" && ch === "}" || (!ch || !";}".includes(ch)) && prev !== ";") {
                 if (options.semicolons || requireSemicolonChars.has(ch)) {
-                    OUTPUT += ";";
+                    OUTPUT.append(";");
                     current_col++;
                     current_pos++;
                 } else {
                     ensure_line_len();
                     if (current_col > 0) {
-                        OUTPUT += "\n";
+                        OUTPUT.append("\n");
                         current_pos++;
                         current_line++;
                         current_col = 0;
@@ -436,7 +488,7 @@ function OutputStream(options) {
                 || (ch == "/" && ch == prev)
                 || ((ch == "+" || ch == "-") && ch == last)
             ) {
-                OUTPUT += " ";
+                OUTPUT.append(" ");
                 current_col++;
                 current_pos++;
             }
@@ -454,7 +506,7 @@ function OutputStream(options) {
             if (!might_add_newline) do_add_mapping();
         }
 
-        OUTPUT += str;
+        OUTPUT.append(str);
         has_parens = str[str.length - 1] == "(";
         current_pos += str.length;
         var a = str.split(/\r?\n/), n = a.length - 1;
@@ -494,15 +546,15 @@ function OutputStream(options) {
 
     var newline = options.beautify ? function() {
         if (newline_insert < 0) return print("\n");
-        if (OUTPUT[newline_insert] != "\n") {
-            OUTPUT = OUTPUT.slice(0, newline_insert) + "\n" + OUTPUT.slice(newline_insert);
+        if (OUTPUT.charAt(newline_insert) != "\n") {
+            OUTPUT.insertAt("\n", newline_insert);
             current_pos++;
             current_line++;
         }
         newline_insert++;
     } : options.max_line_len ? function() {
         ensure_line_len();
-        might_add_newline = OUTPUT.length;
+        might_add_newline = OUTPUT.length();
     } : noop;
 
     var semicolon = options.beautify ? function() {
@@ -568,13 +620,14 @@ function OutputStream(options) {
         if (might_add_newline) {
             ensure_line_len();
         }
-        return OUTPUT;
+        return OUTPUT.toString();
     }
 
     function has_nlb() {
-        let n = OUTPUT.length - 1;
+        const output = OUTPUT.toString();
+        let n = output.length - 1;
         while (n >= 0) {
-            const code = OUTPUT.charCodeAt(n);
+            const code = output.charCodeAt(n);
             if (code === CODE_LINE_BREAK) {
                 return true;
             }
@@ -711,7 +764,7 @@ function OutputStream(options) {
             !/comment[134]/.test(c.type)
         ))) return;
         printed_comments.add(comments);
-        var insert = OUTPUT.length;
+        var insert = OUTPUT.length();
         comments.filter(comment_filter, node).forEach(function(c, i) {
             if (printed_comments.has(c)) return;
             printed_comments.add(c);
@@ -740,7 +793,7 @@ function OutputStream(options) {
                 need_space = true;
             }
         });
-        if (OUTPUT.length > insert) newline_insert = insert;
+        if (OUTPUT.length() > insert) newline_insert = insert;
     }
 
     var stack = [];
@@ -770,7 +823,7 @@ function OutputStream(options) {
             var encoded = encode_string(str, quote);
             if (escape_directive === true && !encoded.includes("\\")) {
                 // Insert semicolons to break directive prologue
-                if (!EXPECT_DIRECTIVE.test(OUTPUT)) {
+                if (!EXPECT_DIRECTIVE.test(OUTPUT.toString())) {
                     force_semicolon();
                 }
                 force_semicolon();
@@ -928,6 +981,7 @@ function OutputStream(options) {
         var p = output.parent();
         return p instanceof AST_PropAccess && p.expression === this
             || p instanceof AST_Call && p.expression === this
+            || p instanceof AST_Binary && p.operator === "**" && p.left === this
             || output.option("safari10") && p instanceof AST_UnaryPrefix;
     });
 
@@ -1625,6 +1679,10 @@ function OutputStream(options) {
             output.space();
         }
         self.module_name.print(output);
+        if (self.assert_clause) {
+            output.print("assert");
+            self.assert_clause.print(output);
+        }
         output.semicolon();
     });
     DEFPRINT(AST_ImportMeta, function(self, output) {
@@ -1690,6 +1748,10 @@ function OutputStream(options) {
             output.space();
             self.module_name.print(output);
         }
+        if (self.assert_clause) {
+            output.print("assert");
+            self.assert_clause.print(output);
+        }
         if (self.exported_value
                 && !(self.exported_value instanceof AST_Defun ||
                     self.exported_value instanceof AST_Function ||
@@ -1707,7 +1769,11 @@ function OutputStream(options) {
         //    https://github.com/mishoo/UglifyJS2/issues/60
         if (noin) {
             parens = walk(node, node => {
-                if (node instanceof AST_Scope) return true;
+                // Don't go into scopes -- except arrow functions:
+                // https://github.com/terser/terser/issues/1019#issuecomment-877642607
+                if (node instanceof AST_Scope && !(node instanceof AST_Arrow)) {
+                    return true;
+                }
                 if (node instanceof AST_Binary && node.operator == "in") {
                     return walk_abort;  // makes walk() return true
                 }
@@ -1777,7 +1843,7 @@ function OutputStream(options) {
         var expr = self.expression;
         expr.print(output);
         var prop = self.property;
-        var print_computed = RESERVED_WORDS.has(prop)
+        var print_computed = ALL_RESERVED_WORDS.has(prop)
             ? output.option("ie8")
             : !is_identifier_string(
                 prop,
@@ -1802,6 +1868,16 @@ function OutputStream(options) {
             output.add_mapping(self.end);
             output.print_name(prop);
         }
+    });
+    DEFPRINT(AST_DotHash, function(self, output) {
+        var expr = self.expression;
+        expr.print(output);
+        var prop = self.property;
+
+        if (self.optional) output.print("?");
+        output.print(".#");
+        output.add_mapping(self.end);
+        output.print_name(prop);
     });
     DEFPRINT(AST_Sub, function(self, output) {
         self.expression.print(output);
@@ -1949,7 +2025,7 @@ function OutputStream(options) {
             }
             return output.print(make_num(key));
         }
-        var print_string = RESERVED_WORDS.has(key)
+        var print_string = ALL_RESERVED_WORDS.has(key)
             ? output.option("ie8")
             : (
                 output.option("ecma") < 2015 || output.option("safari10")
@@ -1976,7 +2052,7 @@ function OutputStream(options) {
                 output.option("ecma") >= 2015 || output.option("safari10")
             ) &&
             get_name(self.value) === self.key &&
-            !RESERVED_WORDS.has(self.key)
+            !ALL_RESERVED_WORDS.has(self.key)
         ) {
             print_property_name(self.key, self.quote, output);
 
@@ -2006,6 +2082,23 @@ function OutputStream(options) {
             self.value.print(output);
         }
     });
+    DEFPRINT(AST_ClassPrivateProperty, (self, output) => {
+        if (self.static) {
+            output.print("static");
+            output.space();
+        }
+
+        output.print("#");
+        
+        print_property_name(self.key.name, self.quote, output);
+
+        if (self.value) {
+            output.print("=");
+            self.value.print(output);
+        }
+
+        output.semicolon();
+    });
     DEFPRINT(AST_ClassProperty, (self, output) => {
         if (self.static) {
             output.print("static");
@@ -2027,7 +2120,7 @@ function OutputStream(options) {
 
         output.semicolon();
     });
-    AST_ObjectProperty.DEFMETHOD("_print_getter_setter", function(type, output) {
+    AST_ObjectProperty.DEFMETHOD("_print_getter_setter", function(type, is_private, output) {
         var self = this;
         if (self.static) {
             output.print("static");
@@ -2038,6 +2131,7 @@ function OutputStream(options) {
             output.space();
         }
         if (self.key instanceof AST_SymbolMethod) {
+            if (is_private) output.print("#");
             print_property_name(self.key.name, self.quote, output);
         } else {
             output.with_square(function() {
@@ -2047,10 +2141,27 @@ function OutputStream(options) {
         self.value._do_print(output, true);
     });
     DEFPRINT(AST_ObjectSetter, function(self, output) {
-        self._print_getter_setter("set", output);
+        self._print_getter_setter("set", false, output);
     });
     DEFPRINT(AST_ObjectGetter, function(self, output) {
-        self._print_getter_setter("get", output);
+        self._print_getter_setter("get", false, output);
+    });
+    DEFPRINT(AST_PrivateSetter, function(self, output) {
+        self._print_getter_setter("set", true, output);
+    });
+    DEFPRINT(AST_PrivateGetter, function(self, output) {
+        self._print_getter_setter("get", true, output);
+    });
+    DEFPRINT(AST_PrivateMethod, function(self, output) {
+        var type;
+        if (self.is_generator && self.async) {
+            type = "async*";
+        } else if (self.is_generator) {
+            type = "*";
+        } else if (self.async) {
+            type = "async";
+        }
+        self._print_getter_setter(type, true, output);
     });
     DEFPRINT(AST_ConciseMethod, function(self, output) {
         var type;
@@ -2061,7 +2172,7 @@ function OutputStream(options) {
         } else if (self.async) {
             type = "async";
         }
-        self._print_getter_setter(type, output);
+        self._print_getter_setter(type, false, output);
     });
     AST_Symbol.DEFMETHOD("_do_print", function(output) {
         var def = this.definition();
@@ -2101,7 +2212,9 @@ function OutputStream(options) {
         source = regexp_source_fix(source);
         flags = flags ? sort_regexp_flags(flags) : "";
         source = source.replace(r_slash_script, slash_script_replace);
+
         output.print(output.to_utf8(`/${source}/${flags}`));
+
         const parent = output.parent();
         if (
             parent instanceof AST_Binary
@@ -2217,8 +2330,10 @@ function OutputStream(options) {
     DEFMAP([
         AST_ObjectGetter,
         AST_ObjectSetter,
+        AST_PrivateGetter,
+        AST_PrivateSetter,
     ], function(output) {
-        output.add_mapping(this.start, this.key.name);
+        output.add_mapping(this.key.end, this.key.name);
     });
 
     DEFMAP([ AST_ObjectProperty ], function(output) {

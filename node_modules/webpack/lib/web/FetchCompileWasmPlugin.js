@@ -30,7 +30,9 @@ class FetchCompileWasmPlugin {
 				const isEnabledForChunk = chunk => {
 					const options = chunk.getEntryOptions();
 					const wasmLoading =
-						(options && options.wasmLoading) || globalWasmLoading;
+						options && options.wasmLoading !== undefined
+							? options.wasmLoading
+							: globalWasmLoading;
 					return wasmLoading === "fetch";
 				};
 				const generateLoadBinaryCode = path =>
@@ -56,7 +58,8 @@ class FetchCompileWasmPlugin {
 							new WasmChunkLoadingRuntimeModule({
 								generateLoadBinaryCode,
 								supportsStreaming: true,
-								mangleImports: this.options.mangleImports
+								mangleImports: this.options.mangleImports,
+								runtimeRequirements: set
 							})
 						);
 					});

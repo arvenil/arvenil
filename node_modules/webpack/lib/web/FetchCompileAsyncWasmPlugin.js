@@ -6,7 +6,7 @@
 "use strict";
 
 const RuntimeGlobals = require("../RuntimeGlobals");
-const AsyncWasmChunkLoadingRuntimeModule = require("../wasm-async/AsyncWasmChunkLoadingRuntimeModule");
+const AsyncWasmLoadingRuntimeModule = require("../wasm-async/AsyncWasmLoadingRuntimeModule");
 
 /** @typedef {import("../Compiler")} Compiler */
 
@@ -24,7 +24,9 @@ class FetchCompileAsyncWasmPlugin {
 				const isEnabledForChunk = chunk => {
 					const options = chunk.getEntryOptions();
 					const wasmLoading =
-						(options && options.wasmLoading) || globalWasmLoading;
+						options && options.wasmLoading !== undefined
+							? options.wasmLoading
+							: globalWasmLoading;
 					return wasmLoading === "fetch";
 				};
 				const generateLoadBinaryCode = path =>
@@ -46,7 +48,7 @@ class FetchCompileAsyncWasmPlugin {
 						set.add(RuntimeGlobals.publicPath);
 						compilation.addRuntimeModule(
 							chunk,
-							new AsyncWasmChunkLoadingRuntimeModule({
+							new AsyncWasmLoadingRuntimeModule({
 								generateLoadBinaryCode,
 								supportsStreaming: true
 							})

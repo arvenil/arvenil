@@ -8,18 +8,25 @@
 const createHash = require("./util/createHash");
 const memoize = require("./util/memoize");
 
+/** @typedef {import("./ChunkGraph")} ChunkGraph */
+/** @typedef {import("./Module")} Module */
+/** @typedef {import("./RequestShortener")} RequestShortener */
+/** @typedef {typeof import("./util/Hash")} Hash */
+
 const ModuleFilenameHelpers = exports;
 
 // TODO webpack 6: consider removing these
 ModuleFilenameHelpers.ALL_LOADERS_RESOURCE = "[all-loaders][resource]";
-ModuleFilenameHelpers.REGEXP_ALL_LOADERS_RESOURCE = /\[all-?loaders\]\[resource\]/gi;
+ModuleFilenameHelpers.REGEXP_ALL_LOADERS_RESOURCE =
+	/\[all-?loaders\]\[resource\]/gi;
 ModuleFilenameHelpers.LOADERS_RESOURCE = "[loaders][resource]";
 ModuleFilenameHelpers.REGEXP_LOADERS_RESOURCE = /\[loaders\]\[resource\]/gi;
 ModuleFilenameHelpers.RESOURCE = "[resource]";
 ModuleFilenameHelpers.REGEXP_RESOURCE = /\[resource\]/gi;
 ModuleFilenameHelpers.ABSOLUTE_RESOURCE_PATH = "[absolute-resource-path]";
 // cSpell:words olute
-ModuleFilenameHelpers.REGEXP_ABSOLUTE_RESOURCE_PATH = /\[abs(olute)?-?resource-?path\]/gi;
+ModuleFilenameHelpers.REGEXP_ABSOLUTE_RESOURCE_PATH =
+	/\[abs(olute)?-?resource-?path\]/gi;
 ModuleFilenameHelpers.RESOURCE_PATH = "[resource-path]";
 ModuleFilenameHelpers.REGEXP_RESOURCE_PATH = /\[resource-?path\]/gi;
 ModuleFilenameHelpers.ALL_LOADERS = "[all-loaders]";
@@ -51,9 +58,9 @@ const getBefore = (strFn, token) => {
 	};
 };
 
-const getHash = strFn => {
+const getHash = (strFn, hashFunction) => {
 	return () => {
-		const hash = createHash("md4");
+		const hash = createHash(hashFunction);
 		hash.update(strFn());
 		const digest = /** @type {string} */ (hash.digest("hex"));
 		return digest.substr(0, 4);
@@ -89,10 +96,20 @@ const lazyObject = obj => {
 
 const REGEXP = /\[\\*([\w-]+)\\*\]/gi;
 
+/**
+ *
+ * @param {Module | string} module the module
+ * @param {TODO} options options
+ * @param {Object} contextInfo context info
+ * @param {RequestShortener} contextInfo.requestShortener requestShortener
+ * @param {ChunkGraph} contextInfo.chunkGraph chunk graph
+ * @param {string | Hash} contextInfo.hashFunction the hash function to use
+ * @returns {string} the filename
+ */
 ModuleFilenameHelpers.createFilename = (
-	module,
+	module = "",
 	options,
-	{ requestShortener, chunkGraph }
+	{ requestShortener, chunkGraph, hashFunction = "md4" }
 ) => {
 	const opts = {
 		namespace: "",
@@ -109,13 +126,12 @@ ModuleFilenameHelpers.createFilename = (
 	let identifier;
 	let moduleId;
 	let shortIdentifier;
-	if (module === undefined) module = "";
 	if (typeof module === "string") {
 		shortIdentifier = memoize(() => requestShortener.shorten(module));
 		identifier = shortIdentifier;
 		moduleId = () => "";
 		absoluteResourcePath = () => module.split("!").pop();
-		hash = getHash(identifier);
+		hash = getHash(identifier, hashFunction);
 	} else {
 		shortIdentifier = memoize(() =>
 			module.readableIdentifier(requestShortener)
@@ -123,7 +139,7 @@ ModuleFilenameHelpers.createFilename = (
 		identifier = memoize(() => requestShortener.shorten(module.identifier()));
 		moduleId = () => chunkGraph.getModuleId(module);
 		absoluteResourcePath = () => module.identifier().split("!").pop();
-		hash = getHash(identifier);
+		hash = getHash(identifier, hashFunction);
 	}
 	const resource = memoize(() => shortIdentifier().split("!").pop());
 

@@ -41,8 +41,6 @@
 
  ***********************************************************************/
 
-"use strict";
-
 import {
     HOP,
     MAP,
@@ -214,8 +212,6 @@ function walk_body(node, visitor) {
 function clone_block_scope(deep) {
     var clone = this._clone(deep);
     if (this.block_scope) {
-        // TODO this is sometimes undefined during compression.
-        // But it should always have a value!
         clone.block_scope = this.block_scope.clone();
     }
     return clone;
@@ -399,7 +395,6 @@ var AST_Scope = DEFNODE("Scope", "variables functions uses_with uses_eval parent
     $documentation: "Base class for all statements introducing a lexical scope",
     $propdoc: {
         variables: "[Map/S] a map of name -> SymbolDef for all variables/functions defined in this scope",
-        functions: "[Map/S] like `variables`, but only lists function declarations",
         uses_with: "[boolean/S] tells whether this scope uses the `with` statement",
         uses_eval: "[boolean/S] tells whether this scope contains a direct call to the global `eval`",
         parent_scope: "[AST_Scope?/S] link to the parent scope",
@@ -422,7 +417,6 @@ var AST_Scope = DEFNODE("Scope", "variables functions uses_with uses_eval parent
             });
         } else {
             if (this.variables) node.variables = new Map(this.variables);
-            if (this.functions) node.functions = new Map(this.functions);
             if (this.enclosed) node.enclosed = this.enclosed.slice();
             if (this._block_scope) node._block_scope = this._block_scope;
         }
@@ -522,6 +516,21 @@ var AST_Lambda = DEFNODE("Lambda", "name argnames uses_arguments is_generator as
 
         if (this.name) push(this.name);
     },
+    is_braceless() {
+        return this.body[0] instanceof AST_Return && this.body[0].value;
+    },
+    // Default args and expansion don't count, so .argnames.length doesn't cut it
+    length_property() {
+        let length = 0;
+
+        for (const arg of this.argnames) {
+            if (arg instanceof AST_SymbolFunarg || arg instanceof AST_Destructuring) {
+                length++;
+            }
+        }
+
+        return length;
+    }
 }, AST_Scope);
 
 var AST_Accessor = DEFNODE("Accessor", null, {
@@ -880,12 +889,13 @@ var AST_NameMapping = DEFNODE("NameMapping", "foreign_name name", {
     },
 });
 
-var AST_Import = DEFNODE("Import", "imported_name imported_names module_name", {
+var AST_Import = DEFNODE("Import", "imported_name imported_names module_name assert_clause", {
     $documentation: "An `import` statement",
     $propdoc: {
         imported_name: "[AST_SymbolImport] The name of the variable holding the module's default export.",
         imported_names: "[AST_NameMapping*] The names of non-default imported variables",
         module_name: "[AST_String] String literal describing where this module came from",
+        assert_clause: "[AST_Object?] The import assertion"
     },
     _walk: function(visitor) {
         return visitor._visit(this, function() {
@@ -914,14 +924,15 @@ var AST_ImportMeta = DEFNODE("ImportMeta", null, {
     $documentation: "A reference to import.meta",
 });
 
-var AST_Export = DEFNODE("Export", "exported_definition exported_value is_default exported_names module_name", {
+var AST_Export = DEFNODE("Export", "exported_definition exported_value is_default exported_names module_name assert_clause", {
     $documentation: "An `export` statement",
     $propdoc: {
         exported_definition: "[AST_Defun|AST_Definitions|AST_DefClass?] An exported definition",
         exported_value: "[AST_Node?] An exported value",
         exported_names: "[AST_NameMapping*?] List of exported names",
         module_name: "[AST_String?] Name of the file to load exports from",
-        is_default: "[Boolean] Whether this is the default exported value of this module"
+        is_default: "[Boolean] Whether this is the default exported value of this module",
+        assert_clause: "[AST_Object?] The import assertion"
     },
     _walk: function (visitor) {
         return visitor._visit(this, function () {
@@ -1007,7 +1018,7 @@ var AST_PropAccess = DEFNODE("PropAccess", "expression property optional", {
     $documentation: "Base class for property access expressions, i.e. `a.foo` or `a[\"foo\"]`",
     $propdoc: {
         expression: "[AST_Node] the “container” expression",
-        property: "[AST_Node|string] the property to access.  For AST_Dot this is always a plain string, while for AST_Sub it's an arbitrary AST_Node",
+        property: "[AST_Node|string] the property to access.  For AST_Dot & AST_DotHash this is always a plain string, while for AST_Sub it's an arbitrary AST_Node",
 
         optional: "[boolean] whether this is an optional property access (IE ?.)"
     }
@@ -1018,6 +1029,18 @@ var AST_Dot = DEFNODE("Dot", "quote", {
     $propdoc: {
         quote: "[string] the original quote character when transformed from AST_Sub",
     },
+    _walk: function(visitor) {
+        return visitor._visit(this, function() {
+            this.expression._walk(visitor);
+        });
+    },
+    _children_backwards(push) {
+        push(this.expression);
+    },
+}, AST_PropAccess);
+
+var AST_DotHash = DEFNODE("DotHash", "", {
+    $documentation: "A dotted property access to a private property",
     _walk: function(visitor) {
         return visitor._visit(this, function() {
             this.expression._walk(visitor);
@@ -1045,7 +1068,7 @@ var AST_Sub = DEFNODE("Sub", null, {
 var AST_Chain = DEFNODE("Chain", "expression", {
     $documentation: "A chain expression like a?.b?.(c)?.[d]",
     $propdoc: {
-        expression: "[AST_Call|AST_Dot|AST_Sub] chain element."
+        expression: "[AST_Call|AST_Dot|AST_DotHash|AST_Sub] chain element."
     },
     _walk: function (visitor) {
         return visitor._visit(this, function() {
@@ -1201,6 +1224,26 @@ var AST_ObjectKeyVal = DEFNODE("ObjectKeyVal", "quote", {
     }
 }, AST_ObjectProperty);
 
+var AST_PrivateSetter = DEFNODE("PrivateSetter", "static", {
+    $propdoc: {
+        static: "[boolean] whether this is a static private setter"
+    },
+    $documentation: "A private setter property",
+    computed_key() {
+        return false;
+    }
+}, AST_ObjectProperty);
+
+var AST_PrivateGetter = DEFNODE("PrivateGetter", "static", {
+    $propdoc: {
+        static: "[boolean] whether this is a static private getter"
+    },
+    $documentation: "A private getter property",
+    computed_key() {
+        return false;
+    }
+}, AST_ObjectProperty);
+
 var AST_ObjectSetter = DEFNODE("ObjectSetter", "quote static", {
     $propdoc: {
         quote: "[string|undefined] the original quote character, if any",
@@ -1235,6 +1278,10 @@ var AST_ConciseMethod = DEFNODE("ConciseMethod", "quote static is_generator asyn
         return !(this.key instanceof AST_SymbolMethod);
     }
 }, AST_ObjectProperty);
+
+var AST_PrivateMethod = DEFNODE("PrivateMethod", "", {
+    $documentation: "A private class method inside a class",
+}, AST_ConciseMethod);
 
 var AST_Class = DEFNODE("Class", "name extends properties", {
     $propdoc: {
@@ -1284,6 +1331,10 @@ var AST_ClassProperty = DEFNODE("ClassProperty", "static quote", {
         return !(this.key instanceof AST_SymbolClassProperty);
     }
 }, AST_ObjectProperty);
+
+var AST_ClassPrivateProperty = DEFNODE("ClassPrivateProperty", "", {
+    $documentation: "A class property for a private property",
+}, AST_ClassProperty);
 
 var AST_DefClass = DEFNODE("DefClass", null, {
     $documentation: "A class definition",
@@ -1684,6 +1735,7 @@ export {
     AST_Chain,
     AST_Class,
     AST_ClassExpression,
+    AST_ClassPrivateProperty,
     AST_ClassProperty,
     AST_ConciseMethod,
     AST_Conditional,
@@ -1700,6 +1752,7 @@ export {
     AST_Directive,
     AST_Do,
     AST_Dot,
+    AST_DotHash,
     AST_DWLoop,
     AST_EmptyStatement,
     AST_Exit,
@@ -1737,6 +1790,9 @@ export {
     AST_ObjectProperty,
     AST_ObjectSetter,
     AST_PrefixedTemplateString,
+    AST_PrivateGetter,
+    AST_PrivateMethod,
+    AST_PrivateSetter,
     AST_PropAccess,
     AST_RegExp,
     AST_Return,

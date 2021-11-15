@@ -70,11 +70,12 @@ class NodeWatchFileSystem {
 		}
 		this.watcher.once("aggregated", (changes, removals) => {
 			if (this.inputFileSystem && this.inputFileSystem.purge) {
+				const fs = this.inputFileSystem;
 				for (const item of changes) {
-					this.inputFileSystem.purge(item);
+					fs.purge(item);
 				}
 				for (const item of removals) {
-					this.inputFileSystem.purge(item);
+					fs.purge(item);
 				}
 			}
 			const times = this.watcher.getTimeInfoEntries();
@@ -97,6 +98,26 @@ class NodeWatchFileSystem {
 				if (this.watcher) {
 					this.watcher.pause();
 				}
+			},
+			getAggregatedRemovals: () => {
+				const items = this.watcher && this.watcher.aggregatedRemovals;
+				if (items && this.inputFileSystem && this.inputFileSystem.purge) {
+					const fs = this.inputFileSystem;
+					for (const item of items) {
+						fs.purge(item);
+					}
+				}
+				return items;
+			},
+			getAggregatedChanges: () => {
+				const items = this.watcher && this.watcher.aggregatedChanges;
+				if (items && this.inputFileSystem && this.inputFileSystem.purge) {
+					const fs = this.inputFileSystem;
+					for (const item of items) {
+						fs.purge(item);
+					}
+				}
+				return items;
 			},
 			getFileTimeInfoEntries: () => {
 				if (this.watcher) {

@@ -41,7 +41,10 @@ class RuntimeModule extends Module {
 		this.compilation = undefined;
 		/** @type {Chunk} */
 		this.chunk = undefined;
+		/** @type {ChunkGraph} */
+		this.chunkGraph = undefined;
 		this.fullHash = false;
+		this.dependentHash = false;
 		/** @type {string} */
 		this._cachedGeneratedCode = undefined;
 	}
@@ -49,11 +52,13 @@ class RuntimeModule extends Module {
 	/**
 	 * @param {Compilation} compilation the compilation
 	 * @param {Chunk} chunk the chunk
+	 * @param {ChunkGraph} chunkGraph the chunk graph
 	 * @returns {void}
 	 */
-	attach(compilation, chunk) {
+	attach(compilation, chunk, chunkGraph = compilation.chunkGraph) {
 		this.compilation = compilation;
 		this.chunk = chunk;
+		this.chunkGraph = chunkGraph;
 	}
 
 	/**
@@ -103,7 +108,7 @@ class RuntimeModule extends Module {
 		hash.update(this.name);
 		hash.update(`${this.stage}`);
 		try {
-			if (this.fullHash) {
+			if (this.fullHash || this.dependentHash) {
 				// Do not use getGeneratedCode here, because i. e. compilation hash might be not
 				// ready at this point. We will cache it later instead.
 				hash.update(this.generate());

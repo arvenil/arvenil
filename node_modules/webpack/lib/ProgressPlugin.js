@@ -5,17 +5,24 @@
 
 "use strict";
 
-const { validate } = require("schema-utils");
-const schema = require("../schemas/plugins/ProgressPlugin.json");
 const Compiler = require("./Compiler");
 const MultiCompiler = require("./MultiCompiler");
 const NormalModule = require("./NormalModule");
+const createSchemaValidation = require("./util/create-schema-validation");
 const { contextify } = require("./util/identifier");
 
 /** @typedef {import("../declarations/plugins/ProgressPlugin").HandlerFunction} HandlerFunction */
 /** @typedef {import("../declarations/plugins/ProgressPlugin").ProgressPluginArgument} ProgressPluginArgument */
 /** @typedef {import("../declarations/plugins/ProgressPlugin").ProgressPluginOptions} ProgressPluginOptions */
 
+const validate = createSchemaValidation(
+	require("../schemas/plugins/ProgressPlugin.check.js"),
+	() => require("../schemas/plugins/ProgressPlugin.json"),
+	{
+		name: "Progress Plugin",
+		baseDataPath: "options"
+	}
+);
 const median3 = (a, b, c) => {
 	return a + b + c - Math.max(a, b, c) - Math.min(a, b, c);
 };
@@ -108,18 +115,14 @@ class ProgressPlugin {
 	/**
 	 * @param {ProgressPluginArgument} options options
 	 */
-	constructor(options) {
+	constructor(options = {}) {
 		if (typeof options === "function") {
 			options = {
 				handler: options
 			};
 		}
 
-		options = options || {};
-		validate(schema, options, {
-			name: "Progress Plugin",
-			baseDataPath: "options"
-		});
+		validate(options);
 		options = { ...ProgressPlugin.defaultOptions, ...options };
 
 		this.profile = options.profile;
@@ -203,12 +206,13 @@ class ProgressPlugin {
 			const items = [];
 			const percentByModules =
 				doneModules /
-				Math.max(lastModulesCount || this.modulesCount, modulesCount);
+				Math.max(lastModulesCount || this.modulesCount || 1, modulesCount);
 			const percentByEntries =
 				doneEntries /
-				Math.max(lastEntriesCount || this.dependenciesCount, entriesCount);
+				Math.max(lastEntriesCount || this.dependenciesCount || 1, entriesCount);
 			const percentByDependencies =
-				doneDependencies / Math.max(lastDependenciesCount, dependenciesCount);
+				doneDependencies /
+				Math.max(lastDependenciesCount || 1, dependenciesCount);
 			let percentageFactor;
 
 			switch (this.percentBy) {
@@ -268,17 +272,19 @@ class ProgressPlugin {
 
 		const factorizeAdd = () => {
 			dependenciesCount++;
-			if (dependenciesCount % 100 === 0) updateThrottled();
+			if (dependenciesCount < 50 || dependenciesCount % 100 === 0)
+				updateThrottled();
 		};
 
 		const factorizeDone = () => {
 			doneDependencies++;
-			if (doneDependencies % 100 === 0) updateThrottled();
+			if (doneDependencies < 50 || doneDependencies % 100 === 0)
+				updateThrottled();
 		};
 
 		const moduleAdd = () => {
 			modulesCount++;
-			if (modulesCount % 100 === 0) updateThrottled();
+			if (modulesCount < 50 || modulesCount % 100 === 0) updateThrottled();
 		};
 
 		// only used when showActiveModules is set
@@ -293,7 +299,7 @@ class ProgressPlugin {
 
 		const entryAdd = (entry, options) => {
 			entriesCount++;
-			if (entriesCount % 10 === 0) updateThrottled();
+			if (entriesCount < 5 || entriesCount % 10 === 0) updateThrottled();
 		};
 
 		const moduleDone = module => {
@@ -312,7 +318,7 @@ class ProgressPlugin {
 					}
 				}
 			}
-			if (doneModules % 100 === 0) updateThrottled();
+			if (doneModules < 50 || doneModules % 100 === 0) updateThrottled();
 		};
 
 		const entryDone = (entry, options) => {

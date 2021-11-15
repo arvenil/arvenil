@@ -36,7 +36,7 @@ const getAsyncWebAssemblyParser = memoize(() =>
 );
 
 /**
- * @typedef {Object} RenderContext
+ * @typedef {Object} WebAssemblyRenderContext
  * @property {Chunk} chunk the chunk
  * @property {DependencyTemplates} dependencyTemplates the dependency templates
  * @property {RuntimeTemplate} runtimeTemplate the runtime template
@@ -47,7 +47,7 @@ const getAsyncWebAssemblyParser = memoize(() =>
 
 /**
  * @typedef {Object} CompilationHooks
- * @property {SyncWaterfallHook<[Source, Module, RenderContext]>} renderModuleContent
+ * @property {SyncWaterfallHook<[Source, Module, WebAssemblyRenderContext]>} renderModuleContent
  */
 
 /** @type {WeakMap<Compilation, CompilationHooks>} */
@@ -91,9 +91,8 @@ class AsyncWebAssemblyModulesPlugin {
 		compiler.hooks.compilation.tap(
 			"AsyncWebAssemblyModulesPlugin",
 			(compilation, { normalModuleFactory }) => {
-				const hooks = AsyncWebAssemblyModulesPlugin.getCompilationHooks(
-					compilation
-				);
+				const hooks =
+					AsyncWebAssemblyModulesPlugin.getCompilationHooks(compilation);
 				compilation.dependencyFactories.set(
 					WebAssemblyImportDependency,
 					normalModuleFactory
@@ -109,7 +108,8 @@ class AsyncWebAssemblyModulesPlugin {
 				normalModuleFactory.hooks.createGenerator
 					.for("webassembly/async")
 					.tap("AsyncWebAssemblyModulesPlugin", () => {
-						const AsyncWebAssemblyJavascriptGenerator = getAsyncWebAssemblyJavascriptGenerator();
+						const AsyncWebAssemblyJavascriptGenerator =
+							getAsyncWebAssemblyJavascriptGenerator();
 						const AsyncWebAssemblyGenerator = getAsyncWebAssemblyGenerator();
 
 						return Generator.byType({

@@ -63,6 +63,7 @@ import {
     AST_Class,
     AST_ClassExpression,
     AST_ClassProperty,
+    AST_ClassPrivateProperty,
     AST_ConciseMethod,
     AST_Conditional,
     AST_Const,
@@ -78,6 +79,7 @@ import {
     AST_Directive,
     AST_Do,
     AST_Dot,
+    AST_DotHash,
     AST_EmptyStatement,
     AST_Expansion,
     AST_Export,
@@ -108,6 +110,9 @@ import {
     AST_ObjectProperty,
     AST_ObjectSetter,
     AST_PrefixedTemplateString,
+    AST_PrivateGetter,
+    AST_PrivateMethod,
+    AST_PrivateSetter,
     AST_PropAccess,
     AST_RegExp,
     AST_Return,
@@ -153,6 +158,7 @@ import {
     AST_With,
     AST_Yield,
 } from "./ast.js";
+import { is_basic_identifier_string } from "./parse.js";
 
 (function() {
 
@@ -172,6 +178,24 @@ import {
         }
 
         return body;
+    };
+
+    const assert_clause_from_moz = (assertions) => {
+        if (assertions && assertions.length > 0) {
+            return new AST_Object({
+                start: my_start_token(assertions),
+                end: my_end_token(assertions),
+                properties: assertions.map((assertion_kv) =>
+                    new AST_ObjectKeyVal({
+                        start: my_start_token(assertion_kv),
+                        end: my_end_token(assertion_kv),
+                        key: assertion_kv.key.name || assertion_kv.key.value,
+                        value: from_moz(assertion_kv.value)
+                    })
+                )
+            });
+        }
+        return null;
     };
 
     var MOZ_TO_ME = {
@@ -386,6 +410,23 @@ import {
                 static   : M.static,
             });
         },
+        PropertyDefinition: function(M) {
+            let key;
+            if (M.computed) {
+                key = from_moz(M.key);
+            } else {
+                if (M.key.type !== "Identifier") throw new Error("Non-Identifier key in PropertyDefinition");
+                key = from_moz(M.key);
+            }
+
+            return new AST_ClassProperty({
+                start    : my_start_token(M),
+                end      : my_end_token(M),
+                key,
+                value    : from_moz(M.value),
+                static   : M.static,
+            });
+        },
         ArrayExpression: function(M) {
             return new AST_Array({
                 start    : my_start_token(M),
@@ -477,7 +518,8 @@ import {
                 end         : my_end_token(M),
                 imported_name: imported_name,
                 imported_names : imported_names,
-                module_name : from_moz(M.source)
+                module_name : from_moz(M.source),
+                assert_clause: assert_clause_from_moz(M.assertions)
             });
         },
         ExportAllDeclaration: function(M) {
@@ -490,7 +532,8 @@ import {
                         foreign_name: new AST_SymbolExportForeign({ name: "*" })
                     })
                 ],
-                module_name: from_moz(M.source)
+                module_name: from_moz(M.source),
+                assert_clause: assert_clause_from_moz(M.assertions)
             });
         },
         ExportNamedDeclaration: function(M) {
@@ -504,7 +547,8 @@ import {
                         name: from_moz(specifier.local)
                     });
                 }) : null,
-                module_name: from_moz(M.source)
+                module_name: from_moz(M.source),
+                assert_clause: assert_clause_from_moz(M.assertions)
             });
         },
         ExportDefaultDeclaration: function(M) {
@@ -574,7 +618,7 @@ import {
                         : p.type == "ArrowFunctionExpression" ? (p.params.includes(M)) ? AST_SymbolFunarg : AST_SymbolRef
                         : p.type == "ClassExpression" ? (p.id === M ? AST_SymbolClass : AST_SymbolRef)
                         : p.type == "Property" ? (p.key === M && p.computed || p.value === M ? AST_SymbolRef : AST_SymbolMethod)
-                        : p.type == "FieldDefinition" ? (p.key === M && p.computed || p.value === M ? AST_SymbolRef : AST_SymbolClassProperty)
+                        : p.type == "PropertyDefinition" || p.type === "FieldDefinition" ? (p.key === M && p.computed || p.value === M ? AST_SymbolRef : AST_SymbolClassProperty)
                         : p.type == "ClassDeclaration" ? (p.id === M ? AST_SymbolDefClass : AST_SymbolRef)
                         : p.type == "MethodDefinition" ? (p.computed ? AST_SymbolRef : AST_SymbolMethod)
                         : p.type == "CatchClause" ? AST_SymbolCatch
@@ -796,12 +840,30 @@ import {
         };
     });
 
+    const assert_clause_to_moz = assert_clause => {
+        const assertions = [];
+        if (assert_clause) {
+            for (const { key, value } of assert_clause.properties) {
+                const key_moz = is_basic_identifier_string(key)
+                    ? { type: "Identifier", name: key }
+                    : { type: "Literal", value: key, raw: JSON.stringify(key) };
+                assertions.push({
+                    type: "ImportAttribute",
+                    key: key_moz,
+                    value: to_moz(value)
+                });
+            }
+        }
+        return assertions;
+    };
+
     def_to_moz(AST_Export, function To_Moz_ExportDeclaration(M) {
         if (M.exported_names) {
             if (M.exported_names[0].name.name === "*") {
                 return {
                     type: "ExportAllDeclaration",
-                    source: to_moz(M.module_name)
+                    source: to_moz(M.module_name),
+                    assertions: assert_clause_to_moz(M.assert_clause)
                 };
             }
             return {
@@ -814,7 +876,8 @@ import {
                     };
                 }),
                 declaration: to_moz(M.exported_definition),
-                source: to_moz(M.module_name)
+                source: to_moz(M.module_name),
+                assertions: assert_clause_to_moz(M.assert_clause)
             };
         }
         return {
@@ -848,7 +911,8 @@ import {
         return {
             type: "ImportDeclaration",
             specifiers: specifiers,
-            source: to_moz(M.module_name)
+            source: to_moz(M.module_name),
+            assertions: assert_clause_to_moz(M.assert_clause)
         };
     });
 
@@ -870,6 +934,19 @@ import {
         return {
             type: "SequenceExpression",
             expressions: M.expressions.map(to_moz)
+        };
+    });
+
+    def_to_moz(AST_DotHash, function To_Moz_PrivateMemberExpression(M) {
+        return {
+            type: "MemberExpression",
+            object: to_moz(M.expression),
+            computed: false,
+            property: {
+                type: "PrivateIdentifier",
+                name: M.property
+            },
+            optional: M.optional
         };
     });
 
@@ -965,12 +1042,38 @@ import {
         if (M instanceof AST_ObjectSetter) {
             kind = "set";
         }
+        if (M instanceof AST_PrivateGetter || M instanceof AST_PrivateSetter) {
+            const kind = M instanceof AST_PrivateGetter ? "get" : "set";
+            return {
+                type: "MethodDefinition",
+                computed: false,
+                kind: kind,
+                static: M.static,
+                key: {
+                    type: "PrivateIdentifier",
+                    name: M.key.name
+                },
+                value: to_moz(M.value)
+            };
+        }
+        if (M instanceof AST_ClassPrivateProperty) {
+            return {
+                type: "PropertyDefinition",
+                key: {
+                    type: "PrivateIdentifier",
+                    name: M.key.name
+                },
+                value: to_moz(M.value),
+                computed: false,
+                static: M.static
+            };
+        }
         if (M instanceof AST_ClassProperty) {
             return {
-                type: "FieldDefinition",
-                computed,
+                type: "PropertyDefinition",
                 key,
                 value: to_moz(M.value),
+                computed,
                 static: M.static
             };
         }
@@ -1005,13 +1108,21 @@ import {
                 value: to_moz(M.value)
             };
         }
+
+        const key = M instanceof AST_PrivateMethod
+            ? {
+                type: "PrivateIdentifier",
+                name: M.key.name
+            }
+            : to_moz(M.key);
+
         return {
             type: "MethodDefinition",
-            computed: !(M.key instanceof AST_Symbol) || M.key instanceof AST_SymbolRef,
             kind: M.key === "constructor" ? "constructor" : "method",
+            key,
+            value: to_moz(M.value),
+            computed: !(M.key instanceof AST_Symbol) || M.key instanceof AST_SymbolRef,
             static: M.static,
-            key: to_moz(M.key),
-            value: to_moz(M.value)
         };
     });
 

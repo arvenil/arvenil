@@ -5,11 +5,10 @@
 
 "use strict";
 
-const { validate } = require("schema-utils");
-const schema = require("../../schemas/plugins/ids/OccurrenceModuleIdsPlugin.json");
 const {
 	compareModulesByPreOrderIndexOrIdentifier
 } = require("../util/comparators");
+const createSchemaValidation = require("../util/create-schema-validation");
 const { assignAscendingModuleIds } = require("./IdHelpers");
 
 /** @typedef {import("../../declarations/plugins/ids/OccurrenceModuleIdsPlugin").OccurrenceModuleIdsPluginOptions} OccurrenceModuleIdsPluginOptions */
@@ -17,15 +16,21 @@ const { assignAscendingModuleIds } = require("./IdHelpers");
 /** @typedef {import("../Module")} Module */
 /** @typedef {import("../ModuleGraphConnection")} ModuleGraphConnection */
 
+const validate = createSchemaValidation(
+	require("../../schemas/plugins/ids/OccurrenceModuleIdsPlugin.check.js"),
+	() => require("../../schemas/plugins/ids/OccurrenceModuleIdsPlugin.json"),
+	{
+		name: "Occurrence Order Module Ids Plugin",
+		baseDataPath: "options"
+	}
+);
+
 class OccurrenceModuleIdsPlugin {
 	/**
 	 * @param {OccurrenceModuleIdsPluginOptions=} options options object
 	 */
 	constructor(options = {}) {
-		validate(schema, options, {
-			name: "Occurrence Order Module Ids Plugin",
-			baseDataPath: "options"
-		});
+		validate(options);
 		this.options = options;
 	}
 
@@ -66,32 +71,42 @@ class OccurrenceModuleIdsPlugin {
 				}
 
 				/**
-				 * @param {Iterable<ModuleGraphConnection>} connections connections
+				 * @param {Module} module module
 				 * @returns {number} count of occurs
 				 */
-				const countOccursInEntry = connections => {
+				const countOccursInEntry = module => {
 					let sum = 0;
-					for (const c of connections) {
-						if (!c.isTargetActive(undefined)) continue;
-						if (!c.originModule) continue;
-						sum += initialChunkChunkMap.get(c.originModule);
+					for (const [
+						originModule,
+						connections
+					] of moduleGraph.getIncomingConnectionsByOriginModule(module)) {
+						if (!originModule) continue;
+						if (!connections.some(c => c.isTargetActive(undefined))) continue;
+						sum += initialChunkChunkMap.get(originModule);
 					}
 					return sum;
 				};
 
 				/**
-				 * @param {Iterable<ModuleGraphConnection>} connections connections
+				 * @param {Module} module module
 				 * @returns {number} count of occurs
 				 */
-				const countOccurs = connections => {
+				const countOccurs = module => {
 					let sum = 0;
-					for (const c of connections) {
-						if (!c.isTargetActive(undefined)) continue;
-						if (!c.originModule) continue;
-						if (!c.dependency) continue;
-						const factor = c.dependency.getNumberOfIdOccurrences();
-						if (factor === 0) continue;
-						sum += factor * chunkGraph.getNumberOfModuleChunks(c.originModule);
+					for (const [
+						originModule,
+						connections
+					] of moduleGraph.getIncomingConnectionsByOriginModule(module)) {
+						if (!originModule) continue;
+						const chunkModules =
+							chunkGraph.getNumberOfModuleChunks(originModule);
+						for (const c of connections) {
+							if (!c.isTargetActive(undefined)) continue;
+							if (!c.dependency) continue;
+							const factor = c.dependency.getNumberOfIdOccurrences();
+							if (factor === 0) continue;
+							sum += factor * chunkModules;
+						}
 					}
 					return sum;
 				};
@@ -99,7 +114,7 @@ class OccurrenceModuleIdsPlugin {
 				if (prioritiseInitial) {
 					for (const m of modulesInOccurrenceOrder) {
 						const result =
-							countOccursInEntry(moduleGraph.getIncomingConnections(m)) +
+							countOccursInEntry(m) +
 							initialChunkChunkMap.get(m) +
 							entryCountMap.get(m);
 						occursInInitialChunksMap.set(m, result);
@@ -108,7 +123,7 @@ class OccurrenceModuleIdsPlugin {
 
 				for (const m of modules) {
 					const result =
-						countOccurs(moduleGraph.getIncomingConnections(m)) +
+						countOccurs(m) +
 						chunkGraph.getNumberOfModuleChunks(m) +
 						entryCountMap.get(m);
 					occursInAllChunksMap.set(m, result);

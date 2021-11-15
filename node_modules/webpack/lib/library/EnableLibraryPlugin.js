@@ -70,11 +70,13 @@ class EnableLibraryPlugin {
 		enabled.add(type);
 
 		if (typeof type === "string") {
-			const ExportPropertyTemplatePlugin = require("./ExportPropertyLibraryPlugin");
-			new ExportPropertyTemplatePlugin({
-				type,
-				nsObjectUsed: type !== "module"
-			}).apply(compiler);
+			const enableExportProperty = () => {
+				const ExportPropertyTemplatePlugin = require("./ExportPropertyLibraryPlugin");
+				new ExportPropertyTemplatePlugin({
+					type,
+					nsObjectUsed: type !== "module"
+				}).apply(compiler);
+			};
 			switch (type) {
 				case "var": {
 					//@ts-expect-error https://github.com/microsoft/TypeScript/issues/41697
@@ -179,6 +181,7 @@ class EnableLibraryPlugin {
 				}
 				case "amd":
 				case "amd-require": {
+					enableExportProperty();
 					const AmdLibraryPlugin = require("./AmdLibraryPlugin");
 					new AmdLibraryPlugin({
 						type,
@@ -188,6 +191,7 @@ class EnableLibraryPlugin {
 				}
 				case "umd":
 				case "umd2": {
+					enableExportProperty();
 					const UmdLibraryPlugin = require("./UmdLibraryPlugin");
 					new UmdLibraryPlugin({
 						type,
@@ -196,6 +200,7 @@ class EnableLibraryPlugin {
 					break;
 				}
 				case "system": {
+					enableExportProperty();
 					const SystemLibraryPlugin = require("./SystemLibraryPlugin");
 					new SystemLibraryPlugin({
 						type
@@ -203,15 +208,21 @@ class EnableLibraryPlugin {
 					break;
 				}
 				case "jsonp": {
+					enableExportProperty();
 					const JsonpLibraryPlugin = require("./JsonpLibraryPlugin");
 					new JsonpLibraryPlugin({
 						type
 					}).apply(compiler);
 					break;
 				}
-				case "module":
-					// TODO implement module library
+				case "module": {
+					enableExportProperty();
+					const ModuleLibraryPlugin = require("./ModuleLibraryPlugin");
+					new ModuleLibraryPlugin({
+						type
+					}).apply(compiler);
 					break;
+				}
 				default:
 					throw new Error(`Unsupported library type ${type}.
 Plugins which provide custom library types must call EnableLibraryPlugin.setEnabled(compiler, type) to disable this error.`);

@@ -21,8 +21,7 @@ const DID_YOU_MEAN = {
 		"output.environment (output.ecmaVersion was a temporary configuration option during webpack 5 beta)",
 	ecmaversion:
 		"output.environment (output.ecmaVersion was a temporary configuration option during webpack 5 beta)",
-	ecma:
-		"output.environment (output.ecmaVersion was a temporary configuration option during webpack 5 beta)",
+	ecma: "output.environment (output.ecmaVersion was a temporary configuration option during webpack 5 beta)",
 	path: "output.path",
 	pathinfo: "output.pathinfo",
 	pathInfo: "output.pathinfo",
@@ -63,9 +62,9 @@ const DID_YOU_MEAN = {
 
 const REMOVED = {
 	concord:
-		"BREAKING CHANGE: resolve.concord has been removed and is no longer avaiable.",
+		"BREAKING CHANGE: resolve.concord has been removed and is no longer available.",
 	devtoolLineToLine:
-		"BREAKING CHANGE: output.devtoolLineToLine has been removed and is no longer avaiable."
+		"BREAKING CHANGE: output.devtoolLineToLine has been removed and is no longer available."
 };
 /* cSpell:enable */
 
@@ -109,7 +108,10 @@ const validateSchema = (schema, options, validationConfiguration) => {
 				}
 
 				if (error.keyword === "additionalProperties") {
-					const params = /** @type {import("ajv").AdditionalPropertiesParams} */ (error.params);
+					const params =
+						/** @type {import("ajv").AdditionalPropertiesParams} */ (
+							error.params
+						);
 					if (
 						Object.prototype.hasOwnProperty.call(
 							DID_YOU_MEAN,

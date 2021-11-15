@@ -15,7 +15,7 @@ const WebpackError = require("./WebpackError");
  * @returns {Module[]} sorted version of original modules
  */
 const sortModules = modules => {
-	return modules.slice().sort((a, b) => {
+	return modules.sort((a, b) => {
 		const aIdent = a.identifier();
 		const bIdent = b.identifier();
 		/* istanbul ignore next */
@@ -37,12 +37,12 @@ const createModulesListMessage = (modules, moduleGraph) => {
 		.map(m => {
 			let message = `* ${m.identifier()}`;
 			const validReasons = Array.from(
-				moduleGraph.getIncomingConnections(m)
-			).filter(reason => reason.originModule);
+				moduleGraph.getIncomingConnectionsByOriginModule(m).keys()
+			).filter(x => x);
 
 			if (validReasons.length > 0) {
 				message += `\n    Used by ${validReasons.length} module(s), i. e.`;
-				message += `\n    ${validReasons[0].originModule.identifier()}`;
+				message += `\n    ${validReasons[0].identifier()}`;
 			}
 			return message;
 		})
@@ -52,11 +52,11 @@ const createModulesListMessage = (modules, moduleGraph) => {
 class CaseSensitiveModulesWarning extends WebpackError {
 	/**
 	 * Creates an instance of CaseSensitiveModulesWarning.
-	 * @param {Module[]} modules modules that were detected
+	 * @param {Iterable<Module>} modules modules that were detected
 	 * @param {ModuleGraph} moduleGraph the module graph
 	 */
 	constructor(modules, moduleGraph) {
-		const sortedModules = sortModules(modules);
+		const sortedModules = sortModules(Array.from(modules));
 		const modulesList = createModulesListMessage(sortedModules, moduleGraph);
 		super(`There are multiple modules with names that only differ in casing.
 This can lead to unexpected behavior when compiling on a filesystem with other case-semantic.
@@ -65,8 +65,6 @@ ${modulesList}`);
 
 		this.name = "CaseSensitiveModulesWarning";
 		this.module = sortedModules[0];
-
-		Error.captureStackTrace(this, this.constructor);
 	}
 }
 

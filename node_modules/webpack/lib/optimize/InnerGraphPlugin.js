@@ -240,20 +240,50 @@ class InnerGraphPlugin {
 
 					parser.hooks.classBodyElement.tap(
 						"InnerGraphPlugin",
-						(element, statement) => {
+						(element, classDefinition) => {
 							if (!InnerGraph.isEnabled(parser.state)) return;
 							if (parser.scope.topLevelScope === true) {
-								const fn = classWithTopLevelSymbol.get(statement);
+								const fn = classWithTopLevelSymbol.get(classDefinition);
 								if (fn) {
-									if (element.type === "MethodDefinition") {
-										InnerGraph.setTopLevelSymbol(parser.state, fn);
-									} else if (
-										element.type === "ClassProperty" &&
-										!element.static
+									InnerGraph.setTopLevelSymbol(parser.state, undefined);
+								}
+							}
+						}
+					);
+
+					parser.hooks.classBodyValue.tap(
+						"InnerGraphPlugin",
+						(expression, element, classDefinition) => {
+							if (!InnerGraph.isEnabled(parser.state)) return;
+							if (parser.scope.topLevelScope === true) {
+								const fn = classWithTopLevelSymbol.get(classDefinition);
+								if (fn) {
+									if (
+										!element.static ||
+										parser.isPure(
+											expression,
+											element.key ? element.key.range[1] : element.range[0]
+										)
 									) {
-										// TODO add test case once acorn supports it
-										// Currently this is not parsable
 										InnerGraph.setTopLevelSymbol(parser.state, fn);
+										if (element.type !== "MethodDefinition" && element.static) {
+											InnerGraph.onUsage(parser.state, usedByExports => {
+												switch (usedByExports) {
+													case undefined:
+													case true:
+														return;
+													default: {
+														const dep = new PureExpressionDependency(
+															expression.range
+														);
+														dep.loc = expression.loc;
+														dep.usedByExports = usedByExports;
+														parser.state.module.addDependency(dep);
+														break;
+													}
+												}
+											});
+										}
 									} else {
 										InnerGraph.setTopLevelSymbol(parser.state, undefined);
 									}
@@ -301,7 +331,9 @@ class InnerGraphPlugin {
 					parser.hooks.expression
 						.for(topLevelSymbolTag)
 						.tap("InnerGraphPlugin", () => {
-							const topLevelSymbol = /** @type {TopLevelSymbol} */ (parser.currentTagData);
+							const topLevelSymbol = /** @type {TopLevelSymbol} */ (
+								parser.currentTagData
+							);
 							const currentTopLevelSymbol = InnerGraph.getTopLevelSymbol(
 								parser.state
 							);

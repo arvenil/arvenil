@@ -86,11 +86,12 @@ class SideEffectsFlagPlugin {
 								if (module.factoryMeta === undefined) {
 									module.factoryMeta = {};
 								}
-								const hasSideEffects = SideEffectsFlagPlugin.moduleHasSideEffects(
-									resolveData.relativePath,
-									sideEffects,
-									cache
-								);
+								const hasSideEffects =
+									SideEffectsFlagPlugin.moduleHasSideEffects(
+										resolveData.relativePath,
+										sideEffects,
+										cache
+									);
 								module.factoryMeta.sideEffectFree = !hasSideEffects;
 							}
 						}
@@ -264,8 +265,24 @@ class SideEffectsFlagPlugin {
 												moduleGraph,
 												({ module }) =>
 													module.getSideEffectsConnectionState(moduleGraph) ===
-													false
+													false,
+												({ module: newModule, export: exportName }) => {
+													moduleGraph.updateModule(dep, newModule);
+													moduleGraph.addExplanation(
+														dep,
+														"(skipped side-effect-free modules)"
+													);
+													const ids = dep.getIds(moduleGraph);
+													dep.setIds(
+														moduleGraph,
+														exportName
+															? [...exportName, ...ids.slice(1)]
+															: ids.slice(1)
+													);
+													return moduleGraph.getConnection(dep);
+												}
 											);
+											continue;
 										}
 										// TODO improve for nested imports
 										const ids = dep.getIds(moduleGraph);

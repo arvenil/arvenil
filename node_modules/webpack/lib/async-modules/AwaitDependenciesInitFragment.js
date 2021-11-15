@@ -7,10 +7,14 @@
 
 const InitFragment = require("../InitFragment");
 const RuntimeGlobals = require("../RuntimeGlobals");
+const Template = require("../Template");
 
 /** @typedef {import("webpack-sources").Source} Source */
 /** @typedef {import("../Generator").GenerateContext} GenerateContext */
 
+/**
+ * @typedef {GenerateContext} Context
+ */
 class AwaitDependenciesInitFragment extends InitFragment {
 	/**
 	 * @param {Set<string>} promises the promises that should be awaited
@@ -34,7 +38,7 @@ class AwaitDependenciesInitFragment extends InitFragment {
 	}
 
 	/**
-	 * @param {GenerateContext} generateContext context for generate
+	 * @param {Context} context context
 	 * @returns {string|Source} the source code that will be included as initialization code
 	 */
 	getContent({ runtimeRequirements }) {
@@ -45,11 +49,20 @@ class AwaitDependenciesInitFragment extends InitFragment {
 		}
 		if (promises.size === 1) {
 			for (const p of promises) {
-				return `${p} = await Promise.resolve(${p});\n`;
+				return Template.asString([
+					`var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([${p}]);`,
+					`${p} = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];`,
+					""
+				]);
 			}
 		}
 		const sepPromises = Array.from(promises).join(", ");
-		return `([${sepPromises}] = await Promise.all([${sepPromises}]));\n`;
+		// TODO check if destructuring is supported
+		return Template.asString([
+			`var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([${sepPromises}]);`,
+			`([${sepPromises}] = __webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__);`,
+			""
+		]);
 	}
 }
 

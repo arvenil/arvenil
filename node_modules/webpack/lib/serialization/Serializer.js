@@ -15,10 +15,8 @@ class Serializer {
 		const ctx = { ...context, ...this.context };
 		let current = obj;
 		for (const middleware of this.serializeMiddlewares) {
-			if (current instanceof Promise) {
-				current = current.then(
-					data => data && middleware.serialize(data, context)
-				);
+			if (current && typeof current.then === "function") {
+				current = current.then(data => data && middleware.serialize(data, ctx));
 			} else if (current) {
 				try {
 					current = middleware.serialize(current, ctx);
@@ -35,8 +33,8 @@ class Serializer {
 		/** @type {any} */
 		let current = value;
 		for (const middleware of this.deserializeMiddlewares) {
-			if (current instanceof Promise) {
-				current = current.then(data => middleware.deserialize(data, context));
+			if (current && typeof current.then === "function") {
+				current = current.then(data => middleware.deserialize(data, ctx));
 			} else {
 				current = middleware.deserialize(current, ctx);
 			}

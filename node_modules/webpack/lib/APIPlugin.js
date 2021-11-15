@@ -33,6 +33,12 @@ const REPLACEMENTS = {
 		type: "string",
 		assign: true
 	},
+	__webpack_base_uri__: {
+		expr: RuntimeGlobals.baseURI,
+		req: [RuntimeGlobals.baseURI],
+		type: "string",
+		assign: true
+	},
 	__webpack_modules__: {
 		expr: RuntimeGlobals.moduleFactories,
 		req: [RuntimeGlobals.moduleFactories],
@@ -74,6 +80,11 @@ const REPLACEMENTS = {
 		req: [RuntimeGlobals.getChunkScriptFilename],
 		type: "function",
 		assign: true
+	},
+	__webpack_runtime_id__: {
+		expr: RuntimeGlobals.runtimeId,
+		req: [RuntimeGlobals.runtimeId],
+		assign: false
 	},
 	"require.onError": {
 		expr: RuntimeGlobals.uncaughtErrorHandler,

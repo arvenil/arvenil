@@ -29,6 +29,27 @@ const addToList = (itemOrItems, list) => {
 };
 
 /**
+ * @template T
+ * @param {T[]} input list
+ * @param {function(T): Buffer} fn map function
+ * @returns {Buffer[]} buffers without duplicates
+ */
+const mapAndDeduplicateBuffers = (input, fn) => {
+	// Buffer.equals compares size first so this should be efficient enough
+	// If it becomes a performance problem we can use a map and group by size
+	// instead of looping over all assets.
+	const result = [];
+	outer: for (const value of input) {
+		const buf = fn(value);
+		for (const other of result) {
+			if (buf.equals(other)) continue outer;
+		}
+		result.push(buf);
+	}
+	return result;
+};
+
+/**
  * Escapes regular expression metacharacters
  * @param {string} str String to quote
  * @returns {string} Escaped string
@@ -173,24 +194,22 @@ class RealContentHashPlugin {
 								cacheAnalyse.getLazyHashedEtag(source),
 								Array.from(hashes).join("|")
 							);
-							[
-								asset.referencedHashes,
-								asset.ownHashes
-							] = await cacheAnalyse.providePromise(name, etag, () => {
-								const referencedHashes = new Set();
-								let ownHashes = new Set();
-								const inContent = content.match(hashRegExp);
-								if (inContent) {
-									for (const hash of inContent) {
-										if (hashes.has(hash)) {
-											ownHashes.add(hash);
-											continue;
+							[asset.referencedHashes, asset.ownHashes] =
+								await cacheAnalyse.providePromise(name, etag, () => {
+									const referencedHashes = new Set();
+									let ownHashes = new Set();
+									const inContent = content.match(hashRegExp);
+									if (inContent) {
+										for (const hash of inContent) {
+											if (hashes.has(hash)) {
+												ownHashes.add(hash);
+												continue;
+											}
+											referencedHashes.add(hash);
 										}
-										referencedHashes.add(hash);
 									}
-								}
-								return [referencedHashes, ownHashes];
-							});
+									return [referencedHashes, ownHashes];
+								});
 						})
 					);
 					const getDependencies = hash => {
@@ -331,7 +350,7 @@ ${referencingAssets
 									: computeNewContent(asset)
 							)
 						);
-						const assetsContent = assets.map(asset => {
+						const assetsContent = mapAndDeduplicateBuffers(assets, asset => {
 							if (asset.ownHashes.has(oldHash)) {
 								return asset.newSourceWithoutOwn
 									? asset.newSourceWithoutOwn.buffer()

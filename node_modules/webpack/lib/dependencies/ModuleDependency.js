@@ -7,6 +7,12 @@
 
 const Dependency = require("../Dependency");
 const DependencyTemplate = require("../DependencyTemplate");
+const memoize = require("../util/memoize");
+
+/** @typedef {import("../Dependency").TRANSITIVE} TRANSITIVE */
+/** @typedef {import("../Module")} Module */
+
+const getRawModule = memoize(() => require("../RawModule"));
 
 class ModuleDependency extends Dependency {
 	/**
@@ -17,13 +23,40 @@ class ModuleDependency extends Dependency {
 		this.request = request;
 		this.userRequest = request;
 		this.range = undefined;
+		// assertions must be serialized by subclasses that use it
+		/** @type {Record<string, any> | undefined} */
+		this.assertions = undefined;
 	}
 
 	/**
 	 * @returns {string | null} an identifier to merge equal requests
 	 */
 	getResourceIdentifier() {
-		return `module${this.request}`;
+		let str = `module${this.request}`;
+		if (this.assertions !== undefined) {
+			str += JSON.stringify(this.assertions);
+		}
+		return str;
+	}
+
+	/**
+	 * @returns {boolean | TRANSITIVE} true, when changes to the referenced module could affect the referencing module; TRANSITIVE, when changes to the referenced module could affect referencing modules of the referencing module
+	 */
+	couldAffectReferencingModule() {
+		return true;
+	}
+
+	/**
+	 * @param {string} context context directory
+	 * @returns {Module} a module
+	 */
+	createIgnoredModule(context) {
+		const RawModule = getRawModule();
+		return new RawModule(
+			"/* (ignored) */",
+			`ignored|${context}|${this.request}`,
+			`${this.request} (ignored)`
+		);
 	}
 
 	serialize(context) {

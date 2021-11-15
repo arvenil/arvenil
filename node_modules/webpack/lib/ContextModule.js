@@ -54,6 +54,7 @@ const makeSerializable = require("./util/makeSerializable");
  * @property {RegExp=} include
  * @property {RegExp=} exclude
  * @property {RawChunkGroupOptions=} groupOptions
+ * @property {string=} typePrefix
  * @property {string=} category
  * @property {string[][]=} referencedExports exports referenced from modules (won't be mangled)
  */
@@ -138,7 +139,14 @@ class ContextModule extends Module {
 		const m = /** @type {ContextModule} */ (module);
 		this.resolveDependencies = m.resolveDependencies;
 		this.options = m.options;
-		this.resolveOptions = m.resolveOptions;
+	}
+
+	/**
+	 * Assuming this module is in the cache. Remove internal references to allow freeing some memory.
+	 */
+	cleanupForCache() {
+		super.cleanupForCache();
+		this.resolveDependencies = undefined;
 	}
 
 	prettyRegExp(regexString) {
@@ -570,7 +578,7 @@ class ContextModule extends Module {
 		fakeMapDataExpression = "fakeMap[id]"
 	) {
 		if (typeof fakeMap === "number") {
-			return `return ${this.getReturn(fakeMap)};`;
+			return `return ${this.getReturn(fakeMap, asyncModule)};`;
 		}
 		return `return ${
 			RuntimeGlobals.createFakeNamespaceObject
@@ -1009,9 +1017,9 @@ module.exports = webpackEmptyAsyncContext;`;
 			this.getSource(this.getSourceString(this.options.mode, context))
 		);
 		const set = new Set();
-		const allDeps = /** @type {ContextElementDependency[]} */ (this.dependencies.concat(
-			this.blocks.map(b => b.dependencies[0])
-		));
+		const allDeps = /** @type {ContextElementDependency[]} */ (
+			this.dependencies.concat(this.blocks.map(b => b.dependencies[0]))
+		);
 		set.add(RuntimeGlobals.module);
 		set.add(RuntimeGlobals.hasOwnProperty);
 		if (allDeps.length > 0) {

@@ -6,6 +6,7 @@
 "use strict";
 
 const { ConcatSource } = require("webpack-sources");
+const makeSerializable = require("./util/makeSerializable");
 
 /** @typedef {import("webpack-sources").Source} Source */
 /** @typedef {import("./Generator").GenerateContext} GenerateContext */
@@ -30,6 +31,9 @@ const sortFragmentWithIndex = ([a, i], [b, j]) => {
 	return i - j;
 };
 
+/**
+ * @template Context
+ */
 class InitFragment {
 	/**
 	 * @param {string|Source} content the source code that will be included as initialization code
@@ -47,22 +51,22 @@ class InitFragment {
 	}
 
 	/**
-	 * @param {GenerateContext} generateContext context for generate
+	 * @param {Context} context context
 	 * @returns {string|Source} the source code that will be included as initialization code
 	 */
-	getContent(generateContext) {
+	getContent(context) {
 		return this.content;
 	}
 
 	/**
-	 * @param {GenerateContext} generateContext context for generate
+	 * @param {Context} context context
 	 * @returns {string|Source=} the source code that will be included at the end of the module
 	 */
-	getEndContent(generateContext) {
+	getEndContent(context) {
 		return this.endContent;
 	}
 
-	static addToSource(source, initFragments, generateContext) {
+	static addToSource(source, initFragments, context) {
 		if (initFragments.length > 0) {
 			// Sort fragments by position. If 2 fragments have the same position,
 			// use their index.
@@ -73,13 +77,25 @@ class InitFragment {
 			// Deduplicate fragments. If a fragment has no key, it is always included.
 			const keyedFragments = new Map();
 			for (const [fragment] of sortedFragments) {
-				if (typeof fragment.merge === "function") {
+				if (typeof fragment.mergeAll === "function") {
+					if (!fragment.key) {
+						throw new Error(
+							`InitFragment with mergeAll function must have a valid key: ${fragment.constructor.name}`
+						);
+					}
+					const oldValue = keyedFragments.get(fragment.key);
+					if (oldValue === undefined) {
+						keyedFragments.set(fragment.key, fragment);
+					} else if (Array.isArray(oldValue)) {
+						oldValue.push(fragment);
+					} else {
+						keyedFragments.set(fragment.key, [oldValue, fragment]);
+					}
+					continue;
+				} else if (typeof fragment.merge === "function") {
 					const oldValue = keyedFragments.get(fragment.key);
 					if (oldValue !== undefined) {
-						keyedFragments.set(
-							fragment.key || Symbol(),
-							fragment.merge(oldValue)
-						);
+						keyedFragments.set(fragment.key, fragment.merge(oldValue));
 						continue;
 					}
 				}
@@ -88,9 +104,12 @@ class InitFragment {
 
 			const concatSource = new ConcatSource();
 			const endContents = [];
-			for (const fragment of keyedFragments.values()) {
-				concatSource.add(fragment.getContent(generateContext));
-				const endContent = fragment.getEndContent(generateContext);
+			for (let fragment of keyedFragments.values()) {
+				if (Array.isArray(fragment)) {
+					fragment = fragment[0].mergeAll(fragment);
+				}
+				concatSource.add(fragment.getContent(context));
+				const endContent = fragment.getEndContent(context);
 				if (endContent) {
 					endContents.push(endContent);
 				}
@@ -105,7 +124,29 @@ class InitFragment {
 			return source;
 		}
 	}
+
+	serialize(context) {
+		const { write } = context;
+
+		write(this.content);
+		write(this.stage);
+		write(this.position);
+		write(this.key);
+		write(this.endContent);
+	}
+
+	deserialize(context) {
+		const { read } = context;
+
+		this.content = read();
+		this.stage = read();
+		this.position = read();
+		this.key = read();
+		this.endContent = read();
+	}
 }
+
+makeSerializable(InitFragment, "webpack/lib/InitFragment");
 
 InitFragment.prototype.merge = undefined;
 

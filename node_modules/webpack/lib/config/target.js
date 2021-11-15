@@ -5,14 +5,18 @@
 
 "use strict";
 
-const browserslistTargetHandler = require("./browserslistTargetHandler");
+const memoize = require("../util/memoize");
+
+const getBrowserslistTargetHandler = memoize(() =>
+	require("./browserslistTargetHandler")
+);
 
 /**
  * @param {string} context the context directory
  * @returns {string} default target
  */
 const getDefaultTarget = context => {
-	const browsers = browserslistTargetHandler.load(null, context);
+	const browsers = getBrowserslistTargetHandler().load(null, context);
 	return browsers ? "browserslist" : "web";
 };
 
@@ -78,6 +82,7 @@ const TARGETS = [
 		"Resolve features from browserslist. Will resolve browserslist config automatically. Only browser or node queries are supported (electron is not supported). Examples: 'browserslist:modern' to use 'modern' environment from browserslist config",
 		/^browserslist(?::(.+))?$/,
 		(rest, context) => {
+			const browserslistTargetHandler = getBrowserslistTargetHandler();
 			const browsers = browserslistTargetHandler.load(
 				rest ? rest.trim() : null,
 				context
@@ -197,7 +202,7 @@ You can also more options via the 'target' option: 'browserslist' / 'browserslis
 				document: context === "renderer",
 				fetchWasm: context === "renderer",
 				importScripts: false,
-				importScriptsInWorker: false,
+				importScriptsInWorker: true,
 
 				globalThis: v(5),
 				const: v(1, 1),

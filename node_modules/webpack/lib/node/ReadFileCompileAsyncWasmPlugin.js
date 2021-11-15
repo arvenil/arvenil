@@ -7,11 +7,15 @@
 
 const RuntimeGlobals = require("../RuntimeGlobals");
 const Template = require("../Template");
-const AsyncWasmChunkLoadingRuntimeModule = require("../wasm-async/AsyncWasmChunkLoadingRuntimeModule");
+const AsyncWasmLoadingRuntimeModule = require("../wasm-async/AsyncWasmLoadingRuntimeModule");
 
 /** @typedef {import("../Compiler")} Compiler */
 
 class ReadFileCompileAsyncWasmPlugin {
+	constructor({ type = "async-node", import: useImport = false } = {}) {
+		this._type = type;
+		this._import = useImport;
+	}
 	/**
 	 * Apply the plugin
 	 * @param {Compiler} compiler the compiler instance
@@ -25,33 +29,53 @@ class ReadFileCompileAsyncWasmPlugin {
 				const isEnabledForChunk = chunk => {
 					const options = chunk.getEntryOptions();
 					const wasmLoading =
-						(options && options.wasmLoading) || globalWasmLoading;
-					return wasmLoading === "async-node";
+						options && options.wasmLoading !== undefined
+							? options.wasmLoading
+							: globalWasmLoading;
+					return wasmLoading === this._type;
 				};
-				const generateLoadBinaryCode = path =>
-					Template.asString([
-						"new Promise(function (resolve, reject) {",
-						Template.indent([
-							"var { readFile } = require('fs');",
-							"var { join } = require('path');",
-							"",
-							"try {",
-							Template.indent([
-								`readFile(join(__dirname, ${path}), function(err, buffer){`,
+				const generateLoadBinaryCode = this._import
+					? path =>
+							Template.asString([
+								"Promise.all([import('fs'), import('url')]).then(([{ readFile }, { URL }]) => new Promise((resolve, reject) => {",
 								Template.indent([
-									"if (err) return reject(err);",
-									"",
-									"// Fake fetch response",
-									"resolve({",
-									Template.indent(["arrayBuffer() { return buffer; }"]),
+									`readFile(new URL(${path}, import.meta.url), (err, buffer) => {`,
+									Template.indent([
+										"if (err) return reject(err);",
+										"",
+										"// Fake fetch response",
+										"resolve({",
+										Template.indent(["arrayBuffer() { return buffer; }"]),
+										"});"
+									]),
 									"});"
 								]),
-								"});"
-							]),
-							"} catch (err) { reject(err); }"
-						]),
-						"})"
-					]);
+								"}))"
+							])
+					: path =>
+							Template.asString([
+								"new Promise(function (resolve, reject) {",
+								Template.indent([
+									"try {",
+									Template.indent([
+										"var { readFile } = require('fs');",
+										"var { join } = require('path');",
+										"",
+										`readFile(join(__dirname, ${path}), function(err, buffer){`,
+										Template.indent([
+											"if (err) return reject(err);",
+											"",
+											"// Fake fetch response",
+											"resolve({",
+											Template.indent(["arrayBuffer() { return buffer; }"]),
+											"});"
+										]),
+										"});"
+									]),
+									"} catch (err) { reject(err); }"
+								]),
+								"})"
+							]);
 
 				compilation.hooks.runtimeRequirementInTree
 					.for(RuntimeGlobals.instantiateWasm)
@@ -69,7 +93,7 @@ class ReadFileCompileAsyncWasmPlugin {
 						set.add(RuntimeGlobals.publicPath);
 						compilation.addRuntimeModule(
 							chunk,
-							new AsyncWasmChunkLoadingRuntimeModule({
+							new AsyncWasmLoadingRuntimeModule({
 								generateLoadBinaryCode,
 								supportsStreaming: false
 							})

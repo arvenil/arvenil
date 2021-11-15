@@ -45,6 +45,8 @@ module.exports = {
 		require("../dependencies/AMDRequireItemDependency"),
 	"dependencies/CachedConstDependency": () =>
 		require("../dependencies/CachedConstDependency"),
+	"dependencies/CreateScriptUrlDependency": () =>
+		require("../dependencies/CreateScriptUrlDependency"),
 	"dependencies/CommonJsRequireContextDependency": () =>
 		require("../dependencies/CommonJsRequireContextDependency"),
 	"dependencies/CommonJsExportRequireDependency": () =>
@@ -154,6 +156,7 @@ module.exports = {
 		require("../dependencies/WebpackIsIncludedDependency"),
 	"dependencies/WorkerDependency": () =>
 		require("../dependencies/WorkerDependency"),
+	"json/JsonData": () => require("../json/JsonData"),
 	"optimize/ConcatenatedModule": () =>
 		require("../optimize/ConcatenatedModule"),
 	DelegatedModule: () => require("../DelegatedModule"),
@@ -161,6 +164,7 @@ module.exports = {
 	DllModule: () => require("../DllModule"),
 	ExternalModule: () => require("../ExternalModule"),
 	FileSystemInfo: () => require("../FileSystemInfo"),
+	InitFragment: () => require("../InitFragment"),
 	InvalidDependenciesModuleWarning: () =>
 		require("../InvalidDependenciesModuleWarning"),
 	Module: () => require("../Module"),
@@ -185,6 +189,7 @@ module.exports = {
 	UnsupportedFeatureWarning: () => require("../UnsupportedFeatureWarning"),
 	"util/LazySet": () => require("../util/LazySet"),
 	UnhandledSchemeError: () => require("../UnhandledSchemeError"),
+	NodeStuffInWebError: () => require("../NodeStuffInWebError"),
 	WebpackError: () => require("../WebpackError"),
 
 	"util/registerExternalSerializer": () => {

@@ -11,17 +11,29 @@ const HarmonyExportExpressionDependency = require("./HarmonyExportExpressionDepe
 const HarmonyExportHeaderDependency = require("./HarmonyExportHeaderDependency");
 const HarmonyExportImportedSpecifierDependency = require("./HarmonyExportImportedSpecifierDependency");
 const HarmonyExportSpecifierDependency = require("./HarmonyExportSpecifierDependency");
+const { ExportPresenceModes } = require("./HarmonyImportDependency");
 const {
-	harmonySpecifierTag
+	harmonySpecifierTag,
+	getAssertions
 } = require("./HarmonyImportDependencyParserPlugin");
 const HarmonyImportSideEffectDependency = require("./HarmonyImportSideEffectDependency");
 
+const { HarmonyStarExportsList } = HarmonyExportImportedSpecifierDependency;
+
 module.exports = class HarmonyExportDependencyParserPlugin {
 	constructor(options) {
-		this.strictExportPresence = options.strictExportPresence;
+		this.exportPresenceMode =
+			options.reexportExportsPresence !== undefined
+				? ExportPresenceModes.fromUserOption(options.reexportExportsPresence)
+				: options.exportsPresence !== undefined
+				? ExportPresenceModes.fromUserOption(options.exportsPresence)
+				: options.strictExportPresence
+				? ExportPresenceModes.ERROR
+				: ExportPresenceModes.AUTO;
 	}
 
 	apply(parser) {
+		const { exportPresenceMode } = this;
 		parser.hooks.export.tap(
 			"HarmonyExportDependencyParserPlugin",
 			statement => {
@@ -46,7 +58,8 @@ module.exports = class HarmonyExportDependencyParserPlugin {
 				parser.state.module.addPresentationalDependency(clearDep);
 				const sideEffectDep = new HarmonyImportSideEffectDependency(
 					source,
-					parser.state.lastHarmonyImportOrder
+					parser.state.lastHarmonyImportOrder,
+					getAssertions(statement)
 				);
 				sideEffectDep.loc = Object.create(statement.loc);
 				sideEffectDep.loc.index = -1;
@@ -124,7 +137,9 @@ module.exports = class HarmonyExportDependencyParserPlugin {
 						name,
 						harmonyNamedExports,
 						null,
-						this.strictExportPresence
+						exportPresenceMode,
+						null,
+						settings.assertions
 					);
 				} else {
 					dep = new HarmonyExportSpecifierDependency(id, name);
@@ -145,7 +160,7 @@ module.exports = class HarmonyExportDependencyParserPlugin {
 					harmonyNamedExports.add(name);
 				} else {
 					harmonyStarExports = parser.state.harmonyStarExports =
-						parser.state.harmonyStarExports || [];
+						parser.state.harmonyStarExports || new HarmonyStarExportsList();
 				}
 				const dep = new HarmonyExportImportedSpecifierDependency(
 					source,
@@ -154,7 +169,8 @@ module.exports = class HarmonyExportDependencyParserPlugin {
 					name,
 					harmonyNamedExports,
 					harmonyStarExports && harmonyStarExports.slice(),
-					this.strictExportPresence
+					exportPresenceMode,
+					harmonyStarExports
 				);
 				if (harmonyStarExports) {
 					harmonyStarExports.push(dep);
