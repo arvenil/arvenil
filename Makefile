@@ -5,7 +5,13 @@ build:	                  ## Build.
 	gulp
 	wkhtmltopdf --encoding utf-8 --print-media-type --user-style-sheet docs/main.css src/README.html src/"Kamil Dziedzic - Software Engineer.pdf"
 
-update:
+npm:
+	npm install -g npm
+
+node:
+	nvm install node
+
+update: npm node
 	npm update            ## Update dependencies.
 
 help: Makefile            ## Display this help message.
