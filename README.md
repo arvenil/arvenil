@@ -1,9 +1,7 @@
-![Kamil Dziedzic](https://raw.githubusercontent.com/arvenil/resume/master/photo.jpg "Kamil Dziedzic")
+![Kamil Dziedzic](https://raw.githubusercontent.com/arvenil/resume/master/selfie/2019.png "Kamil Dziedzic")
 
 # Kamil Dziedzic
-Go and Backend Developer, former IT Manager, and former Full-Stack Developer aspiring to become proper *Software Engineer*.
-
-**Will you help me?**
+**Go Developer** and **IT Manager**, former PHP and Front-end Developer aspiring to become proper ***Software Engineer***.
 
 I'm looking for opportunities to widen my knowledge, experience and expertise in software development alongside with a steady source of income to pursue my dream of building apps for the future.
 
@@ -11,46 +9,50 @@ Feel free to contact me via email [hire@dziedzic.fr](mailto:hire@dziedzic.fr) or
 
 ## What can I offer?
 
-* open mind
-* dedication to learn new languages and technologies
-* 12+ years experience in web app development, product building and team leading
-* 10+ years with Agile, Kanban and Scrum (Professional Scrum Master I, 2012)
-* 5+ years experience with golang: REST/gRPC APIs, CLI tools, gomobile, docker  
-* 10+ years with MySQL, 1+ year with PostgreSQL, 0.5 year with Amazon DynamoDB, some experience with Memcached and MongoDB 
-* 10+ years in building REST APIs
-* 6+ years with testing, TDD, CI and CD
-* 2+ years with Javascript apps e.g. AngularJS and node.js, far from feeling comfortable to say I'm JS developer, but eager to work on professional apps
-* 6+ years with developing PHP apps
-* communicative English with Polish accent
-* "¿Qué hora es?" level of Spanish
-* passion for photography
+* Open mind.
+* Dedication to learn.
+* 14+ years experience in Web App Development, Product Building and Team Leading.
+* 12+ years with Agile, Kanban and Scrum (Professional Scrum Master I, 2012).
+* 7+ years experience with Google Go: gRPC, REST, CLI tools, mobile, docker.
+* 10+ years with databases: MySQL, PostgreSQL, Amazon DynamoDB, Memcached and MongoDB.
+* 6+ years with testing, TDD, CI and CD.
+* 2+ years with AngularJS and node.js (not enough though).
+* 6+ years with developing PHP apps (obsolete).
+* Professional English with Polish accent, elementary Spanish, forgotten German, and non-existing French.
+* A hobbyist photographer, biker, inline skater and swimmer.
 
 ### Skills and buzzwords
 
 Feel free to use below list to quickly check if I might have desired skills
 
-`AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB` `Amazon Web Services` `AngularJS` `Ansible` `Azure` `Azure DevOps` `Azure Event Hubs` `Azure Pipelines` `Backbone.js` `Bash` `CI/CD` `Certified Scrum Master` `Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR` `Docker` `ElasticSearch` `FCE` `Fedora` `Gin` `Git` `Github` `Github Actions` `Goland` `Golang` `Grafana` `gRPC` `HAProxy` `IT Management` `IntelliJ IDEA` `PhpStorm` `JavaScript` `Jenkins` `Jira` `JSON` `jQuery` `kubernetes` `Linux Mint` `Linux` `MacOS` `Makefile` `Memcached` `Microsoft Teams` `MongoDB` `MySQL` `Nagios` `Node.js` `OpenSUSE` `PHPUnit` `PHP` `Photography` `Project Management` `REST` `RabbitMQ` `Revel` `Rollerblading` `RPM` `Scrum` `Software Development` `SPEC` `Splunk` `Symfony` `TDD` `Team Management` `Test Driven Development` `Testify` `TypeScript` `Ubuntu` `Unit Testing` `Travis` `Web Development` `webpack` `WebSockets` `XML`
+`AWS` `Agile Methodologies` `Agile Project Management` `Agile` `Amazon DynamoDB` `Amazon Web Services` `AngularJS` `Ansible` `Azure` `Azure DevOps` `Azure Event Hubs` `Azure Pipelines` `Backbone.js` `Bash` `CI/CD` `Certified Scrum Master` `Coaching` `CoffeeScript` `Continuous Delivery` `Continuous Integration` `DSLR` `Docker` `Echo Labstack` `ElasticSearch` `FCE` `Fedora` `Gin` `Git` `Github` `Github Actions` `Goland` `Golang` `Grafana` `gRPC` `HAProxy` `IT Management` `IntelliJ IDEA` `PhpStorm` `JavaScript` `Jenkins` `Jira` `JSON` `jQuery` `kubernetes` `Linux Mint` `Linux` `MacOS` `Makefile` `Memcached` `Microsoft Teams` `MongoDB` `MySQL` `Nagios` `Node.js` `OpenSUSE` `PHPUnit` `PHP` `Photography` `Project Management` `REST` `RabbitMQ` `Revel` `Rollerblading` `RPM` `Scrum` `Software Development` `SPEC` `Splunk` `Symfony` `TDD` `Team Management` `Test Driven Development` `Testify` `TypeScript` `Ubuntu` `Unit Testing` `Travis` `Web Development` `webpack` `WebSockets` `XML`
 
 ### Demo
 
 Most of my work belongs to my employers.  
 There are however three exceptions:
 
-1. [Kata 形](https://github.com/arvenil/kata) is my recent toy project to show of my skills in algorithms and idiomatic Go.
-2. [osin-dynamodb](https://github.com/uniplaces/osin-dynamodb) is a Go library which implements the storage for [OSIN](https://github.com/RangelReale/osin) with [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) using [aws-sdk-go](https://github.com/aws/aws-sdk-go). I've created it for storing OAuth credentials in DynamoDB in one of my projects at [Uniplaces](https://www.uniplaces.com/).
-3. [ninja-mutex](https://github.com/arvenil/ninja-mutex) [![Total Downloads](https://img.shields.io/packagist/dt/arvenil/ninja-mutex.svg)](https://packagist.org/packages/arvenil/ninja-mutex) is a simple to use mutex implementation for php. It supports different adapters (flock, memcache, mysql, redis, ...) so you can set it up as you wish. All adapters (if set up properly) can be used in multi server environment - in other words lock is shared between web servers. I've created it as a demo of my skills, a demo I could show on job interviews.
+1. [Kata 形] is my recent toy project to show of my skills in algorithms and idiomatic Go.
+2. [osin-dynamodb] is a Go library which implements the storage for [OSIN](https://github.com/RangelReale/osin) with [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) using [aws-sdk-go](https://github.com/aws/aws-sdk-go). I've created it for storing OAuth credentials in DynamoDB in one of my projects at [Uniplaces](https://www.uniplaces.com/).
+3. [ninja-mutex][] [![downloads]][packagist] is a simple to use mutex implementation for php. It supports different adapters (flock, memcache, mysql, redis, ...) so you can set it up as you wish. All adapters (if set up properly) can be used in multi-server environment - in other words lock is shared between web servers. I've created it as a demo of my skills, a demo I could show on job interviews.
 
 All those projects show some of my skills, coding standards and love for testing.
 
+[Kata 形]: https://github.com/arvenil/kata
+[osin-dynamodb]: https://github.com/uniplaces/osin-dynamodb
+[ninja-mutex]: https://github.com/arvenil/ninja-mutex
+[downloads]: https://img.shields.io/packagist/dt/arvenil/ninja-mutex.svg
+[packagist]: https://packagist.org/packages/arvenil/ninja-mutex
+
 ## What can you offer me?
 
-* steady income (to eat, pay rent, read books, support my photography and other hobbies)
+* steady income (to pay rent, read books and support my family and my hobbies)
 * opportunity to learn new programming language
 * opportunity to work and exchange knowledge with a team of specialists
 * opportunity to share knowledge via blogs and talks
 * experience in international product building and team leading
 * experience with technologies you use
-* opportunity to learn new language (e.g. Spanish, French, German, Mandarin or/and proper English)
+* opportunity to learn new language (e.g. French, Spanish, German, Mandarin or/and proper English)
 * office space
 * opportunities to travel
 
@@ -77,16 +79,14 @@ If you are interested more in my previous adventures please feel free to scroll 
 
 #### May 2020 - now, Barcelona (fully Remote because of COVID-19)
 
-Double-entry bookkeeping API and integrations with customers
+Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a5a42-c36b-4af5-97a0-3f71798996f5/public_url). Lead Developer of [Double-entry Bookkeeping API](https://en.wikipedia.org/wiki/Double-entry_bookkeeping) in Go. Integrations with customers REST APIs. Replacing outdated [Elixir](https://elixir-lang.org/) services with implementations in Go.
 
-* [Go](https://golang.org/) with [Echo Labstack](https://echo.labstack.com/) router for REST API
+* [Go](https://golang.org/) with [Echo Labstack](https://echo.labstack.com/) router for REST APIs.
 * [PostgreSQL](https://www.postgresql.org/) for storage and message queue.
-* [Microsoft Azure Event Hubs](https://azure.microsoft.com/en-us/services/event-hubs/) for real-time event processing with sharding
-* [Microsoft Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/), [Ansible](https://www.ansible.com/), [RPM](https://rpm.org/index.html) and [Docker](https://www.docker.com/) for CI and CD
-* Nagios, Grafana and Splunk for monitoring and logs
-* [HAProxy](http://www.haproxy.org/) for high availability load balancer
-
-#### 
+* [Microsoft Azure Event Hubs](https://azure.microsoft.com/en-us/services/event-hubs/) for real-time event processing with sharding.
+* [Microsoft Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/), [Ansible](https://www.ansible.com/), [RPM](https://rpm.org/index.html) and [Docker](https://www.docker.com/) for CI and CD.
+* [Nagios](https://www.nagios.org/), [Grafana](https://grafana.com/) and [Splunk](https://www.splunk.com/) for monitoring and logs.
+* [HAProxy](http://www.haproxy.org/) for high availability load balancer.
 
 ## Software Engineer
 
@@ -94,23 +94,9 @@ Double-entry bookkeeping API and integrations with customers
 
 #### January 2017 - November 2018 (1 year, 11 months), Remote
 
-Working on [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management)
+Developer of [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management).
 
-Contributed to:
-
-* [percona/mysqld_exporter](https://github.com/percona/mysqld_exporter)
-* [prometheus/mysqld_exporter](https://github.com/prometheus/mysqld_exporter)
-* [percona/postgres_exporter](https://github.com/percona/postgres_exporter)
-* [percona/mongodb_exporter](https://github.com/percona/mongodb_exporter)
-* [percona/rds_exporter](https://github.com/percona/rds_exporter)
-* [percona/pmm-client](https://github.com/percona/pmm-client)
-* [percona/pmm-server](https://github.com/percona/pmm-server)
-* [percona/qan-agent](https://github.com/percona/qan-agent)
-* [percona/kardianos-service](https://github.com/percona/kardianos-service)
-* [percona/percona-toolkit](https://github.com/percona/percona-toolkit)
-* [percona/qan-api](https://github.com/percona/qan-api)
-* [percona/qan-app](https://github.com/percona/qan-app)
-* [percona/pmm-managed](https://github.com/percona/pmm-managed)
+Contributed to several open source repositories: [prometheus/mysqld_exporter](https://github.com/prometheus/mysqld_exporter), [percona/mysqld_exporter](https://github.com/percona/mysqld_exporter), [postgres_exporter](https://github.com/percona/postgres_exporter), [mongodb_exporter](https://github.com/percona/mongodb_exporter), [rds_exporter](https://github.com/percona/rds_exporter), [pmm-client](https://github.com/percona/pmm-client), [pmm-server](https://github.com/percona/pmm-server), [qan-agent](https://github.com/percona/qan-agent), [kardianos-service](https://github.com/percona/kardianos-service), [percona-toolkit](https://github.com/percona/percona-toolkit), [qan-api](https://github.com/percona/qan-api), [qan-app](https://github.com/percona/qan-app), [pmm-managed](https://github.com/percona/pmm-managed).
 
 ## Senior Software Developer
 
@@ -118,19 +104,19 @@ Contributed to:
 
 #### January 2016 – June 2016 (6 months), Lisbon, Portugal
 
-I've designed and build REST micro-service for booking app
+Developer of REST microservice for booking app.
 
-* [gin](https://github.com/gin-gonic/gin) web framework for simplified routing
-* [dependency injection](https://github.com/karlkfi/inject)
-* dynamodb for storage with [aws-sdk-go](https://github.com/aws/aws-sdk-go)
-* tests written with [testify](https://github.com/stretchr/testify) and run by circle-ci
-* coverage with coveralls.io
+* [Gin Web Framework](https://github.com/gin-gonic/gin) for simplified routing.
+* [Dependency Injection](https://github.com/karlkfi/inject) for simplified Unit Testing.
+* [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) for storage accessed with [AWS SDK for Go](https://github.com/aws/aws-sdk-go).
+* Tests written with [testify](https://github.com/stretchr/testify) and run by [CircleCI](https://circleci.com/)
+* Code coverage with [Coveralls](https://coveralls.io/).
 
-I've built OAuth server for a password less authorization
+Developer of OAuth server for a password less authorization.
 
-* based on RFC-6749 with support for ["Resource Owner Password Credentials Grant"](https://tools.ietf.org/html/rfc6749#section-4.3)
-* utilizes [osin auth library](https://github.com/RangelReale/osin)
-* I've made library for osin to store auth credentials in [dynamodb](https://github.com/arvenil/osin-dynamodb)
+* Complies with [RFC-6749](https://datatracker.ietf.org/doc/html/rfc6749) with support for ["Resource Owner Password Credentials Grant"](https://tools.ietf.org/html/rfc6749#section-4.3).
+* Utilizes [osin auth library](https://github.com/RangelReale/osin).
+* Developer of [osin-dynamodb](https://github.com/arvenil/osin-dynamodb) for storing credentials in [Amazon DynamoDB](https://aws.amazon.com/dynamodb/). 
 
 Thanks to gomobile I've built SDK application for Android and iOS
 
@@ -143,7 +129,9 @@ Thanks to gomobile I've built SDK application for Android and iOS
 > Kamil is a very proactive mate that can finish things nicely done within the deadlines agreed.  
 > I believe he is a major addition in any company.*
 > 
-> — <cite>Joao Aguiar, Software Engineer</cite>
+> — <cite>[Joao Aguiar], Software Engineer</cite>
+
+[Joao Aguiar]: https://www.linkedin.com/in/jsaguiar/
 
 <!-- -->
 
@@ -156,25 +144,27 @@ Thanks to gomobile I've built SDK application for Android and iOS
 > I wish him all the best and given an opportunity I would like to work with him again.  
 > I highly recommend Kamil.*
 > 
-> — <cite>Ranveer Singh, Software Engineer</cite> 
+> — <cite>[Ranveer Singh], Software Engineer</cite> 
+
+[Ranveer Singh]: https://www.linkedin.com/in/itsranveer/
 
 <!-- -->
 
-## Golang Developer
+## Go Developer
 
 ### [Percona](https://www.percona.com)
 
 #### January 2014 – July 2015 (1 year 7 months), Remote
 
-I've made REST API in golang, for Percona Cloud Tools
+Developer of Percona Cloud Tools (a precursor of [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management)).
 
-* Revel web framework for simplified routing, parameter parsing and for crash-free request processing
-* Event based architecture with RabbitMQ for resource-consuming processing, scalability, non-blocking requests, high-load protection and to utilize sharding
-* WebSockets for real-time server-data analysis
+* [Revel](https://revel.github.io/) web framework for simplified routing, parameter parsing and for crash-free request processing.
+* Event based architecture with [RabbitMQ](https://www.rabbitmq.com/) for resource-consuming processing, scalability, non-blocking requests, high-load protection and to utilize sharding.
+* [WebSockets](https://en.wikipedia.org/wiki/WebSocket) for real-time server-data analysis.
 * Micro-service architecture
-* Memcached as caching and backend for service discovery
-* Upstart for spawning and managing workers
-* Tests written with gocheck and run by jenkins
+* [Memcached](https://memcached.org/) as caching and backend for [service discovery](https://en.wikipedia.org/wiki/Service_discovery).
+* [Ubuntu Upstart](https://upstart.ubuntu.com/) for spawning and managing workers.
+* Tests written with [gocheck](https://labix.org/gocheck) and run by [Jenkins](https://www.jenkins.io/).
 
 Worked on percona-agent, real-time client-side agent written in golang for Percona Cloud Tools
 
@@ -187,14 +177,18 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 > Kamil was a great team player always helping his colleagues when asked.  
 > Kamil has a great ability to find simple practical solutions to complicated problems.*
 > 
-> — <cite>Peter Zaitsev, Founder, CEO</cite>
+> — <cite>[Peter Zaitsev], Founder, CEO</cite>
+
+[Peter Zaitsev]: https://www.linkedin.com/in/peterzaitsev/
 
 <!-- -->
 
 > *Kamil is a Senior Backend Engineer, he did a major work in percona-agent and Percona backend layer.  
 > Kamil showed a deep understand of how to design systems and make an implementation.*
 >
-> — <cite>Vadim Tkachenko, CTO / Co-founder</cite>
+> — <cite>[Vadim Tkachenko], CTO / Co-founder</cite>
+
+[Vadim Tkachenko]: https://www.linkedin.com/in/vadimtk/
 
 <!-- -->
 
@@ -203,7 +197,9 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 > Also Kamil is showing good discipline, very attentive to team mates and giving a hand for everyone who needs his expert view.  
 > And in addition what is most important for manager's view to the team - nice and interesting person.*
 >
-> — <cite>Nika Krupitskaya, Project Manager</cite>
+> — <cite>[Nika Krupitskaya], Project Manager</cite>
+
+[Nika Krupitskaya]: https://www.linkedin.com/in/nikakrupitskaya/
 
 <!-- -->
 
@@ -216,7 +212,9 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 > I've enjoyed his code reviews, and the discussions we had about technology and the best way of solving problems.  
 > He is always trying to improve things and pushes others to do the same.*
 >
-> — <cite>Carlos Salguero, Developer</cite>
+> — <cite>[Carlos Salguero], Developer</cite>
+
+[Carlos Salguero]: https://www.linkedin.com/in/carlosfsalguero/
 
 <!-- -->
 
@@ -225,7 +223,9 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 > His knowledge on backend dev is outstanding.  
 > A definite asset on any company.*
 >
-> — <cite>Martin Cespedes, Senior QA / Scrum Master</cite>
+> — <cite>[Martin Cespedes], Senior QA / Scrum Master</cite>
+
+[Martin Cespedes]: https://www.linkedin.com/in/martin-cespedes-0471196/
 
 <!-- -->
 
@@ -233,7 +233,9 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 > I felt very comfortable working with him as a great backend / frontend team.  
 > He is an excellent professional with great knowledge.*
 >
-> — <cite>Pablo Penén, Senior Frontend Developer</cite>
+> — <cite>[Pablo Penén], Senior Frontend Developer</cite>
+
+[Pablo Penén]: https://www.linkedin.com/in/pablopenen/
 
 <!-- -->
 
@@ -242,21 +244,27 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 > He always kept the team focused on what's important leading the technical discussions in the right direction.  
 > He's great to be around, a team player and more importantly an awesome person.*
 >
-> — <cite>Miguel Paolino, Senior Software Developer</cite>
+> — <cite>[Miguel Paolino], Senior Software Developer</cite>
+
+[Miguel Paolino]: https://www.linkedin.com/in/mpaolino/
 
 <!-- -->
 
-> *Kamil is an extremely talented developer and I was very lucky to work with him.  
+> *Kamil is an extremely talented developer, and I was very lucky to work with him.  
 > He's a true hacker and brilliant class A programmer, his style is a pleasure to read.  
 > He is friendly, outgoing and always has a moment to help address customer concerns.*
 >
-> — <cite>Fabian Vallejos, Senior Frontend Developer</cite>
+> — <cite>[Fabian Vallejos], Senior Frontend Developer</cite>
+
+[Fabian Vallejos]: https://www.linkedin.com/in/fabianvallejos/
 
 <!-- -->
 
 > *Just a great developer and a great team member to work with.*
 >
-> — <cite>Francisco Guijarro, Javascript Developer</cite>
+> — <cite>[Francisco Guijarro], Javascript Developer</cite>
+
+[Francisco Guijarro]: https://www.linkedin.com/in/franleplant/
 
 <!-- -->
 
@@ -270,19 +278,20 @@ Backend and frontend application for Percona Cloud Tools
 
 ##### FrontEnd
 
-* JavaScript, single-page application written in AngularJS
-* asynchronous requests and notifications through WebSockets
-* metrics data graphed with HighchartsJS
-* tests written in Jasmine and run by Karma
+* Single-page application written in [AngularJS](https://angularjs.org/).
+* Asynchronous requests and notifications through [WebSockets](https://en.wikipedia.org/wiki/WebSocket).
+* Metrics data graphed with [Highcharts](https://www.highcharts.com/).
+* Tests written in [Jasmine](https://jasmine.github.io/) and run by [Karma](http://karma-runner.github.io/latest/index.html).
 
 ##### BackEnd
 
-* Symfony2 modular REST api
-* MySQL and TokuDB as storage with Doctrine as ORM,
-* long-time processing handled with message queues and workers
-* message queues implemented in RabbitMQ (php-amqplib/rabbitmq-bundle)
-* workers implemented with Symfony and Supervisor as worker control system
-* tests written using PHPUnit framework
+* REST api build with [Symfony](https://symfony.com/).
+* Storage in [Oracle MySQL](https://www.mysql.com/) and [Percona TokuDB](https://en.wikipedia.org/wiki/TokuDB).
+* Database access with [Doctrine ORM](https://www.doctrine-project.org/projects/orm.html).
+* Long-time processing handled with [Message queues](https://en.wikipedia.org/wiki/Message_queue) and [Background processes](https://en.wikipedia.org/wiki/Background_process).
+* Message queues implemented in [RabbitMQ](https://www.rabbitmq.com/).
+* Background processes written in [Symfony](https://symfony.com/) and managed by [Supervisor](http://supervisord.org/).
+* Tests written using [PHPUnit testing framework](https://phpunit.de/).
 
 ## IT Manager
 
@@ -293,10 +302,10 @@ Backend and frontend application for Percona Cloud Tools
 Development of pharmaceutical platform www.FarmaProm.pl
 and delivery new solutions to pharmaceutical companies.
 
-* introducing agile methods (scrum, kanban) into company
-(“Professional Scrum Master I” since 29th may 2012)
+* [Professional Scrum Master](https://www.credly.com/badges/fa2f8968-bec8-4cce-875a-d20ba566d62e) (certified on 29th May 2012)
+* Introduced [Agile Software Development](https://en.wikipedia.org/wiki/Agile_software_development) into the company, with [Scrum](https://www.scrum.org/) and [Kanban](https://en.wikipedia.org/wiki/Kanban) frameworks.
 * improvement of the team so that everyone could be
-satisfied with his role and will deliver professional software
+satisfied with his role and will deliver professional software.
 without delay
 * managing tasks and workflow
 * supporting developers, IT administrators, testers and other
@@ -324,23 +333,26 @@ duplication)
 > Because he's not going to wait three days to resurrect your dead code.  
 > If you have Kamil in your team it will be done unto you even before you ask.*
 >
-> — <cite>Michal Górski, Hadoop Developer</cite>
+> — <cite>[Michał Górski], Big Data Developer</cite>
+
+[Michał Górski]: https://www.linkedin.com/in/micha%C5%82-g%C3%B3rski-8032a59a/
 
 <!-- -->
 
-## Team Leader / Senior PHP Developer
+## Team Lead / Senior PHP Developer
 
 ### [Araneo](http://araneo.pl)
 
 #### December 2007 – October 2011 (3 years 11 months), Kraków, Poland
  
-Development and maintenance of pharmaceutical platform
-www.FarmaProm.pl.
+Team Lead and Senior PHP Developer for pharmaceutical platform www.FarmaProm.pl.
+
+Pharmacy CRM, Sales Force Automation and Medical CRM
 
 * leading php developer team
 * coordinating work between teams (php, android, windows
 mobile)
-* accepting, pricing and coordinating commissions from client
+* accepting, pricing and coordinating commissions from clients
 * deploying new software versions
 * technical support for client in contacts with his clients
 (pharmaceuticals companies and wholesales)
@@ -367,7 +379,9 @@ application usability
 > At the time he successfully kept restrained our biggest,  
 > really huge project and made sure that his team does the job well.*
 >
-> — <cite>Kris Kovalik, Hacker, Software Developer</cite>
+> — <cite>[Krzysztof Kowalik], Hacker, Software Developer</cite>
+
+[Krzysztof Kowalik]: https://www.linkedin.com/in/irisdelaluna/
 
 <!-- -->
 
@@ -377,13 +391,12 @@ application usability
 
 #### July 2007 – August 2007 (2 months), Kraków, Poland
 
-Summer job, and my first professional experience
+Summer job and my first professional experience.
 
-* head developer and designer of ticket/issue tracking system
-* developer and designer of companies database for sales
-department
-* creation, development and maintenance of existing software
-(CRM, Website Builder and others)
+* Head Developer and designer of [Issue tracking system](https://en.wikipedia.org/wiki/Issue_tracking_system).
+* Developer and designer of [Business Directory](https://en.wikipedia.org/wiki/Business_directory).
+* Developer of [Website Builder](https://en.wikipedia.org/wiki/Website_builder).
+* Maintenance of company's [CRM](https://en.wikipedia.org/wiki/Customer_relationship_management) and other proprietary software.
 
 # Something not right?
 

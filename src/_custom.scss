@@ -12,6 +12,12 @@ img[alt*="Kamil Dziedzic"] {
   h3:nth-of-type(2) {
     page-break-before: always;
   }
+  .card-header {
+    display: none !important;
+  }
+  .card {
+    border: none !important;
+  }
 }
 
 .container-fluid {
