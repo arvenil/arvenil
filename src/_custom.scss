@@ -2,10 +2,21 @@ $font-size-base: 0.9rem !default;
 
 img[alt*="Kamil Dziedzic"] {
   border-radius: 50%;
-  display: block;
   margin: auto;
-  width: 60vmin;
-  height: 60vmin;
+  display: block;
+  width: 40vmin;
+  height: 40vmin;
+}
+
+img[alt*="xyz"] {
+  margin-right: 20px;
+  display: block;
+  width: 100px;
+  float: left;
+}
+
+blockquote {
+  overflow: auto;
 }
 
 @media print {
@@ -17,6 +28,22 @@ img[alt*="Kamil Dziedzic"] {
   }
   .card {
     border: none !important;
+  }
+
+  img[alt*="Kamil Dziedzic"] {
+    width: 700px;
+    height: 700px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+
+  body a {
+    color: green;
   }
 }
 
@@ -32,31 +59,16 @@ blockquote {
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
+  text-align: justify;
 }
 blockquote p {
   display: inline;
 }
-blockquote:before {
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-  color: #2FA4E7;
-  font-size: 4em;
-  content:"\201C";
-}
-blockquote:after {
-  line-height: 0.1em;
-  margin-left: 0.25em;
-  vertical-align: -0.4em;
-  color: #2FA4E7;
-  font-size: 4em;
-  content:"\201D";
-}
 
 cite {
-  color: #2FA4E7;
+  color: deepskyblue;
 }
 
 code {
-  background: #F9F2F4;
+  background: azure;
 }

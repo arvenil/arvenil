@@ -1,7 +1,7 @@
-![Kamil Dziedzic](https://raw.githubusercontent.com/arvenil/resume/master/selfie/2019.png "Kamil Dziedzic")
+![Kamil Dziedzic](https://raw.githubusercontent.com/arvenil/resume/master/selfie/2022.png "Kamil Dziedzic")
 
 # Kamil Dziedzic
-**Go Developer** and **IT Manager**, former PHP and Front-end Developer aspiring to become proper ***Software Engineer***.
+**Go Developer** and **IT Manager**, former PHP and Angular Developer aspiring to become proper ***Software Engineer***.
 
 I'm looking for opportunities to widen my knowledge, experience and expertise in software development alongside with a steady source of income to pursue my dream of building apps for the future.
 
@@ -16,8 +16,9 @@ Feel free to contact me via email [hire@dziedzic.fr](mailto:hire@dziedzic.fr) or
 * 7+ years experience with Google Go: gRPC, REST, CLI tools, mobile, docker.
 * 10+ years with databases: MySQL, PostgreSQL, Amazon DynamoDB, Memcached and MongoDB.
 * 6+ years with testing, TDD, CI and CD.
-* 2+ years with AngularJS and node.js (not enough though).
-* 6+ years with developing PHP apps (obsolete).
+* 1+ year with [Elixir](https://elixir-lang.org/).
+* 2+ years with [AngularJS](https://angularjs.org/) and [Node.js](https://nodejs.org).
+* 6+ years with developing [PHP](https://www.php.net/) apps (obsolete).
 * Professional English with Polish accent, elementary Spanish, forgotten German, and non-existing French.
 * A hobbyist photographer, biker, inline skater and swimmer.
 
@@ -33,8 +34,8 @@ Most of my work belongs to my employers.
 There are however three exceptions:
 
 1. [Kata 形] is my recent toy project to show of my skills in algorithms and idiomatic Go.
-2. [osin-dynamodb] is a Go library which implements the storage for [OSIN](https://github.com/RangelReale/osin) with [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) using [aws-sdk-go](https://github.com/aws/aws-sdk-go). I've created it for storing OAuth credentials in DynamoDB in one of my projects at [Uniplaces](https://www.uniplaces.com/).
-3. [ninja-mutex][] [![downloads]][packagist] is a simple to use mutex implementation for php. It supports different adapters (flock, memcache, mysql, redis, ...) so you can set it up as you wish. All adapters (if set up properly) can be used in multi-server environment - in other words lock is shared between web servers. I've created it as a demo of my skills, a demo I could show on job interviews.
+2. [osin-dynamodb] is a Go library which implements the storage for [OSIN](https://github.com/RangelReale/osin) with [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) using [aws-sdk-go](https://github.com/aws/aws-sdk-go). Developed at [Uniplaces](https://www.uniplaces.com/).
+3. [ninja-mutex][] [![downloads]][packagist] is a simple to use mutex implementation for php. It supports different adapters (flock, memcache, mysql, redis, ...) so you can set it up as you wish. All adapters (if set up properly) can be used in multiserver environment - in other words lock is shared between web servers. I've created it as a demo of my skills, a demo I could show on job interviews.
 
 All those projects show some of my skills, coding standards and love for testing.
 
@@ -60,7 +61,7 @@ All those projects show some of my skills, coding standards and love for testing
 
 Do you think my skills could be useful for your company or clients? Can you offer me anything from the list above?
 
-Great! Please contact me via email [hire@dziedzic.es](mailto:hire@dziedzic.es)
+Great! Please contact me via email [hire@dziedzic.fr](mailto:hire@dziedzic.fr)
 
 You might also try to check some of my online profiles:
   
@@ -69,7 +70,7 @@ You might also try to check some of my online profiles:
 * [Stackoverflow](http://stackoverflow.com/users/916440/kamil-dziedzic)
 * [Instagram](https://www.instagram.com/arvenil/) (private, sorry)
 
-If you are interested more in my previous adventures please feel free to scroll down for my full work history with some references.
+If you are interested more in my previous adventures please feel free to scroll down for my full work history with referrals.
 
 # Work History
 
@@ -77,16 +78,30 @@ If you are interested more in my previous adventures please feel free to scroll 
 
 ### [Derivco Sports](https://derivco.com/)
 
-#### May 2020 - now, Barcelona (fully Remote because of COVID-19)
+#### May 2020 - now, Barcelona, Spain
 
-Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a5a42-c36b-4af5-97a0-3f71798996f5/public_url). Lead Developer of [Double-entry Bookkeeping API](https://en.wikipedia.org/wiki/Double-entry_bookkeeping) in Go. Integrations with customers REST APIs. Replacing outdated [Elixir](https://elixir-lang.org/) services with implementations in Go.
+Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a5a42-c36b-4af5-97a0-3f71798996f5/public_url). Lead Developer of [Double-entry Bookkeeping API](https://en.wikipedia.org/wiki/Double-entry_bookkeeping) in Go. Integrations with customers REST APIs. Replaced outdated and inefficient [Elixir](https://elixir-lang.org/) services with highly efficient and easy to change implementations in Go.
 
-* [Go](https://golang.org/) with [Echo Labstack](https://echo.labstack.com/) router for REST APIs.
+* [Go](https://golang.org/) with [Echo](https://echo.labstack.com/) router for REST APIs.
 * [PostgreSQL](https://www.postgresql.org/) for storage and message queue.
 * [Microsoft Azure Event Hubs](https://azure.microsoft.com/en-us/services/event-hubs/) for real-time event processing with sharding.
 * [Microsoft Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/), [Ansible](https://www.ansible.com/), [RPM](https://rpm.org/index.html) and [Docker](https://www.docker.com/) for CI and CD.
 * [Nagios](https://www.nagios.org/), [Grafana](https://grafana.com/) and [Splunk](https://www.splunk.com/) for monitoring and logs.
 * [HAProxy](http://www.haproxy.org/) for high availability load balancer.
+
+> ![xyz][Pedro Miguel Pereira Serrano Martins🤳]
+> 
+> *My experience with Kamil was that of being with a Golang expert. He knew all the greedy details from the language and always had some optimization/refactor suggestions to make.
+> This however, never distracted him from the goal of finishing his tasks on time. Basically speaking, he knew what to do and when - which I think is a great quality many developers I have met missed.
+> He was also very team oriented, and generally speaking an easy person to be with - a developer capable of being in any team thanks to his social skills.
+> I highly recommend him!*
+>
+> — <cite>[Pedro Miguel Pereira Serrano Martins], Senior Elixir Programmer</cite>
+
+[Pedro Miguel Pereira Serrano Martins🤳]: https://media-exp1.licdn.com/dms/image/C4E03AQFZrMTXNYIXNw/profile-displayphoto-shrink_800_800/0/1516449080223?e=1659571200&v=beta&t=ACYNOLP2VfG7pkcFdQE_kHR-ObrVWl9fcBv2emw82o4
+[Pedro Miguel Pereira Serrano Martins]: https://www.linkedin.com/in/pedro-miguel-pereira-serrano-martins-2b39a171/
+
+<!-- -->
 
 ## Software Engineer
 
@@ -94,7 +109,7 @@ Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a
 
 #### January 2017 - November 2018 (1 year, 11 months), Remote
 
-Developer of [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management).
+Developer of [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management) - a single pane of glass to easily view and monitor the performance of MySQL, MongoDB, PostgreSQL, and MariaDB databases.
 
 Contributed to several open source repositories: [prometheus/mysqld_exporter](https://github.com/prometheus/mysqld_exporter), [percona/mysqld_exporter](https://github.com/percona/mysqld_exporter), [postgres_exporter](https://github.com/percona/postgres_exporter), [mongodb_exporter](https://github.com/percona/mongodb_exporter), [rds_exporter](https://github.com/percona/rds_exporter), [pmm-client](https://github.com/percona/pmm-client), [pmm-server](https://github.com/percona/pmm-server), [qan-agent](https://github.com/percona/qan-agent), [kardianos-service](https://github.com/percona/kardianos-service), [percona-toolkit](https://github.com/percona/percona-toolkit), [qan-api](https://github.com/percona/qan-api), [qan-app](https://github.com/percona/qan-app), [pmm-managed](https://github.com/percona/pmm-managed).
 
@@ -115,15 +130,14 @@ Developer of REST microservice for booking app.
 Developer of OAuth server for a password less authorization.
 
 * Complies with [RFC-6749](https://datatracker.ietf.org/doc/html/rfc6749) with support for ["Resource Owner Password Credentials Grant"](https://tools.ietf.org/html/rfc6749#section-4.3).
-* Utilizes [osin auth library](https://github.com/RangelReale/osin).
-* Developer of [osin-dynamodb](https://github.com/arvenil/osin-dynamodb) for storing credentials in [Amazon DynamoDB](https://aws.amazon.com/dynamodb/). 
+* Utilizes [OSIN OAuth2 library](https://github.com/RangelReale/osin) with [osin-dynamodb](https://github.com/arvenil/osin-dynamodb) for storing credentials in [Amazon DynamoDB](https://aws.amazon.com/dynamodb/). 
 
-Thanks to gomobile I've built SDK application for Android and iOS
+Developer of gomobile library for Android and iOS SDK.
 
-* common application layer for Android and iOS mobile apps
-* simplified development as common logic could be encapsulated in library that Android and iOS developers can use in their apps
-* gomobile allows building fully native apps, but writing just a common library gives Android and iOS developers free hand at designing native frontend part of their app
+* Common authorization and application layer for Android and iOS mobile apps.
 
+> ![xyz][Joao Aguiar🤳]
+> 
 > *I had the pleasure to work with Kamil at Uniplaces.  
 > Soon, I was able to notice that he had a deep knowledge of the most relevant technologies that simply make things work as they should.  
 > Kamil is a very proactive mate that can finish things nicely done within the deadlines agreed.  
@@ -131,14 +145,15 @@ Thanks to gomobile I've built SDK application for Android and iOS
 > 
 > — <cite>[Joao Aguiar], Software Engineer</cite>
 
+[Joao Aguiar🤳]: https://media-exp1.licdn.com/dms/image/C4E03AQEcGB6cvT_2tQ/profile-displayphoto-shrink_800_800/0/1635006122000?e=1659571200&v=beta&t=4J4cmrD6zcrOFPI63mJaLlkvqziAcs2nnd5UPVZ3f8w
 [Joao Aguiar]: https://www.linkedin.com/in/jsaguiar/
 
 <!-- -->
 
-> *Kamil and I worked in the same team at Uniplaces.   
-> He started the very first project in Go at Uniplaces.  
-> He is very organized, composed and enthusiastic person  
-> who will definitely motivate anyone to be a better programmer.   
+> ![xyz][Ranveer Singh🤳]
+>
+> *Kamil and I worked in the same team at Uniplaces. He started the very first project in Go at Uniplaces.  
+> He is very organized, composed and enthusiastic person who will definitely motivate anyone to be a better programmer.   
 > He is a very versatile technologist, always open to work with cutting edge technology.  
 > He also mentored me and taught me a lot of the concepts of programming.  
 > I wish him all the best and given an opportunity I would like to work with him again.  
@@ -146,6 +161,7 @@ Thanks to gomobile I've built SDK application for Android and iOS
 > 
 > — <cite>[Ranveer Singh], Software Engineer</cite> 
 
+[Ranveer Singh🤳]: https://media-exp1.licdn.com/dms/image/C5603AQGyl9z4PXPnzQ/profile-displayphoto-shrink_800_800/0/1564592532579?e=1659571200&v=beta&t=PBXNkySLpbdiN12WwxTWPYgHwg97caZCMYWnHCbjUhY 
 [Ranveer Singh]: https://www.linkedin.com/in/itsranveer/
 
 <!-- -->
@@ -161,18 +177,29 @@ Developer of Percona Cloud Tools (a precursor of [Percona Monitoring and Managem
 * [Revel](https://revel.github.io/) web framework for simplified routing, parameter parsing and for crash-free request processing.
 * Event based architecture with [RabbitMQ](https://www.rabbitmq.com/) for resource-consuming processing, scalability, non-blocking requests, high-load protection and to utilize sharding.
 * [WebSockets](https://en.wikipedia.org/wiki/WebSocket) for real-time server-data analysis.
-* Micro-service architecture
+* Microservice architecture
 * [Memcached](https://memcached.org/) as caching and backend for [service discovery](https://en.wikipedia.org/wiki/Service_discovery).
 * [Ubuntu Upstart](https://upstart.ubuntu.com/) for spawning and managing workers.
 * Tests written with [gocheck](https://labix.org/gocheck) and run by [Jenkins](https://www.jenkins.io/).
 
-Worked on percona-agent, real-time client-side agent written in golang for Percona Cloud Tools
+Developer of percona-agent, real-time client-side agent written in golang for Percona Cloud Tools.
 
-* collecting MySQL metrics from "show global status", information_schema, performance_schema and slowlog
-* collecting system metrics from /proc/{stat,meminfo,vmstat,loadavg,diskstats} and from pt-summary (percona-toolkit)
-* real-time MySQL "EXPLAIN" thanks to WebSockets
-* tests written with gocheck and run by jenkins
+* Collects MySQL metrics from:
+  * [SHOW GLOBAL STATUS Statement](https://dev.mysql.com/doc/refman/8.0/en/show-status.html)
+  * [The INFORMATION_SCHEMA TABLES table](https://dev.mysql.com/doc/refman/8.0/en/information-schema-tables-table.html)
+  * [Performance Schema](https://dev.mysql.com/doc/refman/8.0/en/performance-schema.html)
+  * [The Slow Query Log](https://dev.mysql.com/doc/refman/8.0/en/slow-query-log.html) (--log-output=file)
+* Collects system metrics from [pt-summary](https://www.percona.com/doc/percona-toolkit/latest/pt-summary.html) and [proc filesystem](https://en.wikipedia.org/wiki/procfs):
+  * /proc/stat
+  * /proc/meminfo
+  * /proc/vmstat
+  * /proc/loadavg
+  * /proc/diskstats
+* [EXPLAIN Statement](https://dev.mysql.com/doc/refman/8.0/en/explain.html) in real-time thanks to [Websockets](https://pkg.go.dev/golang.org/x/net/websocket).
+* Tests written with [gocheck](https://labix.org/gocheck) and run by [Jenkins](https://www.jenkins.io/).
 
+> <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEOzraGpczEeA/profile-displayphoto-shrink_800_800/0/1568848210081?e=1659571200&v=beta&t=PeoLC_vR3-bL8Mkbsx0opi_tuYc8V7XeyxLw0X5ThjE" width="100px" align="right">
+> 
 > *Kamil has a great mix of skills as backend, frontend developer as well as understands ops/devops pretty well.  
 > Kamil was a great team player always helping his colleagues when asked.  
 > Kamil has a great ability to find simple practical solutions to complicated problems.*
@@ -183,6 +210,8 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 
 <!-- -->
 
+> <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEl6eJyXzWkag/profile-displayphoto-shrink_800_800/0/1597242759843?e=1659571200&v=beta&t=v7lUD67MZObY9gQ9AAND0EoSDeR0_mGyr8mSiyOq10c" width="100px" align="right">
+> 
 > *Kamil is a Senior Backend Engineer, he did a major work in percona-agent and Percona backend layer.  
 > Kamil showed a deep understand of how to design systems and make an implementation.*
 >
@@ -192,13 +221,16 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 
 <!-- -->
 
+> ![xyz][Nika Krupitskaya🤳]
+> 
 > *Kamil showed expert level of Go lang knowledge, high quality of work and critical architecture mind.  
 > Beside of that Kamil is 1) showing good skills on debugging problems 2) analytic mind with clear explanation of problem and ability to ask right questions and suggest right solutions on the base of answers 3) very attentive to users of the system and support engineers with helping them to solve problems.  
-> Also Kamil is showing good discipline, very attentive to team mates and giving a hand for everyone who needs his expert view.  
+> Also Kamil is showing good discipline, very attentive to teammates and giving a hand for everyone who needs his expert view.  
 > And in addition what is most important for manager's view to the team - nice and interesting person.*
 >
 > — <cite>[Nika Krupitskaya], Project Manager</cite>
 
+[Nika Krupitskaya🤳]: https://media-exp1.licdn.com/dms/image/C4E03AQF60_hGea2XXw/profile-displayphoto-shrink_800_800/0/1516305105322?e=1659571200&v=beta&t=Zlp83umwCZCcdxu0K7xCS4PiwfAAfYT1X3I1FbH97Lo
 [Nika Krupitskaya]: https://www.linkedin.com/in/nikakrupitskaya/
 
 <!-- -->
@@ -268,7 +300,7 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 
 <!-- -->
 
-## PHP and UI/Front-end Developer
+## PHP and UI Developer
 
 ### [Percona](https://www.percona.com)
 
@@ -276,9 +308,9 @@ Worked on percona-agent, real-time client-side agent written in golang for Perco
 
 Backend and frontend application for Percona Cloud Tools
 
-##### FrontEnd
+##### User interface
 
-* Single-page application written in [AngularJS](https://angularjs.org/).
+* [Single-page application](https://en.wikipedia.org/wiki/Single-page_application) written in [AngularJS](https://angularjs.org/).
 * Asynchronous requests and notifications through [WebSockets](https://en.wikipedia.org/wiki/WebSocket).
 * Metrics data graphed with [Highcharts](https://www.highcharts.com/).
 * Tests written in [Jasmine](https://jasmine.github.io/) and run by [Karma](http://karma-runner.github.io/latest/index.html).
@@ -302,78 +334,73 @@ Backend and frontend application for Percona Cloud Tools
 Development of pharmaceutical platform www.FarmaProm.pl
 and delivery new solutions to pharmaceutical companies.
 
-* [Professional Scrum Master](https://www.credly.com/badges/fa2f8968-bec8-4cce-875a-d20ba566d62e) (certified on 29th May 2012)
+* [Professional Scrum Master](https://www.credly.com/badges/fa2f8968-bec8-4cce-875a-d20ba566d62e) certified on 29th May 2012.
 * Introduced [Agile Software Development](https://en.wikipedia.org/wiki/Agile_software_development) into the company, with [Scrum](https://www.scrum.org/) and [Kanban](https://en.wikipedia.org/wiki/Kanban) frameworks.
-* improvement of the team so that everyone could be
-satisfied with his role and will deliver professional software.
-without delay
-* managing tasks and workflow
-* supporting developers, IT administrators, testers and other
-IT specialist in delivering new solutions on time
-* verifying and accepting critical pricing
-* technical support for sales department in contact with
-clients
-* reacting in emergency situations e.g. application crashes
-* recruiting new IT specialists
-Additionally:
-* improve the process and modifications flow by designing
-production and development environment: branches
-hierarchy in SVN (stable, release and integration branches;
-feature branches; hotfix branches), automatic merges
-between branches, integration with redmine issue tracking
-system, integration with jenkins (continuous integration), web
-application actualization process (shell/php), automatic
-reports of deployed modifications
-* verification and protection of business critical application
-components (e.g. protection against race conditions or data
-duplication)
+* Increased [employee satisfaction](https://en.wikipedia.org/wiki/Job_satisfaction) with training opportunities, wider flexibility, more transparency, improved communication, reducing bureaucracy and micromanagement. 
+* Greatly reduced risks and software delivery time by familiarizing IT specialist - developers, system administrators, testers - with [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery) and implementing the approach.
+* Managing tasks and workflows in [Redmine](https://www.redmine.org/).
+* Evaluating [engineering cost](https://en.wikipedia.org/wiki/Cost_engineering) for customers.
+* Technical support for sales department in contact with clients (pharmaceuticals companies and wholesales).
+* Emergency contact for any software problem e.g. app crashes.
+* Interviewing and recruiting IT specialists.
 
-> *I would like to say that Kamil is a Programming Jezus.  
+> ![xyz][Michał Górski🤳]
+> 
+> *I would like to say that Kamil is a Programming Jesus.  
 > But it might be offensive. Offensive to Kamil.  
 > Because he's not going to wait three days to resurrect your dead code.  
 > If you have Kamil in your team it will be done unto you even before you ask.*
 >
 > — <cite>[Michał Górski], Big Data Developer</cite>
 
+[Michał Górski🤳]: https://media-exp1.licdn.com/dms/image/C4E03AQHXEMs4YeobpA/profile-displayphoto-shrink_800_800/0/1516936116860?e=1659571200&v=beta&t=xLQRF9DpKYvBCqlKpHTZLFMtv1eTDy9Tdc14KJTlBdY
 [Michał Górski]: https://www.linkedin.com/in/micha%C5%82-g%C3%B3rski-8032a59a/
 
 <!-- -->
 
-## Team Lead / Senior PHP Developer
+## Team Lead and Senior PHP Developer
 
 ### [Araneo](http://araneo.pl)
 
 #### December 2007 – October 2011 (3 years 11 months), Kraków, Poland
  
-Team Lead and Senior PHP Developer for pharmaceutical platform www.FarmaProm.pl.
+Team Lead and Senior PHP Developer for pharmaceutical platform www.FarmaProm.pl:
+  * [Sales Force Automation](https://www.farmaprom.pl/en/sfa/)
+  * [Medical & Pharmaceutical CRM](https://www.farmaprom.pl/en/crm/)
+  * [Manufacturer CRM](https://www.farmaprom.pl/en/manufacturer/)
+  * [Wholesaler CRM](https://www.farmaprom.pl/en/wholesaler/)
 
-Pharmacy CRM, Sales Force Automation and Medical CRM
+##### As a Team Lead
 
-* leading php developer team
-* coordinating work between teams (php, android, windows
-mobile)
-* accepting, pricing and coordinating commissions from clients
-* deploying new software versions
-* technical support for client in contacts with his clients
-(pharmaceuticals companies and wholesales)
-* designing key modifications (from changes in application
-engine to modifications operating on customers critical data e.g. wholesales financial data)
-* designing, managing and optimizing large databases
+* Leading [PHP](https://www.php.net/) team.
+* Coordinating work between IT teams: [PHP](https://www.php.net/), [Front-end](https://en.wikipedia.org/wiki/Front-end_web_development), [iOS](https://en.wikipedia.org/wiki/IOS), [Android](https://developer.android.com/), [Windows Mobile](https://en.wikipedia.org/wiki/Windows_Mobile), [System administrators](https://en.wikipedia.org/wiki/System_administrator), [Quality assurance](https://en.wikipedia.org/wiki/Software_quality_assurance).
+* Accepting, pricing and coordinating commissions from clients.
+* Releasing and deploying new software versions.
+* Designing key modifications (from changes in application
+engine to modifications operating on customers critical data e.g. wholesales financial data).
+* Designing, managing and optimizing large databases
 (hundreds tables, tens of gigabytes of data, hundreds millions
-records)
-* providing monthly financial settlement of the closed tasks
-for client
-* highly available, especially in breakdowns or when critical fix
-were required
-The development work worth mentioning:
-* implementation and maintenance of web services (rest,
-soap) for mobile solutions (Windows Mobile, Android OS)
-* communication with external services (own solutions based
-on xml, xml+xslt, text files, http request)
-* integration with Oracle Business Intelligence (conversion
-from relation model to star schema)
-* debugging, testing, optimizing php/sql/js code, improving
-application usability
+records).
+
+##### As a PHP Developer
+
+* Developed [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) and [SOAP](https://en.wikipedia.org/wiki/SOAP) web services for [Windows Mobile](https://en.wikipedia.org/wiki/Windows_Mobile), [iOS](https://en.wikipedia.org/wiki/IOS) and [Android](https://developer.android.com/).
+* Established [electronic data interchange](https://en.wikipedia.org/wiki/Electronic_data_interchange) with over 100 pharmaceutical companies and wholesalers. Data formats used: XML+XSLT, CSV, XLS, text files and JSON. Transmission protocols: FTP, FTPS, SFTP and HTTPS. 
+* Integration with [Oracle Business Intelligence](https://www.oracle.com/business-analytics/business-intelligence/). Conversion from [relational model](https://en.wikipedia.org/wiki/Relational_model) to [star schema](https://en.wikipedia.org/wiki/Star_schema).
+* Debugging, testing, optimizing PHP, SQL and Javascript code.
+* [Propel](http://propelorm.org/)
+* Improved parallel development by designing
+  production and development environment: branches
+  hierarchy (stable, release and integration branches;
+  feature branches; hotfix branches) in SVN (and later migrated to GIT), automatic merges
+  between branches, integration with redmine issue tracking
+  system, continuous integration with jenkins, web
+  application actualization process (bash/php), automatic
+  e-mail reports for deployed releases.
+  That was way before [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) and [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow).
+* Ensuring data consistency of business critical application
+  components (e.g. protection against race conditions or data
+  duplication).
 
 > *Kamil is well skilled and very sane developer.
 > At the time he successfully kept restrained our biggest,  
@@ -398,6 +425,21 @@ Summer job and my first professional experience.
 * Developer of [Website Builder](https://en.wikipedia.org/wiki/Website_builder).
 * Maintenance of company's [CRM](https://en.wikipedia.org/wiki/Customer_relationship_management) and other proprietary software.
 
+# Hobbies
+
+* DSLR photography - whenever I have time.
+* Travelling - google reports more than 20 countries, so I guess it's a start.
+* Swimming - learned in Barcelona and [Costa Brava](https://www.google.com/search?q=costa+brava&tbm=isch), now in the wetsuit continuing on the [French Riviera](https://www.google.com/search?q=french+riviera&tbm=isch).
+* Food - it's impossible to say "no" to all delicious regional delights.
+* Books - to name few influential: 
+  * [Astrophysics for People in a Hurry](https://en.wikipedia.org/wiki/Astrophysics_for_People_in_a_Hurry)
+  * [A Brief History of Time](https://en.wikipedia.org/wiki/A_Brief_History_of_Time)
+  * [Getting Things Done](https://en.wikipedia.org/wiki/Getting_Things_Done)
+  * [The Ghost In The Shell](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(manga))
+  * [The Pragmatic Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)
+  * [Sapiens: A Brief History of Humankind](https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind)
+* Technology and programming - everything with microprocessor is as exciting as a birthday cake.
+
 # Something not right?
 
-This resume is open source so feel free to fork project, fix mistakes, make improvements and finally request for pull at [https://github.com/arvenil/arvenil](https://github.com/arvenil/arvenil)
+This resume is open source - feel free to fork it, make improvements and create a pull request at [https://github.com/arvenil/arvenil](https://github.com/arvenil/arvenil)
