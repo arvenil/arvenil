@@ -75,9 +75,9 @@ If you are interested more in my previous adventures please feel free to scroll 
 
 # Work History
 
-## Developer at [Derivco Sports](https://derivco.com/)
+## Developer at [Derivco Sports](https://derivco.com/) <img src="./logo/derivco.jpeg" width="80px" height="80px" align="right" alt="logo">
 
-### May 2020 - now, Barcelona, Spain
+*May 2020 - now, Barcelona, Spain*
 
 Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a5a42-c36b-4af5-97a0-3f71798996f5/public_url). Lead Developer of [Double-entry Bookkeeping API](https://en.wikipedia.org/wiki/Double-entry_bookkeeping) in Go. Integrations with customers REST APIs. Replaced outdated and inefficient [Elixir](https://elixir-lang.org/) services with highly efficient and easy to change implementations in Go.
 
@@ -101,7 +101,7 @@ Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a
 
 <!-- -->
 
-## Software Engineer at [Percona](https://www.percona.com)
+## Software Engineer at [Percona](https://www.percona.com) <img src="./logo/percona.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *January 2017 - November 2018 (1 year, 11 months), Remote*
 
@@ -109,7 +109,7 @@ Developer of [Percona Monitoring and Management](https://www.percona.com/softwar
 
 Contributed to several open source repositories: [prometheus/mysqld_exporter](https://github.com/prometheus/mysqld_exporter), [percona/mysqld_exporter](https://github.com/percona/mysqld_exporter), [postgres_exporter](https://github.com/percona/postgres_exporter), [mongodb_exporter](https://github.com/percona/mongodb_exporter), [rds_exporter](https://github.com/percona/rds_exporter), [pmm-client](https://github.com/percona/pmm-client), [pmm-server](https://github.com/percona/pmm-server), [qan-agent](https://github.com/percona/qan-agent), [kardianos-service](https://github.com/percona/kardianos-service), [percona-toolkit](https://github.com/percona/percona-toolkit), [qan-api](https://github.com/percona/qan-api), [qan-app](https://github.com/percona/qan-app), [pmm-managed](https://github.com/percona/pmm-managed).
 
-## Senior Software Developer at [Uniplaces](https://www.uniplaces.com)
+## Senior Software Developer at [Uniplaces](https://www.uniplaces.com) <img src="./logo/uniplaces.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *January 2016 – June 2016 (6 months), Lisbon, Portugal*
 
@@ -158,7 +158,7 @@ Developer of [Go Mobile](https://github.com/golang/mobile) library for Android a
 
 <!-- -->
 
-## Go Developer at [Percona](https://www.percona.com)
+## Go Developer at [Percona](https://www.percona.com) <img src="./logo/percona.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *January 2014 – July 2015 (1 year 7 months), Remote*
 
@@ -294,20 +294,20 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 
 <!-- -->
 
-## PHP and UI Developer at [Percona](https://www.percona.com)
+## PHP and UI Developer at [Percona](https://www.percona.com) <img src="./logo/percona.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *September 2013 – December 2013 (4 months), Remote*
 
 Backend and frontend application for Percona Cloud Tools
 
-##### User interface
+Frontend:
 
 * [Single-page application](https://en.wikipedia.org/wiki/Single-page_application) written in [AngularJS](https://angularjs.org/).
 * Asynchronous requests and notifications through [WebSockets](https://en.wikipedia.org/wiki/WebSocket).
 * Metrics data graphed with [Highcharts](https://www.highcharts.com/).
 * Tests written in [Jasmine](https://jasmine.github.io/) and run by [Karma](http://karma-runner.github.io/latest/index.html).
 
-##### BackEnd
+Backend: 
 
 * REST api build with [Symfony](https://symfony.com/).
 * Storage in [Oracle MySQL](https://www.mysql.com/) and [Percona TokuDB](https://en.wikipedia.org/wiki/TokuDB).
@@ -317,7 +317,7 @@ Backend and frontend application for Percona Cloud Tools
 * Background processes written in [Symfony](https://symfony.com/) and managed by [Supervisor](http://supervisord.org/).
 * Tests written using [PHPUnit testing framework](https://phpunit.de/).
 
-## IT Manager at [FarmaProm Polska](https://www.farmaprom.pl)
+## IT Manager at [FarmaProm Polska](https://www.farmaprom.pl) <img src="./logo/farmaprom.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *October 2011 – November 2013 (2 years 2 months), Kraków, Poland*
 
@@ -402,7 +402,7 @@ PHP Developer:
 
 <!-- -->
 
-## PHP Developer at [Krakowskie e-Centrum Informatyczne](https://kei.pl) <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNF0E0JH3TIO0FhpMP4i0g-7tuhvCJUvhAvQ&usqp=CAU" width="80px" height="80px" align="right" alt="logo">
+## PHP Developer at [Krakowskie e-Centrum Informatyczne](https://kei.pl) <img src="./logo/kei.png" width="80px" height="80px" align="right" alt="logo">
 
 *July 2007 – August 2007 (2 months), Kraków, Poland*
 
