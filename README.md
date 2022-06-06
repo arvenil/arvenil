@@ -179,7 +179,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
   * The [INFORMATION_SCHEMA TABLES](https://dev.mysql.com/doc/refman/8.0/en/information-schema-tables-table.html) table.
   * [Performance Schema](https://dev.mysql.com/doc/refman/8.0/en/performance-schema.html) database.
   * [The Slow Query Log](https://dev.mysql.com/doc/refman/8.0/en/slow-query-log.html) (--log-output=file)
-* Collects system metrics from [pt-summary](https://www.percona.com/doc/percona-toolkit/latest/pt-summary.html) and [proc filesystem](https://en.wikipedia.org/wiki/procfs), specifically `/proc/{stat,meminfo,vmstat,loadavg,diskstats}`
+* Collects system metrics from [pt-summary](https://www.percona.com/doc/percona-toolkit/latest/pt-summary.html) and [/proc filesystem](https://en.wikipedia.org/wiki/procfs).
 * [EXPLAIN Statement](https://dev.mysql.com/doc/refman/8.0/en/explain.html) in real-time thanks to [Websockets](https://pkg.go.dev/golang.org/x/net/websocket).
 * Tests written with [gocheck](https://labix.org/gocheck) and run by [Jenkins](https://www.jenkins.io/).
 
@@ -222,10 +222,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 >
 > *Kamil is a very talented developer and a good friend.  
 > He has a deep knowledge of Go and other programming languages as well  
-> and that turns him in a good fit for almost any project you can imagine.  
-> Careful about details, always trying to reach 110% of test coverage and always willing to help, I've really enjoyed working with him.  
-> Kamil is not only talented programming computers, but he is also a very open-minded person;  
-> I've enjoyed his code reviews, and the discussions we had about technology and the best way of solving problems.  
+> and that turns him in a good fit for almost any project you can imagine. Careful about details, always trying to reach 110% of test coverage and always willing to help, I've really enjoyed working with him. Kamil is not only talented programming computers, but he is also a very open-minded person; I've enjoyed his code reviews, and the discussions we had about technology and the best way of solving problems.  
 > He is always trying to improve things and pushes others to do the same.*
 >
 > — <cite>[Carlos Salguero], Developer</cite>
@@ -262,8 +259,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 > <img src="https://media-exp1.licdn.com/dms/image/C5603AQEuIFVLgFqYjA/profile-displayphoto-shrink_800_800/0/1516332587704?e=1659571200&v=beta&t=LtwqJQ71vMK1kR8gAWXgfgyERqCslMB3Bw8a1aQEfLE" width="100px" align="right" alt="avatar">
 >
 > *Kamil is a very detail-oriented developer with strong technical and analytic skills.  
-> He was the cornerstone of our backend team, he built most of our code base with great speed and quality.  
-> He always kept the team focused on what's important leading the technical discussions in the right direction.  
+> He was the cornerstone of our backend team, he built most of our code base with great speed and quality. He always kept the team focused on what's important leading the technical discussions in the right direction.  
 > He's great to be around, a team player and more importantly an awesome person.*
 >
 > — <cite>[Miguel Paolino], Senior Software Developer</cite>
