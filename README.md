@@ -347,7 +347,7 @@ and delivery new solutions to pharmaceutical companies.
 
 <!-- -->
 
-## Team Lead and Senior PHP Developer at [Araneo](http://araneo.pl)<img src="https://raw.githubusercontent.com/arvenil/resume/master/logo/araneo.png" width="80px" height="80px" align="right" alt="logo">
+## Team Lead and Senior PHP Developer at [Araneo](http://araneo.pl)<img src="./logo/araneo.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *December 2007 – October 2011 (3 years 11 months), Kraków, Poland*
  
