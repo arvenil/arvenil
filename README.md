@@ -223,8 +223,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 > *Kamil is a very talented developer and a good friend.  
 > He has a deep knowledge of Go and other programming languages as well  
 > and that turns him in a good fit for almost any project you can imagine.  
-> Careful about details, always trying to reach 110% of test coverage and always willing to help,  
-> I've really enjoyed working with him.  
+> Careful about details, always trying to reach 110% of test coverage and always willing to help, I've really enjoyed working with him.  
 > Kamil is not only talented programming computers, but he is also a very open-minded person;  
 > I've enjoyed his code reviews, and the discussions we had about technology and the best way of solving problems.  
 > He is always trying to improve things and pushes others to do the same.*
@@ -348,17 +347,18 @@ and delivery new solutions to pharmaceutical companies.
 
 <!-- -->
 
-## Team Lead and Senior PHP Developer at [Araneo](http://araneo.pl)
+## Team Lead and Senior PHP Developer at [Araneo](http://araneo.pl)<img src="https://raw.githubusercontent.com/arvenil/resume/master/logo/araneo.png" width="80px" height="80px" align="right" alt="logo">
 
 *December 2007 – October 2011 (3 years 11 months), Kraków, Poland*
  
 Team Lead and Senior PHP Developer for pharmaceutical platform www.FarmaProm.pl:
+
   * [Sales Force Automation](https://www.farmaprom.pl/en/sfa/)
   * [Medical & Pharmaceutical CRM](https://www.farmaprom.pl/en/crm/)
   * [Manufacturer CRM](https://www.farmaprom.pl/en/manufacturer/)
   * [Wholesaler CRM](https://www.farmaprom.pl/en/wholesaler/)
 
-### As a Team Lead
+Team Lead:
 
 * Leading [PHP](https://www.php.net/) team.
 * Coordinating work between IT teams: [PHP](https://www.php.net/), [Front-end](https://en.wikipedia.org/wiki/Front-end_web_development), [iOS](https://en.wikipedia.org/wiki/IOS), [Android](https://developer.android.com/), [Windows Mobile](https://en.wikipedia.org/wiki/Windows_Mobile), [System administrators](https://en.wikipedia.org/wiki/System_administrator), [Quality assurance](https://en.wikipedia.org/wiki/Software_quality_assurance).
@@ -370,7 +370,7 @@ engine to modifications operating on customers critical data e.g. wholesales fin
 (hundreds tables, tens of gigabytes of data, hundreds millions
 records).
 
-### As a PHP Developer
+PHP Developer:
 
 * Developed [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) and [SOAP](https://en.wikipedia.org/wiki/SOAP) web services for [Windows Mobile](https://en.wikipedia.org/wiki/Windows_Mobile), [iOS](https://en.wikipedia.org/wiki/IOS) and [Android](https://developer.android.com/).
 * Established [electronic data interchange](https://en.wikipedia.org/wiki/Electronic_data_interchange) with over 100 pharmaceutical companies and wholesalers. Data formats used: XML+XSLT, CSV, XLS, text files and JSON. Transmission protocols: FTP, FTPS, SFTP and HTTPS. 
@@ -402,7 +402,7 @@ records).
 
 <!-- -->
 
-## <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNF0E0JH3TIO0FhpMP4i0g-7tuhvCJUvhAvQ&usqp=CAU" width="80px" height="80px" align="right" alt="logo"> PHP Developer at [Krakowskie e-Centrum Informatyczne](https://kei.pl) 
+## PHP Developer at [Krakowskie e-Centrum Informatyczne](https://kei.pl) <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNF0E0JH3TIO0FhpMP4i0g-7tuhvCJUvhAvQ&usqp=CAU" width="80px" height="80px" align="right" alt="logo">
 
 *July 2007 – August 2007 (2 months), Kraków, Poland*
 
