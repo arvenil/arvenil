@@ -283,9 +283,9 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 > <img src="https://media-exp1.licdn.com/dms/image/C5603AQFTnmmqsPV90A/profile-displayphoto-shrink_800_800/0/1517497891726?e=1659571200&v=beta&t=K0haKYWT_CkyxZl6KONjyvhE45BGUzoLPh2AVEtqr1Q" width="100px" align="right" alt="avatar">
 >
 > *Just a great developer and a great team member to work with.*  
->   
-> 
->
+>  
+>  
+>  
 > — <cite>[Francisco Guijarro], Javascript Developer</cite>
 
 [Francisco Guijarro]: https://www.linkedin.com/in/franleplant/
