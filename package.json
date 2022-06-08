@@ -4,7 +4,7 @@
   "description": "![Kamil Dziedzic](https://raw.githubusercontent.com/arvenil/resume/master/photo.jpg \"Kamil Dziedzic\")",
   "main": "docs/main.js",
   "dependencies": {
-    "bootstrap": "^4.6.1",
+    "bootstrap": "^5.1.3",
     "bootswatch": "^4.6.1",
     "file-saver": "^2.0.5"
   },
