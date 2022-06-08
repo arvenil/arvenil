@@ -1,22 +1,22 @@
 build: html pdf html	## Build 🏗
 
 html:
-	blackfriday-tool README.md src/README.html
-	npx webpack --mode production
+	blackfriday-tool README.md README.html
+	npx webpack --mode production --stats-children
 
 #chromehtml2pdf:
 #	# BUG: https://bugs.chromium.org/p/chromium/issues/detail?id=840455
 #	chromehtml2pdf --out="src/Kamil Dziedzic - Software Engineer.pdf" file:///Users/nil/local/resume/docs/index.html
 
 pdf:
-	sed -i '' 's/“/\\201C/g;s/”/\\201D/g' docs/main.css
 	# BUG: https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2913
 	wkhtmltopdf	\
+				--enable-local-file-access \
 				--encoding utf-8 \
 				--print-media-type \
 				--user-style-sheet docs/main.css \
 				--title "Curriculum vitae" \
-				src/README.html \
+				README.html \
 				src/"Kamil Dziedzic - Software Engineer.pdf"
 
 npm:
@@ -30,6 +30,8 @@ update: npm node		## Update dependencies
 
 upgrade:				## Upgrade dependencies
 	node -v > .nvmrc
+	npx npm-check-updates -u
+	npm install
 
 help: Makefile			## Display this help message
 	@echo "USAGE:	make TARGET\n\nTARGETS:"
