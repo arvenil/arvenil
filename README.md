@@ -1,4 +1,4 @@
-![Kamil Dziedzic](./src/img/selfie/2022.png "Kamil Dziedzic")
+![Kamil Dziedzic](src/img/selfie/2022.png "Kamil Dziedzic")
 
 # Kamil Dziedzic
 
@@ -75,9 +75,9 @@ If you are interested more in my previous adventures please feel free to scroll 
 
 # Work History
 
-## Developer at [Derivco Sports](https://derivco.com/) <img src="./src/img/logo/derivco.jpeg" width="80px" height="80px" align="right" alt="logo">
+## Developer at [Derivco Sports](https://derivco.com/) <img src="src/img/logo/derivco.jpeg" width="80px" height="80px" align="right" alt="logo">
 
-*May 2020 - now, Barcelona, Spain*
+*May 2020 - September 2021 (1 year 5 months), Barcelona, Spain*
 
 Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a5a42-c36b-4af5-97a0-3f71798996f5/public_url). Lead Developer of [Double-entry Bookkeeping API](https://en.wikipedia.org/wiki/Double-entry_bookkeeping) in Go. Integrations with customers REST APIs. Replaced outdated and inefficient [Elixir](https://elixir-lang.org/) services with highly efficient and easy to change implementations in Go.
 
@@ -88,7 +88,7 @@ Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a
 * [Nagios](https://www.nagios.org/), [Grafana](https://grafana.com/) and [Splunk](https://www.splunk.com/) for monitoring and logs.
 * [HAProxy](http://www.haproxy.org/) for high availability load balancer.
 
-> <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFZrMTXNYIXNw/profile-displayphoto-shrink_800_800/0/1516449080223?e=1659571200&v=beta&t=ACYNOLP2VfG7pkcFdQE_kHR-ObrVWl9fcBv2emw82o4" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/pedro-miguel-pereira-serrano-martins.jpeg" width="100px" align="right" alt="avatar">
 > 
 > *My experience with Kamil was that of being with a Golang expert. He knew all the greedy details from the language and always had some optimization/refactor suggestions to make.
 > This however, never distracted him from the goal of finishing his tasks on time. Basically speaking, he knew what to do and when - which I think is a great quality many developers I have met missed.
@@ -101,15 +101,15 @@ Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a
 
 <!-- -->
 
-## Software Engineer at [Percona](https://www.percona.com) <img src="./src/img/logo/percona.jpeg" width="80px" height="80px" align="right" alt="logo">
+## Software Engineer at [Percona](https://www.percona.com) <img src="src/img/logo/percona.jpeg" width="80px" height="80px" align="right" alt="logo">
 
-*January 2017 - November 2018 (1 year, 11 months), Remote*
+*January 2017 - November 2018 (1 year 11 months), Remote*
 
 Developer of [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management) - a single pane of glass to easily view and monitor the performance of MySQL, MongoDB, PostgreSQL, and MariaDB databases.
 
 Contributed to several open source repositories: [prometheus/mysqld_exporter](https://github.com/prometheus/mysqld_exporter), [percona/mysqld_exporter](https://github.com/percona/mysqld_exporter), [postgres_exporter](https://github.com/percona/postgres_exporter), [mongodb_exporter](https://github.com/percona/mongodb_exporter), [rds_exporter](https://github.com/percona/rds_exporter), [pmm-client](https://github.com/percona/pmm-client), [pmm-server](https://github.com/percona/pmm-server), [qan-agent](https://github.com/percona/qan-agent), [kardianos-service](https://github.com/percona/kardianos-service), [percona-toolkit](https://github.com/percona/percona-toolkit), [qan-api](https://github.com/percona/qan-api), [qan-app](https://github.com/percona/qan-app), [pmm-managed](https://github.com/percona/pmm-managed).
 
-## Senior Software Developer at [Uniplaces](https://www.uniplaces.com) <img src="./src/img/logo/uniplaces.jpeg" width="80px" height="80px" align="right" alt="logo">
+## Senior Software Developer at [Uniplaces](https://www.uniplaces.com) <img src="src/img/logo/uniplaces.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *January 2016 – June 2016 (6 months), Lisbon, Portugal*
 
@@ -130,7 +130,7 @@ Developer of [Go Mobile](https://github.com/golang/mobile) library for Android a
 
 * Common authorization and application layer for Android and iOS mobile apps.
 
-> <img src="./src/img/avatar/joao-aguiar.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/joao-aguiar.jpeg" width="100px" align="right" alt="avatar">
 > 
 > *I had the pleasure to work with Kamil at Uniplaces.  
 > Soon, I was able to notice that he had a deep knowledge of the most relevant technologies that simply make things work as they should.  
@@ -143,7 +143,7 @@ Developer of [Go Mobile](https://github.com/golang/mobile) library for Android a
 
 <!-- -->
 
-> <img src="./src/img/avatar/ranveer-singh.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/ranveer-singh.jpeg" width="100px" align="right" alt="avatar">
 >
 > *Kamil and I worked in the same team at Uniplaces. He started the very first project in Go at Uniplaces.  
 > He is very organized, composed and enthusiastic person who will definitely motivate anyone to be a better programmer.   
@@ -158,7 +158,7 @@ Developer of [Go Mobile](https://github.com/golang/mobile) library for Android a
 
 <!-- -->
 
-## Go Developer at [Percona](https://www.percona.com) <img src="./src/img/logo/percona.jpeg" width="80px" height="80px" align="right" alt="logo">
+## Go Developer at [Percona](https://www.percona.com) <img src="src/img/logo/percona.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *January 2014 – July 2015 (1 year 7 months), Remote*
 
@@ -183,7 +183,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 * [EXPLAIN Statement](https://dev.mysql.com/doc/refman/8.0/en/explain.html) in real-time thanks to [Websockets](https://pkg.go.dev/golang.org/x/net/websocket).
 * Tests written with [gocheck](https://labix.org/gocheck) and run by [Jenkins](https://www.jenkins.io/).
 
-> <img src="./src/img/avatar/peter-zaitsev.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/peter-zaitsev.jpeg" width="100px" align="right" alt="avatar">
 > 
 > *Kamil has a great mix of skills as backend, frontend developer as well as understands ops/devops pretty well.  
 > Kamil was a great team player always helping his colleagues when asked.  
@@ -195,7 +195,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 
 <!-- -->
 
-> <img src="./src/img/avatar/vadim-tkachenko.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/vadim-tkachenko.jpeg" width="100px" align="right" alt="avatar">
 > 
 > *Kamil is a Senior Backend Engineer, he did a major work in percona-agent and Percona backend layer.  
 > Kamil showed a deep understand of how to design systems and make an implementation.*
@@ -205,7 +205,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 [Vadim Tkachenko]: https://www.linkedin.com/in/vadimtk/
 
 <!-- -->
-> <img src="./src/img/avatar/nika-krupitskaya.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/nika-krupitskaya.jpeg" width="100px" align="right" alt="avatar">
 > 
 > *Kamil showed expert level of Go lang knowledge, high quality of work and critical architecture mind.  
 > Beside of that Kamil is 1) showing good skills on debugging problems 2) analytic mind with clear explanation of problem and ability to ask right questions and suggest right solutions on the base of answers 3) very attentive to users of the system and support engineers with helping them to solve problems.  
@@ -218,7 +218,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 
 <!-- -->
 
-> <img src="./src/img/avatar/carlos-salguero.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/carlos-salguero.jpeg" width="100px" align="right" alt="avatar">
 >
 > *Kamil is a very talented developer and a good friend.  
 > He has a deep knowledge of Go and other programming languages as well  
@@ -231,7 +231,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 
 <!-- -->
 
-> <img src="./src/img/avatar/martin-cespedes.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/martin-cespedes.jpeg" width="100px" align="right" alt="avatar">
 >
 > *Kamil is a great person, and he makes the everyday work easier.   
 > He has great capacity for analysis, and he is always willing to help and learn new things.   
@@ -244,7 +244,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 
 <!-- -->
 
-> <img src="./src/img/avatar/pablo-penén.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/pablo-penén.jpeg" width="100px" align="right" alt="avatar">
 >
 > *Kamil is a great developer and an excellent team-mate,  
 > I felt very comfortable working with him as a great backend / frontend team.  
@@ -256,7 +256,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 
 <!-- -->
 
-> <img src="./src/img/avatar/miguel-paolino.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/miguel-paolino.jpeg" width="100px" align="right" alt="avatar">
 >
 > *Kamil is a very detail-oriented developer with strong technical and analytic skills.  
 > He was the cornerstone of our backend team, he built most of our code base with great speed and quality. He always kept the team focused on what's important leading the technical discussions in the right direction.  
@@ -268,7 +268,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 
 <!-- -->
 
-> <img src="./src/img/avatar/fabian-vallejos.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/fabian-vallejos.jpeg" width="100px" align="right" alt="avatar">
 >
 > *Kamil is an extremely talented developer, and I was very lucky to work with him.  
 > He's a true hacker and brilliant class A programmer, his style is a pleasure to read.  
@@ -280,7 +280,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 
 <!-- -->
 
-> <img src="./src/img/avatar/francisco-guijarro.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/francisco-guijarro.jpeg" width="100px" align="right" alt="avatar">
 >
 > *Just a great developer  
 > and a great team member to work with.*  
@@ -291,7 +291,7 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 
 <!-- -->
 
-## PHP and UI Developer at [Percona](https://www.percona.com) <img src="./src/img/logo/percona.jpeg" width="80px" height="80px" align="right" alt="logo">
+## PHP and UI Developer at [Percona](https://www.percona.com) <img src="src/img/logo/percona.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *September 2013 – December 2013 (4 months), Remote*
 
@@ -314,7 +314,7 @@ Backend:
 * Background processes written in [Symfony](https://symfony.com/) and managed by [Supervisor](http://supervisord.org/).
 * Tests written using [PHPUnit testing framework](https://phpunit.de/).
 
-## IT Manager at [FarmaProm Polska](https://www.farmaprom.pl) <img src="./src/img/logo/farmaprom.jpeg" width="80px" height="80px" align="right" alt="logo">
+## IT Manager at [FarmaProm Polska](https://www.farmaprom.pl) <img src="src/img/logo/farmaprom.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *October 2011 – November 2013 (2 years 2 months), Kraków, Poland*
 
@@ -331,7 +331,7 @@ and delivery new solutions to pharmaceutical companies.
 * Emergency contact for any software problem e.g. app crashes.
 * Interviewing and recruiting IT specialists.
 
-> <img src="./src/img/avatar/michał-górski.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/michał-górski.jpeg" width="100px" align="right" alt="avatar">
 > 
 > *I would like to say that Kamil is a Programming Jesus.  
 > But it might be offensive. Offensive to Kamil.  
@@ -344,7 +344,7 @@ and delivery new solutions to pharmaceutical companies.
 
 <!-- -->
 
-## Team Lead and Senior PHP Developer at [Araneo](http://araneo.pl)<img src="./src/img/logo/araneo.jpeg" width="80px" height="80px" align="right" alt="logo">
+## Team Lead and Senior PHP Developer at [Araneo](http://araneo.pl)<img src="src/img/logo/araneo.jpeg" width="80px" height="80px" align="right" alt="logo">
 
 *December 2007 – October 2011 (3 years 11 months), Kraków, Poland*
  
@@ -387,7 +387,7 @@ PHP Developer:
   components (e.g. protection against race conditions or data
   duplication).
 
-> <img src="./src/img/avatar/krzysztof-kowalik.jpeg" width="100px" align="right" alt="avatar">
+> <img src="src/img/avatar/krzysztof-kowalik.jpeg" width="100px" align="right" alt="avatar">
 >
 > *Kamil is well skilled and very sane developer.  
 > At the time he successfully kept restrained our biggest,  
@@ -399,7 +399,7 @@ PHP Developer:
 
 <!-- -->
 
-## PHP Developer at [Krakowskie e-Centrum Informatyczne](https://kei.pl) <img src="./src/img/logo/kei.png" width="80px" height="80px" align="right" alt="logo">
+## PHP Developer at [Krakowskie e-Centrum Informatyczne](https://kei.pl) <img src="src/img/logo/kei.png" width="80px" height="80px" align="right" alt="logo">
 
 *July 2007 – August 2007 (2 months), Kraków, Poland*
 
