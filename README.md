@@ -105,9 +105,19 @@ Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a
 
 *January 2017 - November 2018 (1 year 11 months), Remote*
 
-Developer of [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management) - a single pane of glass to easily view and monitor the performance of MySQL, MongoDB, PostgreSQL, and MariaDB databases.
+Developer of [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management) - an open source database monitoring, observability and management tool. Works with MySQL, MongoDB, PostgreSQL, MariaDB, Amazon Aurora, Amazon RDS, ProxySQL and Percona XtraDB Cluster.
 
 Contributed to several open source repositories: [prometheus/mysqld_exporter](https://github.com/prometheus/mysqld_exporter), [percona/mysqld_exporter](https://github.com/percona/mysqld_exporter), [postgres_exporter](https://github.com/percona/postgres_exporter), [mongodb_exporter](https://github.com/percona/mongodb_exporter), [rds_exporter](https://github.com/percona/rds_exporter), [pmm-client](https://github.com/percona/pmm-client), [pmm-server](https://github.com/percona/pmm-server), [qan-agent](https://github.com/percona/qan-agent), [kardianos-service](https://github.com/percona/kardianos-service), [percona-toolkit](https://github.com/percona/percona-toolkit), [qan-api](https://github.com/percona/qan-api), [qan-app](https://github.com/percona/qan-app), [pmm-managed](https://github.com/percona/pmm-managed).
+
+> <img src="src/img/avatar/peter-zaitsev.jpeg" width="100px" align="right" alt="avatar">
+>
+> *Kamil has a great mix of skills as backend, frontend developer as well as understands ops/devops pretty well.  
+> Kamil was a great team player always helping his colleagues when asked.  
+> Kamil has a great ability to find simple practical solutions to complicated problems.*
+>
+> — <cite>[Peter Zaitsev], Founder, CEO</cite>
+
+[Peter Zaitsev]: https://www.linkedin.com/in/peterzaitsev/
 
 ## Senior Software Developer at [Uniplaces](https://www.uniplaces.com) <img src="src/img/logo/uniplaces.jpeg" width="80px" height="80px" align="right" alt="logo">
 
@@ -182,18 +192,6 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 * Collects system metrics from [pt-summary](https://www.percona.com/doc/percona-toolkit/latest/pt-summary.html) and [/proc filesystem](https://en.wikipedia.org/wiki/procfs).
 * [EXPLAIN Statement](https://dev.mysql.com/doc/refman/8.0/en/explain.html) in real-time thanks to [Websockets](https://pkg.go.dev/golang.org/x/net/websocket).
 * Tests written with [gocheck](https://labix.org/gocheck) and run by [Jenkins](https://www.jenkins.io/).
-
-> <img src="src/img/avatar/peter-zaitsev.jpeg" width="100px" align="right" alt="avatar">
-> 
-> *Kamil has a great mix of skills as backend, frontend developer as well as understands ops/devops pretty well.  
-> Kamil was a great team player always helping his colleagues when asked.  
-> Kamil has a great ability to find simple practical solutions to complicated problems.*
-> 
-> — <cite>[Peter Zaitsev], Founder, CEO</cite>
-
-[Peter Zaitsev]: https://www.linkedin.com/in/peterzaitsev/
-
-<!-- -->
 
 > <img src="src/img/avatar/vadim-tkachenko.jpeg" width="100px" align="right" alt="avatar">
 > 
@@ -370,19 +368,11 @@ records).
 PHP Developer:
 
 * Developed [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) and [SOAP](https://en.wikipedia.org/wiki/SOAP) web services for [Windows Mobile](https://en.wikipedia.org/wiki/Windows_Mobile), [iOS](https://en.wikipedia.org/wiki/IOS) and [Android](https://developer.android.com/).
-* Established [electronic data interchange](https://en.wikipedia.org/wiki/Electronic_data_interchange) with over 100 pharmaceutical companies and wholesalers. Data formats used: XML+XSLT, CSV, XLS, text files and JSON. Transmission protocols: FTP, FTPS, SFTP and HTTPS. 
+* Established [electronic data interchange](https://en.wikipedia.org/wiki/Electronic_data_interchange) with over 100 pharmaceutical companies and wholesalers. Data formats: XML+XSLT, CSV, XLS, TXT and JSON. Transmission protocols: FTP, FTPS, SFTP and HTTPS. 
 * Integration with [Oracle Business Intelligence](https://www.oracle.com/business-analytics/business-intelligence/). Conversion from [relational model](https://en.wikipedia.org/wiki/Relational_model) to [star schema](https://en.wikipedia.org/wiki/Star_schema).
 * Debugging, testing, optimizing PHP, SQL and Javascript code.
-* [Propel](http://propelorm.org/)
-* Improved parallel development by designing
-  production and development environment: branches
-  hierarchy (stable, release and integration branches;
-  feature branches; hotfix branches) in SVN (and later migrated to GIT), automatic merges
-  between branches, integration with redmine issue tracking
-  system, continuous integration with jenkins, web
-  application actualization process (bash/php), automatic
-  e-mail reports for deployed releases.
-  That was way before [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) and [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow).
+* [Propel](http://propelorm.org/) ORM.
+* Designed development workflow within SVN (later migrated to git and [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) / [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)).
 * Ensuring data consistency of business critical application
   components (e.g. protection against race conditions or data
   duplication).
@@ -409,6 +399,11 @@ Summer job and my first professional experience.
 * Developer and designer of [Business Directory](https://en.wikipedia.org/wiki/Business_directory).
 * Developer of [Website Builder](https://en.wikipedia.org/wiki/Website_builder).
 * Maintenance of company's [CRM](https://en.wikipedia.org/wiki/Customer_relationship_management) and other proprietary software.
+
+# Certificates
+
+<img src="src/img/certificate/MCAF.png" width="50%" align="right" alt="certificate">
+<img src="src/img/certificate/PSMI.png" width="50%" align="right" alt="certificate">
 
 # Hobbies
 
