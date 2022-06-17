@@ -402,8 +402,8 @@ Summer job and my first professional experience.
 
 # Certificates
 
-<img src="src/img/certificate/MCAF.png" width="50%" alt="certificate">
-<img src="src/img/certificate/PSMI.png" width="50%" align="left" alt="certificate">
+<img src="src/img/certificate/PSMI.png" width="40%" align="left" alt="certificate">
+<img src="src/img/certificate/MCAF.png" width="40%" alt="certificate">
 
 # Hobbies
 
