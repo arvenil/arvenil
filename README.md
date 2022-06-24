@@ -402,10 +402,10 @@ Summer job and my first professional experience.
 
 # Certificates
 
-<img src="src/img/certificate/WSM.jpg" border="0" width="32%" alt="certificate" align="right">
-<img src="src/img/certificate/FCE.jpg" border="0" width="32%" alt="certificate" align="right">
-<img src="src/img/certificate/MCAF.png" border="0" width="33%" alt="certificate">
-<img src="src/img/certificate/PSMI.png" border="0" width="33%" alt="certificate">
+<img src="src/img/certificate/WSM.jpg" width="31%" alt="certificate" align="right">
+<img src="src/img/certificate/FCE.jpg" width="31%" alt="certificate" align="right">
+<img src="src/img/certificate/MCAF.png" width="33%" alt="certificate">
+<img src="src/img/certificate/PSMI.png" width="33%" alt="certificate">
 
 # Hobbies
 
