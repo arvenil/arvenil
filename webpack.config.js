@@ -2,7 +2,9 @@ const path = require('path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+
 
 module.exports = {
     output: {
@@ -30,9 +32,17 @@ module.exports = {
         },
     },
     plugins: [
+        new FaviconsWebpackPlugin({
+            logo: './src/img/selfie/2022.png',
+            favicons: {
+                icons: {
+                    appleStartup: false,
+                    yandex: false
+                }
+            }
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
-
         }),
         new HtmlWebpackPlugin({template: './src/index.html'}),
     ],
