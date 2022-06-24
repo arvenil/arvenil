@@ -7,7 +7,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     output: {
         path: path.resolve(__dirname, 'docs'),
-        assetModuleFilename: 'img/[hash][ext][query]'
+        assetModuleFilename: (pathData) => {
+            const filepath = path
+                .dirname(pathData.filename)
+                .split("/")
+                .slice(1)
+                .join("/");
+            return `${filepath}/[name][ext][query]`;
+        }
     },
     optimization: {
         minimizer: [new TerserJSPlugin({}), new CssMinimizerPlugin({})],
@@ -67,7 +74,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif|pdf)$/i,
                 type: 'asset/resource'
-            },
+            }
         ],
     },
 };
