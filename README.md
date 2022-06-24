@@ -402,8 +402,11 @@ Summer job and my first professional experience.
 
 # Certificates
 
-<img src="src/img/certificate/PSMI.png" width="40%" align="left" alt="certificate">
-<img src="src/img/certificate/MCAF.png" width="40%" alt="certificate">
+<img src="src/img/certificate/WSM.jpg" width="33%" alt="certificate" align="right">
+<img src="src/img/certificate/FCE.jpg" width="33%" alt="certificate" align="right">
+<img src="src/img/certificate/MCAF.png" width="33%" alt="certificate">
+<br>
+<img src="src/img/certificate/PSMI.png" width="33%" alt="certificate">
 
 # Hobbies
 
@@ -411,13 +414,7 @@ Summer job and my first professional experience.
 * Travelling - google reports more than 20 countries, so I guess it's a start.
 * Swimming - learned in Barcelona and [Costa Brava](https://www.google.com/search?q=costa+brava&tbm=isch), now in the wetsuit continuing on the [French Riviera](https://www.google.com/search?q=french+riviera&tbm=isch).
 * Food - it's impossible to say "no" to all delicious regional delights.
-* Books - to name few influential: 
-  * [Astrophysics for People in a Hurry](https://en.wikipedia.org/wiki/Astrophysics_for_People_in_a_Hurry)
-  * [A Brief History of Time](https://en.wikipedia.org/wiki/A_Brief_History_of_Time)
-  * [Getting Things Done](https://en.wikipedia.org/wiki/Getting_Things_Done)
-  * [The Ghost In The Shell](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(manga))
-  * [The Pragmatic Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)
-  * [Sapiens: A Brief History of Humankind](https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind)
+* Books - to name few influential: [Astrophysics for People in a Hurry](https://en.wikipedia.org/wiki/Astrophysics_for_People_in_a_Hurry), [A Brief History of Time](https://en.wikipedia.org/wiki/A_Brief_History_of_Time), [Getting Things Done](https://en.wikipedia.org/wiki/Getting_Things_Done), [The Ghost In The Shell](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(manga)), [The Pragmatic Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer), [Sapiens: A Brief History of Humankind](https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind).
 * Technology and programming - everything with microprocessor is as exciting as a birthday cake.
 
 # Something not right?
