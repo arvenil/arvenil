@@ -12,11 +12,11 @@ Feel free to contact me via email [hire@dziedzic.fr](mailto:hire@dziedzic.fr) or
 
 * Open mind.
 * Dedication to learn.
-* 14+ years experience in Web App Development, Product Building and Team Leading.
-* 12+ years with Agile, Kanban and Scrum (Professional Scrum Master I, 2012).
-* 7+ years experience with Google Go: gRPC, REST, CLI tools, mobile, docker.
-* 10+ years with databases: MySQL, PostgreSQL, Amazon DynamoDB, Memcached and MongoDB.
-* 6+ years with testing, TDD, CI and CD.
+* 14+ years experience in Web App and API Development, Product Building and Team Leading.
+* 12+ years with [Agile](https://agilemanifesto.org/), [Kanban](https://en.wikipedia.org/wiki/Kanban) and [Scrum](https://www.scrum.org/) (Professional Scrum Master I, 2012).
+* 7+ years experience with Google Go: [gRPC](https://grpc.io/), [REST](https://en.wikipedia.org/wiki/Representational_state_transfer), [CLI](https://en.wikipedia.org/wiki/Command-line_interface) tools, [mobile](https://github.com/golang/mobile), [docker](https://www.docker.com/).
+* 10+ years with databases: [MySQL](https://www.mysql.com/), [PostgreSQL](https://www.postgresql.org/), [Amazon DynamoDB](https://aws.amazon.com/dynamodb/), [Memcached](https://memcached.org/) and [MongoDB](https://www.mongodb.com/).
+* 6+ years with testing, [TDD](https://en.wikipedia.org/wiki/Test-driven_development), [CI](https://en.wikipedia.org/wiki/Continuous_integration) and [CD](https://en.wikipedia.org/wiki/Continuous_delivery).
 * 1+ year with [Elixir](https://elixir-lang.org/).
 * 2+ years with [AngularJS](https://angularjs.org/) and [Node.js](https://nodejs.org).
 * 6+ years with developing [PHP](https://www.php.net/) apps (obsolete).
@@ -317,7 +317,7 @@ Backend:
 *October 2011 – November 2013 (2 years 2 months), Kraków, Poland*
 
 Development of pharmaceutical platform www.FarmaProm.pl
-and delivery new solutions to pharmaceutical companies.
+and new solutions to pharmaceutical companies.
 
 * [Professional Scrum Master](https://www.credly.com/badges/fa2f8968-bec8-4cce-875a-d20ba566d62e) certified on 29th May 2012.
 * Introduced [Agile Software Development](https://en.wikipedia.org/wiki/Agile_software_development) into the company, with [Scrum](https://www.scrum.org/) and [Kanban](https://en.wikipedia.org/wiki/Kanban) frameworks.
@@ -347,11 +347,10 @@ and delivery new solutions to pharmaceutical companies.
 *December 2007 – October 2011 (3 years 11 months), Kraków, Poland*
  
 Team Lead and Senior PHP Developer for pharmaceutical platform www.FarmaProm.pl:
-
-  * [Sales Force Automation](https://www.farmaprom.pl/en/sfa/)
-  * [Medical & Pharmaceutical CRM](https://www.farmaprom.pl/en/crm/)
-  * [Manufacturer CRM](https://www.farmaprom.pl/en/manufacturer/)
-  * [Wholesaler CRM](https://www.farmaprom.pl/en/wholesaler/)
+ [Sales Force Automation](https://www.farmaprom.pl/en/sfa/),
+ [Medical & Pharmaceutical CRM](https://www.farmaprom.pl/en/crm/),
+ [Manufacturer CRM](https://www.farmaprom.pl/en/manufacturer/),
+ [Wholesaler CRM](https://www.farmaprom.pl/en/wholesaler/).
 
 Team Lead:
 
@@ -396,8 +395,7 @@ PHP Developer:
 Summer job and my first professional experience.
 
 * Head Developer and designer of [Issue tracking system](https://en.wikipedia.org/wiki/Issue_tracking_system).
-* Developer and designer of [Business Directory](https://en.wikipedia.org/wiki/Business_directory).
-* Developer of [Website Builder](https://en.wikipedia.org/wiki/Website_builder).
+* Developer and designer of [Business Directory](https://en.wikipedia.org/wiki/Business_directory) and [Website Builder](https://en.wikipedia.org/wiki/Website_builder).
 * Maintenance of company's [CRM](https://en.wikipedia.org/wiki/Customer_relationship_management) and other proprietary software.
 
 # Certificates
@@ -413,7 +411,13 @@ Summer job and my first professional experience.
 * Travelling - google reports more than 20 countries, so I guess it's a start.
 * Swimming - learned in Barcelona and [Costa Brava](https://www.google.com/search?q=costa+brava&tbm=isch), now in the wetsuit continuing on the [French Riviera](https://www.google.com/search?q=french+riviera&tbm=isch).
 * Food - it's impossible to say "no" to all delicious regional delights.
-* Books - to name few influential: [Astrophysics for People in a Hurry](https://en.wikipedia.org/wiki/Astrophysics_for_People_in_a_Hurry), [A Brief History of Time](https://en.wikipedia.org/wiki/A_Brief_History_of_Time), [Getting Things Done](https://en.wikipedia.org/wiki/Getting_Things_Done), [The Ghost In The Shell](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(manga)), [The Pragmatic Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer), [Sapiens: A Brief History of Humankind](https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind).
+* Books - to name few influential: 
+  * [Astrophysics for People in a Hurry](https://en.wikipedia.org/wiki/Astrophysics_for_People_in_a_Hurry)
+  * [A Brief History of Time](https://en.wikipedia.org/wiki/A_Brief_History_of_Time)
+  * [Getting Things Done](https://en.wikipedia.org/wiki/Getting_Things_Done)
+  * [The Ghost In The Shell](https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(manga))
+  * [The Pragmatic Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)
+  * [Sapiens: A Brief History of Humankind](https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind)
 * Technology and programming - everything with microprocessor is as exciting as a birthday cake.
 
 # Something not right?
