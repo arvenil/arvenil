@@ -402,8 +402,8 @@ Summer job and my first professional experience.
 
 # Certificates
 
-<img src="src/img/certificate/WSM.jpg" width="32%" alt="certificate" align="right">
-<img src="src/img/certificate/FCE.jpg" width="32%" alt="certificate" align="right">
+<img src="src/img/certificate/WSM.jpg" width="30%" alt="certificate" align="right">
+<img src="src/img/certificate/FCE.jpg" width="30%" alt="certificate" align="right">
 <img src="src/img/certificate/MCAF.png" width="32%" alt="certificate">
 <br>
 <img src="src/img/certificate/PSMI.png" width="32%" alt="certificate">
