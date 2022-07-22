@@ -107,6 +107,8 @@ Certified with [Microsoft Azure Fundamentals](https://www.credly.com/badges/3b2a
 
 Developer of [Percona Monitoring and Management](https://www.percona.com/software/database-tools/percona-monitoring-and-management) - an open source database monitoring, observability and management tool. Works with MySQL, MongoDB, PostgreSQL, MariaDB, Amazon Aurora, Amazon RDS, ProxySQL and Percona XtraDB Cluster.
 
+PMM has complex client-server architecture. Client scrapes prometheus exporters and collects additional metrics with pmm-agent. Server collects metrics for prometheus server and allows management with gRPC API. 
+
 Contributed to several open source repositories: [prometheus/mysqld_exporter](https://github.com/prometheus/mysqld_exporter), [percona/mysqld_exporter](https://github.com/percona/mysqld_exporter), [postgres_exporter](https://github.com/percona/postgres_exporter), [mongodb_exporter](https://github.com/percona/mongodb_exporter), [rds_exporter](https://github.com/percona/rds_exporter), [pmm-client](https://github.com/percona/pmm-client), [pmm-server](https://github.com/percona/pmm-server), [qan-agent](https://github.com/percona/qan-agent), [kardianos-service](https://github.com/percona/kardianos-service), [percona-toolkit](https://github.com/percona/percona-toolkit), [qan-api](https://github.com/percona/qan-api), [qan-app](https://github.com/percona/qan-app), [pmm-managed](https://github.com/percona/pmm-managed).
 
 > <img src="src/img/avatar/peter-zaitsev.jpeg" width="100px" align="right" alt="avatar">
@@ -119,9 +121,20 @@ Contributed to several open source repositories: [prometheus/mysqld_exporter](ht
 
 [Peter Zaitsev]: https://www.linkedin.com/in/peterzaitsev/
 
+<!-- -->
+
+> <img src="src/img/avatar/vadim-tkachenko.jpeg" width="100px" align="right" alt="avatar">
+>
+> *Kamil is a Senior Backend Engineer, he did a major work in percona-agent and Percona backend layer.  
+> Kamil showed a deep understand of how to design systems and make an implementation.*
+>
+> — <cite>[Vadim Tkachenko], CTO / Co-founder</cite>
+
+[Vadim Tkachenko]: https://www.linkedin.com/in/vadimtk/
+
 ## Senior Software Developer at [Uniplaces](https://www.uniplaces.com) <img src="src/img/logo/uniplaces.jpeg" width="80px" height="80px" align="right" alt="logo">
 
-*January 2016 – June 2016 (6 months), Lisbon, Portugal*
+*January 2016 – December 2016 (1 year), Lisbon, Portugal*
 
 Developer of REST microservice for booking app.
 
@@ -193,16 +206,6 @@ Developer of percona-agent, real-time client-side agent written in golang for Pe
 * [EXPLAIN Statement](https://dev.mysql.com/doc/refman/8.0/en/explain.html) in real-time thanks to [Websockets](https://pkg.go.dev/golang.org/x/net/websocket).
 * Tests written with [gocheck](https://labix.org/gocheck) and run by [Jenkins](https://www.jenkins.io/).
 
-> <img src="src/img/avatar/vadim-tkachenko.jpeg" width="100px" align="right" alt="avatar">
-> 
-> *Kamil is a Senior Backend Engineer, he did a major work in percona-agent and Percona backend layer.  
-> Kamil showed a deep understand of how to design systems and make an implementation.*
->
-> — <cite>[Vadim Tkachenko], CTO / Co-founder</cite>
-
-[Vadim Tkachenko]: https://www.linkedin.com/in/vadimtk/
-
-<!-- -->
 > <img src="src/img/avatar/nika-krupitskaya.jpeg" width="100px" align="right" alt="avatar">
 > 
 > *Kamil showed expert level of Go lang knowledge, high quality of work and critical architecture mind.  
