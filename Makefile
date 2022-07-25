@@ -16,6 +16,8 @@ pdf:
 				--print-media-type \
 				--user-style-sheet docs/main.css \
 				--title "Curriculum vitae" \
+				--image-dpi 300 \
+				--image-quality 90 \
 				README.html \
 				src/"Kamil Dziedzic - Software Engineer.pdf"
 
