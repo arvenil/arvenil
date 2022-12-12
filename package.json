@@ -5,7 +5,7 @@
   "main": "docs/main.js",
   "dependencies": {
     "bootstrap": "^4.6.1",
-    "bootswatch": "^4.6.1",
+    "bootswatch": "^5.2.3",
     "file-saver": "^2.0.5"
   },
   "devDependencies": {
