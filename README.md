@@ -1,3 +1,5 @@
+
+
 ![Kamil Dziedzic](src/img/selfie/2022.png "Kamil Dziedzic")
 
 # Kamil Dziedzic
@@ -58,7 +60,7 @@ All those projects show some of my skills, coding standards and love for testing
 * office space
 * opportunities to travel
 
-## Interested? Sent me a message!
+## Interested? Send me a message!
 
 Do you think my skills could be useful for your company or clients? Can you offer me anything from the list above?
 
